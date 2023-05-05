@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+  /* theme font */
+  --font: "Roboto Condensed", Arial, 'Trebuchet MS';
+  --font-color: rgb(228, 228, 228);
+  --bkContrast-color: #ff931e;
+  --background-color: rgb(24, 24, 24);
+  /* theme colors */
+
+  /* margins and paddings */
+  --small-padding: 15px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: var(--font);
+  color: var(--font-color);
+  min-width: 233px;
+}
+
+header {
+  text-align: center;
+  height: 225px;
+}
+
+header h1 {
+  font-weight: normal;
+  padding: var(--small-padding);
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--font-color);
+  padding: 0.6em;
+  width: 100%;
+}
+
+nav a:hover {
+  background-color: var(--bkContrast-color);
+  color: var(--background-color);
+  border-radius: 2px;
+}
+
+@media (max-width: 300px) {
+  header {
+    height: 265px;
+    /* background-color: yellow; */
+  }
+
+  #title-dash {
+    display: none;
+  }
+
+  #title-subtitle {
+    padding-top: 10px;
+    display: block;
+    font-size: 0.8em;
+  }
+}

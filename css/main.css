@@ -1,0 +1,19 @@
+body {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+header, nav, main, footer {
+  margin: 1.25rem auto;
+  max-width: 760px;
+}
+
+header {
+  text-align: center;
+}
+
+p img {
+  float: right;
+}
+
+/* Class Selectors */
