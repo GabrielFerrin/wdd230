@@ -76,7 +76,7 @@ header nav ul {
 nav a {
   display: block;
   text-decoration: none;
-  color: var(--font-color);
+  color: var(--background-color);
   padding: 0.6em;
   background-color: var(--bg-contrast-color);
 }
