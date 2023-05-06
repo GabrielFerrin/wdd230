@@ -4,7 +4,7 @@
   /* theme font */
   --font: "Roboto Condensed", Arial, 'Trebuchet MS';
   --font-color: rgb(228, 228, 228);
-  --bkContrast-color: #ff931e;
+  --bg-contrast-color: #ff931e;
   --background-color: rgb(0, 0, 0);
   /* theme colors */
 
@@ -78,10 +78,11 @@ nav a {
   text-decoration: none;
   color: var(--font-color);
   padding: 0.6em;
+  background-color: var(--bg-contrast-color);
 }
 
 nav a:hover {
-  background-color: var(--bkContrast-color);
+  background-color: var(--bg-contrast-color);
   color: var(--background-color);
   border-radius: 2px;
 }
