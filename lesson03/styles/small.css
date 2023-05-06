@@ -3,15 +3,21 @@
 :root {
   /* theme font */
   --font: "Roboto Condensed", Arial, 'Trebuchet MS';
-  --font-color: rgb(228, 228, 228);
-  --bg-contrast-color: #ff931e;
-  --background-color-01: rgb(0, 0, 0);
-  --background-color-02: rgb(14, 14, 14);
+  --font-color: #e4e4e4;
+  --bg-contrast-color-01: #ff931e;
+  --bg-contrast-color-02: #5d9ceb;
+  --bg-transparent-color: rgba(255, 255, 255, 0.85);
+  --background-color-01: #010101;
+  --background-color-02: #0c0c0c;
+  --background-color-03: #070707;
+  --contrast-background-color-01: #ffffff;
   /* theme colors */
 
   /* margins and paddings */
   --small-padding: 15px;
   /* others */
+  --header-high: 300px;
+  --foother-high: 125px;
   --min-width: 260px;
 }
 
@@ -36,7 +42,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 255px;
+  height: var(--header-high);
 }
 
 #bg-top img {
@@ -49,9 +55,8 @@ header {
 }
 
 header #title-bg {
-  background: rgba(255, 255, 255, 0.60);
+  background: var(--bg-transparent-color);
   width: 90%;
-  height: 50%;
   margin: 15px;
   min-width: calc(var(--min-width) - 20px);
   border-radius: 10px;
@@ -77,6 +82,10 @@ header nav ul {
   flex-direction: column;
 }
 
+header nav ul li {
+  position: relative;
+}
+
 nav a {
   display: block;
   text-decoration: none;
@@ -86,20 +95,79 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--bg-contrast-color);
+  background-color: var(--bg-contrast-color-01);
   color: var(--background-color-01);
 }
 
-.selected {
-  background-color: var(--background-color-02);
+header nav hr {
+  position: absolute;
+  width: 60px;
+  border: 1.4px solid;
+  border-radius: 7px;
+  margin: 0 auto;
+  left: 50%;
+  bottom: 6.5px;
+  transform: translate(-50%, 0);
 }
+
+nav li:hover hr {
+  border: 1.5px solid var(--background-color-01);
+}
+
+.selected {
+  background-color: var(--background-color-03);
+}
+
+/********/
+/* MAIN */
+/********/
+main .card-section {
+  border-radius: 3px;
+  font-weight: 100;
+  background-color: var(--background-color-02);
+  margin: var(--small-padding);
+  padding: var(--small-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .card-section-large {
+  text-align: center;
+}
+
+main .card-section:hover {
+  transition: .5s;
+  color: var(--background-color-01);
+  background-color: var(--contrast-background-color-01);
+}
+
+main img {
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+main h3 {
+  color: var(--bg-contrast-color-01);
+  margin: 5px 0px;
+}
+
+main p {
+  margin: 5px 0px;
+}
+
+main .picture {
+  width: 200px;
+  border-radius: 3px;
+}
+
 
 /**********/
 /* FOOTER */
 /**********/
 footer {
   text-align: center;
-  height: 55px;
+  height: var(--foother-high);
   position: relative;
 }
 
@@ -112,7 +180,7 @@ footer p {
   left: 50%;
   bottom: 0;
   transform: translate(-50%, 0);
-  color: var(--bg-contrast-color);
+  color: var(--bg-contrast-color-01);
 }
 
 #bg-button img {
@@ -124,6 +192,32 @@ footer p {
   min-width: var(--min-width);
 }
 
+/**************/
+/* SCROLL-BAR */
+/**************/
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-color-02);
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-contrast-color-02);
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--contrast-background-color-01);
+}
+
 @media (max-width: 355px) {
   #bg-top img {
     top: -30px;
@@ -132,7 +226,7 @@ footer p {
 
 @media (max-width: 334px) {
   header {
-    height: 290px;
+    height: var(--header-high) + 100px;
   }
 
   #bg-top img {
@@ -146,11 +240,7 @@ footer p {
 
 @media (max-width: 300px) {
   header {
-    height: 265px;
-  }
-
-  header #title-bg {
-    height: 60%;
+    /* height: 265px; */
   }
 
   #bg-top img {
