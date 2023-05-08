@@ -14,17 +14,19 @@
   --background-color-03: #070707;
   --contrast-background-color-01: #ffffff;
   /* margins and paddings */
-  --padding: 15px;
+  --spacing: 15px;
   /* others */
-  --header-high: 300px;
-  --foother-high: 125px;
+  /* --header-high: 300px; */
+  /* --foother-high: 125px; */
   --min-width: 260px;
+  --max-width: 860px;
 }
 
 html,
 body {
   min-width: var(--min-width);
-  margin: 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -38,92 +40,58 @@ body {
 /* HEADER */
 /**********/
 header {
+  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: var(--header-high);
+  /* height: var(--header-high); */
 }
 
 header #profile-photo {
   border-radius: 6px;
-  width: 100px;
-  margin-top: 20px;
+  background-color: var(--contrast-background-color-01);
+  padding: 6px;
+  width: 80px;
+  margin: 20px;
+  margin-bottom: 3px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
+/* 
 header .bg-top-medium {
   display: none;
 }
 
 header .bg-top-large {
   display: none;
-}
-
-header .bg-top-small {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: -45px;
-  z-index: -1;
-  min-width: var(--min-width);
-}
+} */
 
 header #title-bg {
   background: var(--bg-transparent-color);
-  width: 90%;
-  max-width: 700px;
-  margin: 15px;
+  width: calc(100% - var(--spacing) * 2);
+  margin: var(--spacing);
   min-width: calc(var(--min-width) - 20px);
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 header h1 {
   color: var(--background-color-01);
   font-weight: normal;
-  padding: var(--padding);
+  padding: var(--spacing);
   margin: 0;
 }
 
-header nav {
+/* header nav {
   width: 100%;
   max-width: 1000px;
-}
-
-main .card-section {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  /* text-align: center; */
-  /* display: flex; */
-  /* flex-direction: column; */
-}
-/* 
-header nav ul li {
-  position: relative;
 } */
-
-main a {
-  text-decoration: none;
-  /* padding: 0.6em 0em;
-  border-radius: 5px; */
-}
 
 /* nav a:hover {
   background-color: var(--bg-contrast-color-01);
   color: var(--background-color-01);
 } */
 
-header nav hr {
-  /* position: absolute; */
-  width: 160px;
-  border: 1.4px solid;
-  border-radius: 3px;
-  /* margin: 0 auto; */
-  /* left: 50%; */
-  /* bottom: 6.5px; */
-  /* transform: translate(-50%, 0); */
-}
 /* 
 nav li:hover hr {
   border: 1.5px solid var(--background-color-01);
@@ -139,34 +107,74 @@ nav li:hover hr {
 main {
   display: flex;
   flex-direction: column;
+  padding: var(--spacing);
+  margin: var(--spacing);
 }
 
-main .card-section {
+header .bg-top-small {
+  width: 100%;
+  min-height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  z-index: -1;
+}
+
+main .menu-option {
+  list-style: none;
+  padding: var(--spacing);
+  margin: 0;
+  border-radius: 3px;
+  background-color: var(--background-color-02);
+  box-sizing: border-box;
+}
+
+main hr {
+  /* position: absolute; */
+  width: 100%;
+  border-width: 1px;
+  border-color: rgb(116, 116, 116);
+  /* border: 1px solid; */
   /* border-radius: 3px; */
-  /* font-weight: 100; */
-  /* text-decoration: none; */
-  /* background-color: var(--background-color-02); */
-  /* margin: var(--padding); */
-  /* padding: var(--padding); */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* box-sizing: border-box; */
+  /* margin: 0 auto; */
+  /* left: 50%; */
+  /* bottom: 6.5px; */
+  /* transform: translate(-50%, 0); */
+}
+
+main h2 {
+  color: var(--contrast-background-color-01);
+  margin: 0;
+}
+
+main ul {
+  padding: 0;
+  margin: 0;
+}
+
+main a {
+  text-decoration: none;
+  /* padding: 0.6em 0em;
+  border-radius: 5px; */
 }
 
 main .card-section-large {
   text-align: center;
 }
 
-main .card-section:hover {
+main .menu-option:hover {
   transition: 0.35s;
   color: var(--background-color-01);
   background-color: var(--contrast-background-color-01);
 }
 
-main .card-section .h3-subtitle {
+main .menu-option .h3-subtitle {
   font-weight: 100;
-  color: white;
+  color: var(--contrast-background-color-01);
+}
+
+main .menu-option:hover .h3-subtitle {
+  color: var(--background-color-01);
 }
 
 main img {
@@ -257,13 +265,8 @@ footer {
 
 footer p {
   font-size: 0.9em;
-  position: absolute;
   width: 100%;
   margin: 0;
-  padding-bottom: 10px;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
   color: var(--bg-contrast-color-01);
 }
 
@@ -311,7 +314,7 @@ footer p {
   background: var(--contrast-background-color-01);
 }
 
-@media (max-width: 611px) {
+/* @media (max-width: 611px) {
   header .bg-top-small {
     top: -90px;
   }
@@ -374,4 +377,4 @@ footer p {
   footer p {
     padding-bottom: 8px;
   }
-}
+} */
