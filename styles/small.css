@@ -37,13 +37,19 @@ body {
 /**********/
 /* HEADER */
 /**********/
-
 header {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: var(--header-high);
+}
+
+header #profile-photo {
+  border-radius: 6px;
+  width: 100px;
+  margin-top: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 header .bg-top-medium {
@@ -84,46 +90,44 @@ header nav {
   max-width: 1000px;
 }
 
-header nav ul {
+main .card-section {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  /* text-align: center; */
+  /* display: flex; */
+  /* flex-direction: column; */
 }
-
+/* 
 header nav ul li {
   position: relative;
-}
+} */
 
-nav a {
-  display: block;
+main a {
   text-decoration: none;
-  color: var(--font-color);
-  padding: 0.6em 0em;
-  border-radius: 5px;
+  /* padding: 0.6em 0em;
+  border-radius: 5px; */
 }
 
-nav a:hover {
+/* nav a:hover {
   background-color: var(--bg-contrast-color-01);
   color: var(--background-color-01);
-}
+} */
 
 header nav hr {
-  position: absolute;
-  width: 60px;
+  /* position: absolute; */
+  width: 160px;
   border: 1.4px solid;
-  border-radius: 7px;
-  margin: 0 auto;
-  left: 50%;
-  bottom: 6.5px;
-  transform: translate(-50%, 0);
+  border-radius: 3px;
+  /* margin: 0 auto; */
+  /* left: 50%; */
+  /* bottom: 6.5px; */
+  /* transform: translate(-50%, 0); */
 }
-
+/* 
 nav li:hover hr {
   border: 1.5px solid var(--background-color-01);
-}
+} */
 
 .selected {
   background-color: var(--background-color-03);
@@ -138,15 +142,16 @@ main {
 }
 
 main .card-section {
-  border-radius: 3px;
-  font-weight: 100;
-  background-color: var(--background-color-02);
-  margin: var(--padding);
-  padding: var(--padding);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
+  /* border-radius: 3px; */
+  /* font-weight: 100; */
+  /* text-decoration: none; */
+  /* background-color: var(--background-color-02); */
+  /* margin: var(--padding); */
+  /* padding: var(--padding); */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* box-sizing: border-box; */
 }
 
 main .card-section-large {
@@ -157,6 +162,11 @@ main .card-section:hover {
   transition: 0.35s;
   color: var(--background-color-01);
   background-color: var(--contrast-background-color-01);
+}
+
+main .card-section .h3-subtitle {
+  font-weight: 100;
+  color: white;
 }
 
 main img {

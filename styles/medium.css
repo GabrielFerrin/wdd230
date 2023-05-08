@@ -1,0 +1,113 @@
+@media (min-width: 611px) {
+  :root {
+    /* margins and paddings */
+    --padding: 20px;
+    /* others */
+    --header-high: 160px;
+    --foother-high: 125px;
+  }
+
+  /**********/
+  /* HEADER */
+  /**********/
+
+  header .bg-top-small {
+    display: none;
+  }
+
+  header .bg-top-small {
+    display: none;
+  }
+
+  header .bg-top-large {
+    display: none;
+  }
+
+  header .bg-top-medium {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    z-index: -1;
+    min-width: var(--min-width);
+  }
+
+  header nav ul {
+    flex-direction: row;
+  }
+
+  header nav ul li {
+    transition: .35s;
+    width: 100%;
+  }
+
+  header nav ul li:hover {
+    width: 105%;
+  }
+
+  header #title-bg {
+    border-radius: 50px;
+  }
+
+  /********/
+  /* MAIN */
+  /********/
+
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: calc(100vh - (var(--header-high) + var(--foother-high)));
+  }
+
+  main .card-section {
+    width: calc(50% - (var(--padding) * 2));
+  }
+
+  main .target-audience-section {
+    width: 100%;
+  }
+
+  /**********/
+  /* FOOTER */
+  /**********/
+
+  footer .bg-botton-medium {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    min-width: var(--min-width);
+  }
+
+  footer .bg-botton-large {
+    display: none;
+  }
+
+  footer .bg-botton-small {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  header .bg-top-medium {
+    top: -40px;
+  }
+
+  footer .bg-botton-medium {
+    bottom: -30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .bg-top-medium {
+    top: -60px;
+  }
+
+  .bg-botton-medium {
+    bottom: -55px;
+  }
+}
