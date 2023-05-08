@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   /* theme font */
@@ -45,7 +46,15 @@ header {
   height: var(--header-high);
 }
 
-#bg-top img {
+header .bg-top-medium {
+  display: none;
+}
+
+header .bg-top-large {
+  display: none;
+}
+
+header .bg-top-small {
   width: 100%;
   position: absolute;
   left: 0;
@@ -57,6 +66,7 @@ header {
 header #title-bg {
   background: var(--bg-transparent-color);
   width: 90%;
+  max-width: 700px;
   margin: 15px;
   min-width: calc(var(--min-width) - 20px);
   border-radius: 10px;
@@ -71,6 +81,7 @@ header h1 {
 
 header nav {
   width: 100%;
+  max-width: 1000px;
 }
 
 header nav ul {
@@ -90,7 +101,7 @@ nav a {
   display: block;
   text-decoration: none;
   color: var(--font-color);
-  padding: 0.6em;
+  padding: 0.6em 0em;
   border-radius: 5px;
 }
 
@@ -121,6 +132,11 @@ nav li:hover hr {
 /********/
 /* MAIN */
 /********/
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 main .card-section {
   border-radius: 3px;
   font-weight: 100;
@@ -130,6 +146,7 @@ main .card-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 main .card-section-large {
@@ -137,7 +154,7 @@ main .card-section-large {
 }
 
 main .card-section:hover {
-  transition: .5s;
+  transition: 0.35s;
   color: var(--background-color-01);
   background-color: var(--contrast-background-color-01);
 }
@@ -161,6 +178,63 @@ main .picture {
   border-radius: 3px;
 }
 
+main .rectangle-color-schema {
+  padding: 15px;
+  border-radius: 3px;
+  width: 80%;
+  margin: 2px 20px;
+  text-align: center;
+}
+
+main .rectangle01 {
+  background-color: #df9803;
+  color: var(--background-color-01);
+}
+
+main .rectangle02 {
+  background-color: #0a0443;
+  color: var(--contrast-background-color-01);
+}
+
+main .rectangle03 {
+  background-color: #2c2292;
+  color: var(--contrast-background-color-01);
+}
+
+main .rectangle04 {
+  background-color: #3c38e5;
+  color: var(--contrast-background-color-01);
+}
+
+main .rectangle05 {
+  background-color: #00b5b6;
+  color: var(--background-color-01);
+}
+
+main .rectangle06 {
+  background-color: #00e5df;
+  color: var(--background-color-01);
+}
+
+main .typography-card {
+  /* transition: 0.35s; */
+  /* color: var(--contrast-background-color-01); */
+  font-family: Rubik;
+}
+
+main .typography-section:hover #h3 {
+  transition: .35s;
+  color: var(--background-color-01);
+}
+
+#h3 {
+  color: var(--contrast-background-color-01);
+}
+
+.logo-image {
+  width: 150px;
+  padding-top: 15px;
+}
 
 /**********/
 /* FOOTER */
@@ -183,13 +257,22 @@ footer p {
   color: var(--bg-contrast-color-01);
 }
 
-#bg-button img {
+.bg-botton-small {
+  display: block;
   width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: -1;
   min-width: var(--min-width);
+}
+
+.bg-botton-medium {
+  display: none;
+}
+
+.bg-botton-large {
+  display: none;
 }
 
 /**************/
@@ -218,8 +301,32 @@ footer p {
   background: var(--contrast-background-color-01);
 }
 
+@media (max-width: 611px) {
+  header .bg-top-small {
+    top: -90px;
+  }
+}
+
+@media (max-width: 528px) {
+  header .bg-top-small {
+    top: -70px;
+  }
+}
+
+@media (max-width: 455px) {
+  header .bg-top-small {
+    top: -70px;
+  }
+}
+
+@media (max-width: 455px) {
+  header .bg-top-small {
+    top: -50px;
+  }
+}
+
 @media (max-width: 355px) {
-  #bg-top img {
+  header .bg-top-small {
     top: -30px;
   }
 }
@@ -229,7 +336,7 @@ footer p {
     height: var(--header-high) + 100px;
   }
 
-  #bg-top img {
+  header .bg-top-small {
     top: -10px;
   }
 
@@ -239,11 +346,8 @@ footer p {
 }
 
 @media (max-width: 300px) {
-  header {
-    /* height: 265px; */
-  }
 
-  #bg-top img {
+  header .bg-top-small {
     top: 0;
   }
 

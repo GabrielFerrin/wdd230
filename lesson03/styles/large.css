@@ -1,0 +1,41 @@
+@media (min-width: 1200px) {
+  main .card-section {
+    width: calc(30% - (var(--medium-padding) * 2));
+  }
+
+  header .bg-top-small {
+    display: none;
+  }
+
+  header .bg-top-medium {
+    display: none;
+  }
+
+  header .bg-top-large {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    z-index: -1;
+    min-width: var(--min-width);
+  }
+
+  footer .bg-bottom-small {
+    display: none;
+  }
+
+  footer .bg-botton-medium {
+    display: none;
+  }
+
+  footer .bg-botton-large {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    min-width: var(--min-width);
+  }
+}
