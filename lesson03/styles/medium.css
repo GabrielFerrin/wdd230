@@ -1,13 +1,10 @@
 @media (min-width: 611px) {
   :root {
     /* margins and paddings */
-    --medium-padding: 20px;
-    /* others */
-    --header-high: 300px;
-    --foother-high: 125px;
-    --min-width: 260px;
+    --padding: 20px;
     /* others */
     --header-high: 160px;
+    --foother-high: 125px;
   }
 
   /**********/
@@ -65,7 +62,7 @@
   }
 
   main .card-section {
-    width: calc(50% - (var(--medium-padding) * 2));
+    width: calc(50% - (var(--padding) * 2));
   }
 
   main .target-audience-section {

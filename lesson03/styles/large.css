@@ -1,6 +1,12 @@
 @media (min-width: 1200px) {
+  :root {
+      /* others */
+      --foother-high: 125px;
+      --header-high: 160px;
+    }
+
   main .card-section {
-    width: calc(30% - (var(--medium-padding) * 2));
+    width: calc(30% - (var(--padding) * 2));
   }
 
   header .bg-top-small {

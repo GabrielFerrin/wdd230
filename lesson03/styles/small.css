@@ -4,6 +4,7 @@
 :root {
   /* theme font */
   --font: "Roboto Condensed", Arial, 'Trebuchet MS';
+  /* theme colors */
   --font-color: #e4e4e4;
   --bg-contrast-color-01: #ff931e;
   --bg-contrast-color-02: #5d9ceb;
@@ -12,10 +13,8 @@
   --background-color-02: #0c0c0c;
   --background-color-03: #070707;
   --contrast-background-color-01: #ffffff;
-  /* theme colors */
-
   /* margins and paddings */
-  --small-padding: 15px;
+  --padding: 15px;
   /* others */
   --header-high: 300px;
   --foother-high: 125px;
@@ -75,7 +74,7 @@ header #title-bg {
 header h1 {
   color: var(--background-color-01);
   font-weight: normal;
-  padding: var(--small-padding);
+  padding: var(--padding);
   margin: 0;
 }
 
@@ -141,8 +140,8 @@ main .card-section {
   border-radius: 3px;
   font-weight: 100;
   background-color: var(--background-color-02);
-  margin: var(--small-padding);
-  padding: var(--small-padding);
+  margin: var(--padding);
+  padding: var(--padding);
   display: flex;
   flex-direction: column;
   align-items: center;
