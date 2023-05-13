@@ -58,6 +58,15 @@ header #profile-photo {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
+header .bg-top-small {
+  width: 100%;
+  min-height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  z-index: -1;
+}
+
 /* 
 header .bg-top-medium {
   display: none;
@@ -111,24 +120,6 @@ main {
   margin: var(--spacing);
 }
 
-header .bg-top-small {
-  width: 100%;
-  min-height: 50%;
-  position: absolute;
-  left: 0;
-  bottom: 50%;
-  z-index: -1;
-}
-
-main .menu-option {
-  list-style: none;
-  padding: var(--spacing);
-  margin: 0;
-  border-radius: 3px;
-  background-color: var(--background-color-02);
-  box-sizing: border-box;
-}
-
 main hr {
   /* position: absolute; */
   width: 100%;
@@ -140,6 +131,20 @@ main hr {
   /* left: 50%; */
   /* bottom: 6.5px; */
   /* transform: translate(-50%, 0); */
+}
+
+main .menu-option {
+  list-style: none;
+  margin: 0;
+  border-radius: 3px;
+  background-color: var(--background-color-02);
+  box-sizing: border-box;
+}
+
+main .menu-option:hover {
+  transition: 0.35s;
+  color: var(--background-color-01);
+  background-color: var(--contrast-background-color-01);
 }
 
 main h2 {
@@ -154,19 +159,15 @@ main ul {
 
 main a {
   text-decoration: none;
+  padding: var(--spacing);
   /* padding: 0.6em 0em;
   border-radius: 5px; */
 }
 
-main .card-section-large {
+/* main .card-section-large {
   text-align: center;
-}
+} */
 
-main .menu-option:hover {
-  transition: 0.35s;
-  color: var(--background-color-01);
-  background-color: var(--contrast-background-color-01);
-}
 
 main .menu-option .h3-subtitle {
   font-weight: 100;
@@ -184,7 +185,7 @@ main img {
 
 main h3 {
   color: var(--bg-contrast-color-01);
-  margin: 5px 0px;
+  margin: var(--spacing);
 }
 
 main p {
