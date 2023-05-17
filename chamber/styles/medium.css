@@ -1,0 +1,16 @@
+@media only screen and (min-width: 500px) {
+	/********/
+	/* MAIN */
+	/********/
+
+	main {
+		display: grid;
+		grid-template-columns: .75fr 0.25fr;
+		/* grid-template-rows: repeat(1fr, 5); */
+	}
+
+	main section,
+	article {
+		margin: 0;
+	}
+}

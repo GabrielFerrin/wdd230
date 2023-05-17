@@ -66,6 +66,7 @@ header {
   align-self: center;
   min-width: 64px;
   padding-right: var(--white-space);
+  padding-top: calc(var(--white-space) / 2);
 }
 
 .header-social img {
@@ -111,42 +112,40 @@ header {
 /********/
 main {
   background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  gap: var(--white-space);
+  padding: var(--white-space);
 }
 
-section {
+main section, article {
   padding: var(--white-space);
-  box-sizing: border-box;
+  height: 200px;
 }
 
 .hero {
-  min-height: 100px;
   background-color: rgb(0, 0, 0);
 }
 
 .event {
-  min-height: 100px;
   background-color: rgb(39, 39, 39);
 }
 
 .weather {
-  min-height: 100px;
   background-color: rgb(67, 67, 67);
 }
 
 .news {
-  min-height: 100px;
   background-color: rgb(87, 87, 87);
 }
 
 .spotlights {
-  min-height: 100px;
-  height: 100px;
+  height: 400px;
   padding: var(--white-space);
   background-color: rgb(115, 115, 115);
 }
 
 article {
-  min-height: 10px;
   height: calc(50% - var(--white-space) * 2);
   padding: var(--white-space);
 }
@@ -210,9 +209,9 @@ footer p {
 .footer-contact {
   background-color: magenta;
   display: flex;
-  padding: 6px 0;
+  padding: var(--white-space) 0;
   flex-direction: column;
-  /* justify-content: space-between; */
+  gap: calc(var(--white-space) / 2);
 }
 
 .footer-contact p {
