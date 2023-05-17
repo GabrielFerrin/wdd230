@@ -1,7 +1,11 @@
 // hamburger menu
 function toggleMenu() {
-	document.getElementById('hamburger-menu')[0]
+	document.getElementsByClassName('header-menu')[0]
 	.classList.toggle('responsive');
+
+	// document
+	// .getElementsByClassName('navigation')[0]
+	// .classList.toggle('responsive');
 }
 
 const now = new Date();
