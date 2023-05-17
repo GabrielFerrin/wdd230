@@ -3,6 +3,18 @@
 :root {
   /* theme font */
   --font: "Rubik", Arial, 'Trebuchet MS';
+  /* theme colors */
+  --primary01: #0a0443;
+  --primary02: #2c2292;
+  --primary03: #3c38e5;
+  --secondary01: #00b5b6;
+  --secondary02: #00e5df;
+  --warn: #df9803;
+  --font-color: #1b1b1b;
+  --contrast-font-color01: #fff;
+  --contrast-font-color02: #c4c4c4;
+  --bg--contrast-light-01: #ebebeb;
+  /* spacing */
   --white-space: 10px;
 }
 
@@ -16,7 +28,6 @@ body {
 /* HEADER */
 /**********/
 header {
-  background-color: blue;
   padding: var(--white-space);
   margin-bottom: var(--white-space);
   display: grid;
@@ -30,10 +41,6 @@ header {
 
 .header-logo {
   width: 55px;
-}
-
-.header-title-title {
-  background-color: brown;
 }
 
 .header-heading {
@@ -50,6 +57,8 @@ header {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  padding-left: var(--white-space);
+  font-size: 1.2em;
 }
 
 .header-title-title p {
@@ -62,7 +71,6 @@ header {
 }
 
 .header-social {
-  background-color: yellow;
   text-align: right;
   align-self: center;
   min-width: 64px;
@@ -75,32 +83,45 @@ header {
 }
 
 .header-menu {
-  background-color: green;
+  position: relative;
+  height: 28px;
+  width: 28px;
 }
 
 .header-menu a {
+  position: relative;
+  border: var(--primary01) 1px solid;
+  display: block;
   text-decoration: none;
-  background-color: aqua;
-  color: black;
-  padding: 3px 7px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 .header-menu a:hover {
-  background-color: red;
+  background-color: var(--primary01);
+  color: var(--bg--contrast-light-01);
+}
+
+.header-menu #hamburger-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: yellow;
+}
+
+.responsive {
+  display: block;
 }
 
 .header-date {
-  background-color: violet;
   grid-column: 1/3;
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 40px;
   margin-top: 0.6em;
-}
-
-#header-date {
-  background-color: #fff;
+  background-color: var(--bg--contrast-light-01);
 }
 
 .center {
@@ -112,70 +133,66 @@ header {
 /* MAIN */
 /********/
 main {
-  background-color: yellow;
   display: flex;
   flex-direction: column;
   gap: var(--white-space);
   padding: var(--white-space);
 }
 
-main section, article {
+main section, article, .spotlights {
+  border-radius: 3px;
   padding: var(--white-space);
   height: 200px;
+  background-color: var(--primary02);
+  color: var(--contrast-font-color02);
 }
 
 .hero {
-  background-color: rgb(0, 0, 0);
+  background-color: var(--primary01);
 }
 
 .event {
-  background-color: rgb(39, 39, 39);
+  background-color: var(--primary02);
+
 }
 
 .weather {
-  background-color: rgb(67, 67, 67);
 }
 
 .news {
-  background-color: rgb(87, 87, 87);
 }
 
 .join {
   display: none;
-  background-color: rgb(87, 87, 87);
 }
 
 .spotlights {
   height: 400px;
-  padding: var(--white-space);
-  background-color: rgb(115, 115, 115);
 }
 
 article {
-  height: calc(50% - var(--white-space) * 2);
+  height: calc(50% - var(--white-space) * 2.3);
   padding: var(--white-space);
-}
+  border: var(--primary03) 1px solid;
+  background-color: var(--bg--contrast-light-01);
+  color: var(--font-color);
+} 
 
 .spotlights article:first-child {
-  background-color: #fff;
 }
 
 .spotlights article:nth-child(2) {
-  background-color: aquamarine;
 }
 
 .spotlights article:last-child {
   display: none;
-  background-color: cadetblue;
 }
 
 /**********/
 /* FOOTER */
 /**********/
 footer {
-  background-color: orange;
   margin-top: var(--white-space);
-
 }
 
 footer p {
@@ -184,7 +201,6 @@ footer p {
 }
 
 .footer-logo {
-  background-color: red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -197,7 +213,6 @@ footer p {
 }
 
 .footer-address {
-  background-color: green;
   padding: 2px 0;
   display: flex;
   flex-direction: column;
@@ -216,7 +231,6 @@ footer p {
 }
 
 .footer-contact {
-  background-color: magenta;
   display: flex;
   justify-content: center;
   padding: var(--white-space) 0;
@@ -229,10 +243,25 @@ footer p {
   padding: 2px;
 }
 
+footer .footer-contact p a {
+  position: relative;
+}
+
+footer .footer-contact p img {
+  position: absolute;
+  left: -14px;
+  width: 10px;
+}
+
 .footer-copyright {
-  background-color: yellow;
+  font-size: 0.9em;
   padding: var(--white-space);
   text-align: center;
+}
+
+.footer-copyright hr {
+  border-color: var(--bg--contrast-light-01);
+  width: 100%;
 }
 
 .footer-copyright p:last-child {
