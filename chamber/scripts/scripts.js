@@ -14,3 +14,8 @@ document.getElementById('copyright')
 // last modified
 document.getElementById('last-modified')
 	.innerText = 'Last Modification: ' + document.lastModified;
+
+const copyrightLine = copyrightDate.getFullYear();
+
+document.getElementById('copyright-line')
+	.innerText = copyrightLine;

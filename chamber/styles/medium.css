@@ -45,4 +45,37 @@
 		display: block;
 		grid-area: main-join;
 	}
+
+	
+	/**********/
+	/* FOOTER */
+	/**********/
+	footer .footer-wrapper {
+		display: flex;
+	}
+
+	footer .footer-address {
+		padding-left: var(--white-space);
+		justify-content: center;
+		width: 50%;
+		align-content: flex-start;
+		align-items: flex-start;
+	}
+
+	footer .footer-contact {
+		width: 50%;
+		gap: 0;
+	}
+
+	footer .footer-copyright p {
+		display: none;
+	}
+
+	footer .footer-copyright p:last-child {
+		display: block;
+	}
+
+	main {
+		display: none;
+	}
 }

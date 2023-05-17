@@ -198,12 +198,12 @@ footer p {
 
 .footer-address {
   background-color: green;
-  text-align: center;
   padding: 2px 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-address p {
@@ -218,9 +218,11 @@ footer p {
 .footer-contact {
   background-color: magenta;
   display: flex;
+  justify-content: center;
   padding: var(--white-space) 0;
   flex-direction: column;
   gap: calc(var(--white-space) / 2);
+  text-align: center;
 }
 
 .footer-contact p {
@@ -231,4 +233,8 @@ footer p {
   background-color: yellow;
   padding: var(--white-space);
   text-align: center;
+}
+
+.footer-copyright p:last-child {
+  display: none;
 }

@@ -2,8 +2,10 @@
 	:root {
 		--white-space: 8px;
 	}
-	
 
+	/********/
+	/* MAIN */
+	/********/
 	main {
 		margin: 0 calc(var(--white-space) * 2);
 		grid-template-columns: 1fr 2.1fr 1fr;
@@ -12,9 +14,6 @@
 			"main-event main-hero main-spotlights"
 			"main-weather main-hero main-spotlights"
 			"main-join main-news main-spotlights"
-			/* "main-event main-hero main-spotlights" */
-			/* "main-weather main-hero main-spotlights" */
-			/* "main-join main-news main-spotlights" */
 		;
 	}
 
@@ -41,7 +40,7 @@
 		width: calc(100% - var(--white-space) * 2);
 	}
 
-	.spotlights article:last-child {
+	main .spotlights article:last-child {
 		display: block;
 	}
 }
