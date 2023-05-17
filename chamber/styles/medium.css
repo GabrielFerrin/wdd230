@@ -1,16 +1,48 @@
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 700px) {
 	/********/
 	/* MAIN */
 	/********/
 
 	main {
 		display: grid;
-		grid-template-columns: .75fr 0.25fr;
-		/* grid-template-rows: repeat(1fr, 5); */
+		grid-template-columns: .65fr 0.35fr;
+		grid-template-areas:
+			"main-hero main-hero"
+			"main-news main-news"
+			"main-spotlights main-spotlights"
+			"main-join main-join"
+		;
+		padding: var(--white-space) 0;
 	}
 
 	main section,
 	article {
 		margin: 0;
+	}
+
+	main .hero {
+		grid-area: main-hero;
+	}
+
+	main .news {
+		grid-area: main-news;
+	}
+
+	main .spotlights {
+		grid-area: main-spotlights;
+		display: flex;
+		flex-direction: row;
+		gap: calc(var(--white-space) / 2);
+		height: 200px;
+	}
+
+	main .spotlights article {
+		height: calc(100% - var(--white-space) * 2);
+		width: calc(50% - var(--white-space) * 2);
+	}
+
+	.join {
+		display: block;
+		grid-area: main-join;
 	}
 }

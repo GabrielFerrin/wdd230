@@ -18,6 +18,7 @@ body {
 header {
   background-color: blue;
   padding: var(--white-space);
+  margin-bottom: var(--white-space);
   display: grid;
   grid-template-columns: 1.7fr 0.4fr;
   grid-template-rows: 0.6fr 0.4fr;
@@ -139,6 +140,11 @@ main section, article {
   background-color: rgb(87, 87, 87);
 }
 
+.join {
+  display: none;
+  background-color: rgb(87, 87, 87);
+}
+
 .spotlights {
   height: 400px;
   padding: var(--white-space);
@@ -160,6 +166,7 @@ article {
 
 .spotlights article:last-child {
   display: none;
+  background-color: cadetblue;
 }
 
 /**********/
@@ -167,6 +174,8 @@ article {
 /**********/
 footer {
   background-color: orange;
+  margin-top: var(--white-space);
+
 }
 
 footer p {
