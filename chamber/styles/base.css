@@ -10,6 +10,8 @@
   --secondary01: #00b5b6;
   --secondary02: #00e5df;
   --warn: #df9803;
+  /* default border radius */
+  --default-border-radius: 4px;
   /* extra colors */
   --font-color: #1b1b1b;
   --contrast-font-color01: #fff;
@@ -23,6 +25,8 @@ body {
   margin: 0;
   font-family: var(--font);
   min-width: 240px;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
 /*******************/
@@ -108,7 +112,7 @@ header {
   height: 100%;
   width: 100%;
   text-align: center;
-  border-radius: 3px;
+  border-radius: var(--default-border-radius);
   z-index: 99;
 }
 
@@ -135,7 +139,7 @@ header {
   right: -2px;
   background-color: var(--primary01);
   padding: var(--white-space);
-  border-radius: 3px;
+  border-radius: var(--default-border-radius);
 }
 
 .responsive div {
@@ -179,7 +183,7 @@ main {
 }
 
 main section, article, .spotlights {
-  border-radius: 3px;
+  border-radius: var(--default-border-radius);
   padding: var(--white-space);
   height: 200px;
   background-color: var(--primary02);

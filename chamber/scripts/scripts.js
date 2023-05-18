@@ -1,5 +1,5 @@
 // hamburger menu
-function toggleMenu() {
+let toggleMenu = _ => {
 	document.getElementsByClassName('header-menu')[0]
 		.classList.toggle('responsive');
 
@@ -10,7 +10,7 @@ function toggleMenu() {
 }
 
 // hide menu background
-function hideMenuBG() {
+let hideMenuBG = _ => {
 	document.getElementsByClassName('menu-background')[0]
 		.style.display = "none";
 	document.getElementsByClassName('header-menu')[0]
