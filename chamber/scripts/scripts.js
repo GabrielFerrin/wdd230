@@ -3,11 +3,13 @@ function toggleMenu() {
 	document.getElementsByClassName('header-menu')[0]
 		.classList.toggle('responsive');
 
+	const isBGOn = document.getElementsByClassName('menu-background')[0]
+	.style.display == "block";
 	document.getElementsByClassName('menu-background')[0]
-		.style.display = "block";
+		.style.display = isBGOn ? "none" : "block";
 }
 
-// hide meny background
+// hide menu background
 function hideMenuBG() {
 	document.getElementsByClassName('menu-background')[0]
 		.style.display = "none";
