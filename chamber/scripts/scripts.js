@@ -1,11 +1,18 @@
 // hamburger menu
 function toggleMenu() {
 	document.getElementsByClassName('header-menu')[0]
-	.classList.toggle('responsive');
+		.classList.toggle('responsive');
 
-	// document
-	// .getElementsByClassName('navigation')[0]
-	// .classList.toggle('responsive');
+	document.getElementsByClassName('menu-background')[0]
+		.style.display = "block";
+}
+
+// hide meny background
+function hideMenuBG() {
+	document.getElementsByClassName('menu-background')[0]
+		.style.display = "none";
+	document.getElementsByClassName('header-menu')[0]
+		.classList.toggle('responsive');
 }
 
 const now = new Date();
