@@ -1,6 +1,9 @@
 const input = document.getElementById('favchap');
 const button = document.querySelector('button');
 const list = document.getElementById('list');
+setTimeout(() => {
+	input.focus();
+}, 400);
 
 button.addEventListener('click', () => {
 	if (input.value != '') {
