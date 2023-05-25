@@ -158,6 +158,7 @@ main ul {
 }
 
 main a {
+  display: block;
   text-decoration: none;
   padding: var(--spacing);
   /* padding: 0.6em 0em;
