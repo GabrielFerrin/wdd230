@@ -101,9 +101,63 @@ header {
 
 .header-menu {
   position: relative;
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
 }
+
+/* ↓ menu-button source: https://codepen.io/ainalem/pen/wvKOEMV */
+.menu-button {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  border: black 1px solid;
+  border-radius: var(--default-border-radius);
+  z-index: 99;
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+/* ↑ menu-button source: https://codepen.io/ainalem/pen/wvKOEMV */
 
 .header-menu a {
   position: relative;
@@ -130,7 +184,6 @@ header {
   margin-top: 0.6em;
   background-color: var(--bg--contrast-light-01);
 }
-
 
 .header-menu div {
   display: none;
@@ -182,7 +235,9 @@ main {
   padding: var(--white-space);
 }
 
-main section, article, .spotlights {
+main section,
+article,
+.spotlights {
   border-radius: var(--default-border-radius);
   padding: var(--white-space);
   height: 200px;
@@ -197,13 +252,16 @@ main section, article, .spotlights {
 }
 
 .hero img {
-  position: absolute;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  /* position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 3px;
-  z-index: 1;
+  z-index: 1; */
 }
 
 .hero p {
@@ -217,11 +275,9 @@ main section, article, .spotlights {
 
 }
 
-.weather {
-}
+.weather {}
 
-.news {
-}
+.news {}
 
 .join {
   display: none;
@@ -237,13 +293,11 @@ article {
   border: var(--primary03) 1px solid;
   background-color: var(--bg--contrast-light-01);
   color: var(--font-color);
-} 
-
-.spotlights article:first-child {
 }
 
-.spotlights article:nth-child(2) {
-}
+.spotlights article:first-child {}
+
+.spotlights article:nth-child(2) {}
 
 .spotlights article:last-child {
   display: none;

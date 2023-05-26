@@ -12,7 +12,7 @@ button.addEventListener('click', () => {
 		li.innerText = input.value;
 		deleteButton.innerText = '❌';
 		deleteButton.classList.add('delete');
-		deleteButton.ariaLabel = `Remove: ${input.innerText}`;
+		deleteButton.ariaLabel = `Remove: ${input.value}`;
 		deleteButton.addEventListener('click', (event) => {
 			event.currentTarget.parentNode.remove();
 			input.focus();
@@ -21,5 +21,7 @@ button.addEventListener('click', () => {
 		list.append(li);
 		input.focus();
 		input.value = '';
-	}
+	} else
+		input.focus();
+
 });

@@ -1,8 +1,13 @@
 // hamburger menu
 let toggleMenu = _ => {
+	// menu button
+  const menuButton = document.getElementById('menu-button');
+	menuButton.classList.toggle('opened');
+
 	document.getElementsByClassName('header-menu')[0]
 		.classList.toggle('responsive');
 
+	// background when menu is active
 	const isBGOn = document.getElementsByClassName('menu-background')[0]
 	.style.display == "block";
 	document.getElementsByClassName('menu-background')[0]
