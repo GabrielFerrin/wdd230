@@ -72,15 +72,10 @@
 </header>
 <main>
   <section class="hero">Hero
-    <img 
-    srcset="
-      images/cat.jpeg 300w,
-      images/hero-medium.jpg 500w
-    "
-    sizes="(max-width: 600px) 300px, 500px"
-    src="images/hero-medium.jpg"
-      alt=""
-    >
+    <picture>
+      <source media="(min-width: 651px)" srcset="images/hero-large.jpg">
+      <img src="images/cat.jpeg" alt="">
+    </picture>
   </section>
   <section class="event">Event</section>
   <section class="weather">Weather</section>
