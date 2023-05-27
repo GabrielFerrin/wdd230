@@ -1,8 +1,29 @@
 @media only screen and (min-width: 651px) {
+
+	/**********/
+	/* HEADER */
+	/**********/
+	header {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0;
+	}
+
+	.announcement-banner p {
+		font-size: 1.5em;
+	}
+
+	.header-title-wrapper {
+		padding-left: var(--white-space);
+	}
+
+	.header-social-wrapper {
+		padding-right: var(--white-space);
+	}
+
 	/********/
 	/* MAIN */
 	/********/
-
 	main {
 		display: grid;
 		grid-template-columns: .65fr 0.35fr;

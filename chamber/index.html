@@ -19,28 +19,28 @@
   <title>Manta Chamber of Commerce</title>
 </head>
 
-<div class="menu-background" onclick="hideMenuBG()"></div>
+<div class="menu-background" onclick="toggleMenu()"></div>
 <header>
+  <div class="announcement-banner" id="announcement-banner">
+    <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+  </div>
   <div class="header-title-wrapper">
-    <img class="header-logo center" src="images/logo-svg.svg" alt="Company_logo" width="55" height="55">
+    <img class="header-logo center" src="images/logo.webp" alt="Company_logo" width="55" height="55">
     <div class="header-title-title">
-      <h1 class="header-heading">Mantaaa</h1>
+      <h1 class="header-heading">Manta</h1>
       <p class="header-subtitle">Chamber of Commerce</p>
     </div>
   </div>
   <div class="header-social-wrapper">
     <div class="header-social">
-      <img src="images/facebook-30px.webp" alt="" width="30" height="30">
-      <img src="images/linkedin-30px.webp" alt="" width="30" height="30">
+      <img src="images/facebook-30px.svg" alt="" width="30" height="30">
+      <img src="images/linkedin-30px.svg" alt="" width="30" height="30">
     </div>
     <div class="header-menu center">
-      <!-- <a href="#" onclick="toggleMenu()">&#9776;</a> -->
       <!-- source: https://codepen.io/ainalem/pen/wvKOEMV -->
-      <button id="menu-button" class="menu-button"
-        onclick="toggleMenu();
-        // this.classList.toggle('opened');
-        this.setAttribute('aria-expanded', this.classList
-          .contains('opened'))" aria-label="Main Menu">
+      <button 
+        id="menu-button" class="menu-button" onclick="toggleMenu();"
+        aria-label="Main Menu">
         <svg viewBox="0 0 100 100">
           <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,
             29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,
@@ -71,11 +71,16 @@
   </div>
 </header>
 <main>
-  <section class="hero">Hero
+  <section class="hero">
     <picture>
-      <source media="(min-width: 651px)" srcset="images/hero-large.jpg">
-      <img src="images/cat.jpeg" alt="">
+      <source media="(min-width: 990px)" srcset="images/hero-large.jpg">
+      <source media="(min-width: 651px)" srcset="images/hero-medium.jpg">
+      <img src="images/hero-small.jpg" alt="Business people discussing">
     </picture>
+    <div class="hero-wrapper">
+      <h2>Welcome to Manta</h2>
+      <button>Join the Chamber</button>
+    </div>
   </section>
   <section class="event">Event</section>
   <section class="weather">Weather</section>
@@ -90,7 +95,7 @@
 <footer>
   <div class="footer-wrapper">
     <div class="footer-logo">
-      <img src="images/logo-svg.svg" alt="Manta_Chamber_of_Commerce_Logo" width="55" height="55">
+      <img src="images/logo.webp" alt="Manta_Chamber_of_Commerce_Logo" width="55" height="55">
     </div>
     <div class="footer-address">
       <p class="footer-title">Manta Chamber of Commerce</p>
@@ -123,7 +128,7 @@
 
 
 <body>
-  <script src="scripts/scripts.js"></script>
+  <script defer src="scripts/scripts.js"></script>
 </body>
 
 </html>
