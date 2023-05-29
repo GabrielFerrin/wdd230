@@ -62,7 +62,7 @@
 		width: calc(50% - var(--white-space) * 2);
 	}
 
-	.join {
+	main .join {
 		display: block;
 		grid-area: main-join;
 	}

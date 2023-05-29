@@ -7,6 +7,7 @@
   --primary01: #0a0443;
   --primary02: #2c2292;
   --primary03: #3c38e5;
+  --primary03-opaque: #2624c9;
   --secondary01: #00b5b6;
   --secondary02: #00e5df;
   --warn: #f1a500;
@@ -25,7 +26,7 @@
 body {
   margin: 0;
   font-family: var(--font);
-  min-width: 240px;
+  min-width: 360px;
   max-width: 1700px;
   margin: 0 auto;
 }
@@ -34,7 +35,12 @@ a:visited {
   color: var(--primary03);
 }
 
-p, h1, h2, h3, h4, h5 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
@@ -52,11 +58,15 @@ button {
 button:hover {
   background-color: var(--warn-opaque);
   cursor: pointer;
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24),0 2px 2px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
 }
 
 button:active {
   box-shadow: 0 1px #666;
+}
+
+hr {
+  margin: 0;
 }
 
 /*******************/
@@ -208,10 +218,12 @@ header {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
+
 .line2 {
   stroke-dasharray: 60 60;
   stroke-width: 6;
 }
+
 .line3 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
@@ -222,16 +234,19 @@ header {
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
+
 .opened .line2 {
   stroke-dasharray: 1 60;
   stroke-dashoffset: -30;
   stroke-width: 6;
 }
+
 .opened .line3 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
+
 /* ↑ menu-button source: https://codepen.io/ainalem/pen/wvKOEMV */
 
 .header-menu a {
@@ -315,13 +330,16 @@ main {
 }
 
 main section,
+.spotlights {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+main section,
 article,
 .spotlights {
   border-radius: var(--default-border-radius);
   padding: var(--white-space);
   height: 200px;
-  background-color: var(--primary02);
-  color: var(--contrast-font-color02);
 }
 
 .hero {
@@ -352,7 +370,7 @@ article,
   box-sizing: border-box;
 }
 
-.hero h2 {
+.hero h1 {
   color: black;
   text-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
 }
@@ -362,20 +380,93 @@ article,
   width: 200px;
 }
 
-.event {
-  background-color: var(--primary02);
-
+main .news {
+  display: flex;
+  flex-direction: column;
+  gap: var(--white-space);
+  text-align: center;
 }
 
-.join {
+main .event {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: auto 120px auto;
+  gap: var(--white-space);
+  text-align: center;
+}
+
+main .event h2 {
+  grid-column: 1/3;
+}
+
+main .event button {
+  grid-column: 2/3;
+  background-color: var(--primary03);
+  font-size: 0.8em;
+  width: 100%;
+  height: 30px;
+  align-self: flex-end;
+}
+
+main .event button:hover {
+  background-color: var(--primary03-opaque);
+}
+
+main .news {
+  background-color: var(--primary02);
+  color: var(--contrast-font-color02);
+}
+
+main .news h2 {
+  color: var(--contrast-font-color01);
+}
+
+main .news p,
+main .event p {
+  width: 60%;
+  font-size: .87em;
+  align-self: center;
+}
+
+main .event p {
+  width: 100%;
+  grid-row: 2/4;
+}
+
+main .news-separator-wrapper {
+  display: flex;
+  width: 100%;
+  height: 160px;
+  gap: var(--white-space);
+}
+
+main .news .news-picture-wrapper {
+  width: 40%;
+}
+
+main .news picture,
+main .event picture {
+  display: block;
+  height: 100%;
+}
+
+main .news picture img,
+main .event picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--default-border-radius);
+}
+
+main .join {
   display: none;
 }
 
-.spotlights {
+main .spotlights {
   height: 400px;
 }
 
-article {
+main .spotlights article {
   height: calc(50% - var(--white-space) * 2.3);
   padding: var(--white-space);
   border: var(--primary03) 1px solid;
@@ -383,7 +474,35 @@ article {
   color: var(--font-color);
 }
 
-.spotlights article:last-child {
+main .spotlights article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--white-space);
+}
+
+main .spotlights article picture:first-child img {
+  height: 35px;
+  align-self: center;
+}
+
+main .spotlights .article-separator {
+  font-size: 0.70rem;
+}
+
+main .spotlights hr {
+  margin: calc(var(--white-space) / 2);
+}
+
+main .spotlights .article-small-p {
+  font-size: 0.65rem;
+}
+
+main .spotlights article picture:nth-child(2) img {
+  height: 65px;
+}
+
+main .spotlights article:last-child {
   display: none;
 }
 
