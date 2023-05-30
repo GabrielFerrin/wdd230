@@ -262,6 +262,7 @@ header .expanded {
   text-align: center;
   border-radius: var(--default-border-radius);
   z-index: 99;
+  transition: .3s;
 }
 
 .hamburger-menu a:hover {
