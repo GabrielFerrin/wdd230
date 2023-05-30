@@ -3,6 +3,66 @@
 		--white-space: 8px;
 	}
 
+	/**********/
+	/* HEADER */
+	/**********/
+
+	header {
+		grid-template-columns: 2.4fr 0.4fr;
+	}
+
+	header .header-title-wrapper {
+		display: grid;
+		grid-template-columns: 80px 190px 1fr;
+	}
+
+	header .header-menu {
+		display: none;
+	}
+
+	header .hamburger-menu {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-self: center;
+		justify-self: flex-end;
+		width: 600px;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	header .hamburger-menu ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-self: flex-end;
+		margin: 0;
+		margin-left: calc(var(--white-space) * 6);
+		height: 40px;
+	}
+
+	header .hamburger-menu ul a:first-child {
+		border: none;
+	}
+		
+	header .hamburger-menu ul a {
+		width: 90px;
+		height: auto;
+		padding: 0.6rem;
+		border: none;
+		color: var(--font-color);
+	}
+
+	.header-menu a:hover {
+		background-color: var(--warn);
+		color: var(--bg--contrast-light-01);
+	}
+
+	.header-title-title{
+		width: auto;
+	}
+
 	/********/
 	/* MAIN */
 	/********/
@@ -19,7 +79,6 @@
 
 	main .hero {
 		height: calc(400px + var(--white-space) * 3);
-		
 	}
 
 	main .event {

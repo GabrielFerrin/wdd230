@@ -149,6 +149,10 @@ header {
   margin: 0;
 }
 
+header .expanded {
+  display: none;
+}
+
 .header-social-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -249,7 +253,7 @@ header {
 
 /* ↑ menu-button source: https://codepen.io/ainalem/pen/wvKOEMV */
 
-.header-menu a {
+.hamburger-menu a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -260,7 +264,7 @@ header {
   z-index: 99;
 }
 
-.header-menu a:hover {
+.hamburger-menu a:hover {
   background-color: var(--warn);
   color: var(--bg--contrast-light-01);
 }
@@ -275,7 +279,7 @@ header {
   background-color: var(--bg--contrast-light-01);
 }
 
-.header-menu div {
+.hamburger-menu {
   display: none;
   position: absolute;
   width: 200px;

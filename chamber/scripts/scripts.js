@@ -34,9 +34,7 @@ document.getElementById('header-date')
 
 // show banner Mondays and Tesdays
 if (now.getDay() == 1 || now.getDay() == 2) {
-	setTimeout(() => {
-		document.getElementById('announcement-banner').style.display = "flex";
-	}, 1000);
+	document.getElementById('announcement-banner').style.display = "flex";
 }
 
 // copyright
