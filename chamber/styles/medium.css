@@ -60,6 +60,7 @@
 	main .spotlights article {
 		height: calc(100% - var(--white-space) * 2);
 		width: calc(50% - var(--white-space) * 2);
+		border: none;
 	}
 
 	main .join {

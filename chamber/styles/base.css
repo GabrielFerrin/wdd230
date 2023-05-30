@@ -474,6 +474,7 @@ main .spotlights {
 main .spotlights article {
   height: calc(50% - var(--white-space) * 2.3);
   padding: var(--white-space);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   border: var(--primary03) 1px solid;
   background-color: var(--bg--contrast-light-01);
   color: var(--font-color);

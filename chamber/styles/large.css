@@ -64,6 +64,7 @@
 		flex-direction: column;
 		text-align: center;
 		gap: var(--white-space);
-		background-color: var(--contrast-font-color01);
+		background-color: var(--font-color);
+		color: var(--bg--contrast-light-01);
 	}
 }

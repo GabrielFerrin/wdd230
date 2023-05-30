@@ -97,7 +97,7 @@
     <h2>Weather</h2>
     <div class="weather-separator-01">
       <picture>
-        <img src="images/cloudy.png" alt="">
+        <img src="images/cloudy.svg" alt="">
       </picture>
       <p><span id="temperature">33</span>°C</p>
     </div>
@@ -117,7 +117,9 @@
     <div class="news-separator-wrapper">
       <div class="news-picture-wrapper">
         <picture>
-          <img src="images/news-picture1.webp" alt="" height="100%">
+          <source media="(min-width: 990px)" srcset="images/news-picture-large.webp">
+          <source media="(min-width: 651px)" srcset="images/news-picture-landscape.webp">
+          <img src="images/news-picture-portrait.webp" alt="" height="100%">
         </picture>
       </div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
