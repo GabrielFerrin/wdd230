@@ -19,10 +19,28 @@
 
 	main .hero {
 		height: calc(400px + var(--white-space) * 3);
+		
 	}
 
 	main .event {
 		grid-area: main-event;
+		display: block;
+		text-align: center;
+	}
+
+	main .event-picture-wrapper {
+		height: 130px;
+		width: 200px;
+		margin: 0 auto;
+		margin-bottom: var(--white-space);
+	}
+
+	main .event p {
+		display: none;
+	}
+
+	main .event button {
+		width: 70%;
 	}
 
 	main .weather {
@@ -41,6 +59,11 @@
 	}
 
 	main .spotlights article:last-child {
-		display: block;
+		width: calc(100% - var(--white-space) * 2);
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: var(--white-space);
+		background-color: var(--contrast-font-color01);
 	}
 }

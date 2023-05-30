@@ -26,7 +26,7 @@
 	/********/
 	main {
 		display: grid;
-		grid-template-columns: .65fr 0.35fr;
+		grid-template-columns: 1fr 0.35fr;
 		grid-template-areas:
 			"main-hero main-hero"
 			"main-news main-news"
@@ -63,10 +63,17 @@
 	}
 
 	main .join {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-evenly;
 		grid-area: main-join;
 	}
 
+	main .join p {
+		width: 70%;
+	}
 
 	/**********/
 	/* FOOTER */
