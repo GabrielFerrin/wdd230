@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="styles/medium.css">
   <link rel="stylesheet" href="styles/large.css">
   <title>Manta Chamber of Commerce</title>
+  <script defer src="scripts/scripts.js"></script>
+  <script defer src="scripts/windchill.js"></script>
 </head>
 
 <div class="menu-background" onclick="toggleMenu()"></div>
@@ -108,7 +110,7 @@
       <picture>
         <img src="images/cloudy.svg" alt="">
       </picture>
-      <p><span id="temperature">33</span>°C</p>
+      <p><span id="temperature">-20</span>°C</p>
     </div>
     <div class="weather-separator-02">
       <p><strong>Partly Cloudy</strong></p>
@@ -116,8 +118,8 @@
       <div class="weather-separator-03">
         <p>Wind Speed:</p>
         <p>Wind Chill:</p>
-        <p>2.5 km/h</p>
-        <p>N/A</p>
+        <p><span id="wind-speed">55</span> km/h</p>
+        <p><span id="windchill">N/A</span></p>
       </div>
     </div>
   </section>
@@ -226,7 +228,6 @@
 
 
 <body>
-  <script defer src="scripts/scripts.js"></script>
 </body>
 
 </html>
