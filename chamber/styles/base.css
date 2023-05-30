@@ -468,6 +468,10 @@ main .join {
   text-align: center;
 }
 
+main .join h2 {
+  display: none;
+}
+
 main .join button {
   width: 	100%;
 }
