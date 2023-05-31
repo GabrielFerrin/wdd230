@@ -335,13 +335,13 @@ main {
 }
 
 main section,
-.spotlights {
+.spotlights-wrapper {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 main section,
-article,
-.spotlights {
+.spotlight,
+.spotlights-wrapper {
   border-radius: var(--default-border-radius);
   padding: var(--white-space);
   height: 200px;
@@ -476,11 +476,11 @@ main .join button {
   width: 	100%;
 }
 
-main .spotlights {
+main .spotlights-wrapper {
   height: 400px;
 }
 
-main .spotlights article {
+main .spotlights-wrapper .spotlight {
   height: calc(50% - var(--white-space) * 2.3);
   padding: var(--white-space);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -489,35 +489,35 @@ main .spotlights article {
   color: var(--font-color);
 }
 
-main .spotlights article {
+main .spotlights-wrapper .spotlight {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: var(--white-space);
 }
 
-main .spotlights article picture:first-child img {
+main .spotlights-wrapper .spotlight picture:first-child img {
   height: 35px;
   align-self: center;
 }
 
-main .spotlights .article-separator {
+main .spotlights-wrapper .article-separator {
   font-size: 0.70rem;
 }
 
-main .spotlights hr {
+main .spotlights-wrapper hr {
   margin: calc(var(--white-space) / 2);
 }
 
-main .spotlights .article-small-p {
+main .spotlights-wrapper .article-small-p {
   font-size: 0.65rem;
 }
 
-main .spotlights article picture:nth-child(2) img {
+main .spotlights-wrapper .spotlight picture:nth-child(2) img {
   height: 65px;
 }
 
-main .spotlights article:last-child {
+main .spotlights-wrapper .spotlight:last-child {
   display: none;
 }
 

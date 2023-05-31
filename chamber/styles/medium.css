@@ -37,7 +37,7 @@
 	}
 
 	main section,
-	article {
+	.spotlight {
 		margin: 0;
 	}
 
@@ -49,7 +49,7 @@
 		grid-area: main-news;
 	}
 
-	main .spotlights {
+	main .spotlights-wrapper {
 		grid-area: main-spotlights;
 		display: flex;
 		flex-direction: row;
@@ -57,7 +57,7 @@
 		height: 200px;
 	}
 
-	main .spotlights article {
+	main .spotlights-wrapper .spotlight {
 		height: calc(100% - var(--white-space) * 2);
 		width: calc(50% - var(--white-space) * 2);
 		border: none;

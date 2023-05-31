@@ -106,18 +106,18 @@
 		grid-area: main-weather;
 	}
 
-	main .spotlights {
+	main .spotlights-wrapper {
 		height: calc(600px + var(--white-space) * 6);
 		flex-direction: column;
 		padding: calc(var(--white-space) * 1.2);
 		gap: calc(var(--white-space) / 2);
 	}
 
-	main .spotlights article {
+	main .spotlights-wrapper .spotlight {
 		width: calc(100% - var(--white-space) * 2);
 	}
 
-	main .spotlights article:last-child {
+	main .spotlights-wrapper .spotlight:last-child {
 		width: calc(100% - var(--white-space) * 2);
 		display: flex;
 		flex-direction: column;
