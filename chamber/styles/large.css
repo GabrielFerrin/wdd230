@@ -38,7 +38,7 @@
 		flex-wrap: nowrap;
 		align-self: flex-end;
 		margin: 0;
-		margin-left: calc(var(--white-space) * 6);
+		/* margin-left: calc(var(--white-space) * 6); */
 		height: 40px;
 	}
 
@@ -63,10 +63,10 @@
 		width: auto;
 	}
 
-	/********/
-	/* MAIN */
-	/********/
-	main {
+	/******************/
+	/* MAIN HOME-PAGE */
+	/******************/
+	.home-main {
 		margin: 0 calc(var(--white-space) * 2);
 		grid-template-columns: 1fr 2.1fr 1fr;
 		grid-template-rows: repeat(3, 1fr);
@@ -77,47 +77,47 @@
 		;
 	}
 
-	main .hero {
+	.home-main .hero {
 		height: calc(400px + var(--white-space) * 3);
 	}
 
-	main .event {
+	.home-main .event {
 		grid-area: main-event;
 		display: block;
 		text-align: center;
 	}
 
-	main .event-picture-wrapper {
+	.home-main .event-picture-wrapper {
 		height: 130px;
 		width: 200px;
 		margin: 0 auto;
 		margin-bottom: var(--white-space);
 	}
 
-	main .event p {
+	.home-main .event p {
 		display: none;
 	}
 
-	main .event button {
+	.home-main .event button {
 		width: 70%;
 	}
 
-	main .weather {
+	.home-main .weather {
 		grid-area: main-weather;
 	}
 
-	main .spotlights-wrapper {
+	.home-main .spotlights-wrapper {
 		height: calc(600px + var(--white-space) * 6);
 		flex-direction: column;
 		padding: calc(var(--white-space) * 1.2);
 		gap: calc(var(--white-space) / 2);
 	}
 
-	main .spotlights-wrapper .spotlight {
+	.home-main .spotlights-wrapper .spotlight {
 		width: calc(100% - var(--white-space) * 2);
 	}
 
-	main .spotlights-wrapper .spotlight:last-child {
+	.home-main .spotlights-wrapper .spotlight:last-child {
 		width: calc(100% - var(--white-space) * 2);
 		display: flex;
 		flex-direction: column;

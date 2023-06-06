@@ -53,3 +53,21 @@ const copyrightLine = '©' + copyrightDate.getFullYear()
 
 document.getElementById('copyright-line')
 	.innerText = copyrightLine;
+
+// increase number animation
+const increaseNumbers = document.querySelectorAll('.increase-number');
+
+increaseNumbers.forEach((number) => {
+	let value = 0;
+	const endNumber = Number(number.getAttribute('number-info')).toFixed(0);
+	const increase = endNumber / 50;
+	let counter = setInterval(() => {
+		number.innerText = value.toFixed(2);
+		value += increase;
+			if (value >= endNumber) {
+				clearInterval(counter);
+				number.innerText = 
+					Number(number.getAttribute('number-info')).toLocaleString();
+			}
+	}, 25);
+});
