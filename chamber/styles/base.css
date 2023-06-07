@@ -597,14 +597,14 @@ header .expanded {
   padding: var(--white-space);
 }
 
-.demographics {
+.discover-main .demographics {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--white-space);
 }
 
-.demographics-card {
+.discover-main .demographics-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -612,32 +612,33 @@ header .expanded {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card-content-wrapper {
+.discover-main .card-content-wrapper {
   width: fit-content;
 }
 
-.demographics-card p {
+.discover-main .demographics-card p {
   color: var(--primary02);
 }
 
-.demographics-card p:first-child {
+.discover-main .demographics-card p:first-child {
+  color: var(--font-color);
   font-size: 0.8rem;
   width: fit-content;
 }
 
-.demographics-card p:last-child {
+.discover-main .demographics-card p:last-child {
   width: fit-content;
   font-weight: 700;
   font-size: 2.6rem;
 }
 
-.photos {
+.discover-main .photos {
   display: flex;
   flex-direction: column;
   gap: var(--white-space);
 }
 
-.photo-card {
+.discover-main .photo-card {
   border-radius: var(--default-border-radius);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
@@ -645,27 +646,53 @@ header .expanded {
   color: var(--font-color);
 }
 
-.photo-card:nth-child(odd) {
-  background-color: var(--primary02);
+.discover-main .photo-card:nth-child(odd) {
+  background-color: var(--primary01);
   color: var(--contrast-font-color02);
 }
 
-.photo-card h2 {
+.discover-main .photo-card:nth-child(3) a {
+  color: var(--contrast-font-color01);
+}
+
+.discover-main .photo-card:nth-child(3) a:visited {
+  color: var(--warn);
+}
+
+.discover-main .photo-card h2 {
   margin: var(--white-space);
 }
 
-.photo-card p {
+.discover-main .photo-card p {
   margin: var(--white-space);
 }
 
-.photo-card .left-alg-p {
+.discover-main .photo-card .left-alg-p {
   text-align: left;
 }
 
-.photo-card button {
+.discover-main .photo-card button {
   font-size: 0.95rem;
   margin: var(--white-space) 0;
   min-width: 160px;
+}
+
+.discover-main .photo-card img[data-image] {
+  filter: blur(4px);
+  border-radius: 0px 0px;
+}
+
+.discover-main .photo-card img {
+  filter:blur(0);
+  border-radius: 15px 150px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  transition: .5s;
+}
+
+.discover-main .photo-card img:hover {
+  filter:blur(0);
+  border-radius: 10px 10px;
+  transition: .2s;
 }
 
 /**********/
