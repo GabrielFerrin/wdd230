@@ -120,8 +120,9 @@ if (imagesToLoad.length) {
 			}, 8);
 		}
 
+		// numbers oberver
 		const numberObserver =
-			new IntersectionObserver((items, observer) => {
+			new IntersectionObserver((items) => {
 				items.forEach((number) => {
 					if (number.isIntersecting) {
 						triggerEffect(number.target);
@@ -135,10 +136,13 @@ if (imagesToLoad.length) {
 			numberObserver.observe(number);
 		});
 	} else {
+
+		// nomal load of images
 		imagesToLoad.forEach((image) => {
 			loadImage(image);
 		});
 
+		// normal number effect
 		numbers.forEach((number) => {
 			triggerEffect(number);
 		});

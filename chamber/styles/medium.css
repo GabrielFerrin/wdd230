@@ -1,4 +1,7 @@
 @media only screen and (min-width: 651px) {
+	:root {
+		--white-space: 15px;
+	}
 
 	/**********/
 	/* HEADER */
@@ -126,5 +129,22 @@
 	footer .footer-copyright p:last-child {
 		display: block;
 		align-self: center;
+	}
+}
+
+
+/******************/
+/* MAIN DISCOVER */
+/******************/
+
+@media only screen and (min-width: 852px) {
+
+	.discover-main .demographics {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.discover-main .demographics-card {
+		width: calc(50% - (var(--white-space) / 2));
 	}
 }

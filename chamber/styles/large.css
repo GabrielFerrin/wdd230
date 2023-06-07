@@ -1,6 +1,6 @@
 @media only screen and (min-width: 990px) {
 	:root {
-		--white-space: 8px;
+		--white-space: 20px;
 	}
 
 	/**********/
@@ -45,7 +45,7 @@
 	header .hamburger-menu ul a:first-child {
 		border: none;
 	}
-		
+
 	header .hamburger-menu ul a {
 		width: 90px;
 		height: auto;
@@ -59,7 +59,7 @@
 		color: var(--bg--contrast-light-01);
 	}
 
-	.header-title-title{
+	.header-title-title {
 		width: auto;
 	}
 
