@@ -596,12 +596,12 @@ header .expanded {
   gap: var(--white-space);
   padding: var(--white-space);
   text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .discover-main .demographics {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: var(--white-space);
@@ -641,17 +641,47 @@ header .expanded {
   display: flex;
   flex-direction: column;
   gap: var(--white-space);
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .discover-main .photo-card {
   border-radius: var(--default-border-radius);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
   padding: var(--white-space) 0.1px;
   color: var(--font-color);
   background-color: var(--contrast-font-color01);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.location-card {
+  border-radius: var(--default-border-radius);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  height: 200px;
+  padding: 0;
+  position: relative;
+  filter: brightness(1);
+  transition: 0.3s all ease;
+}
+
+.location-card:hover {
+  transform: scale(1.01);
+  filter: brightness(0.9);
+  /* opacity: 0.8; */
+  /* width: calc(100% + (var(--white-space) * 2)); */
+  /* margin-left: calc(var(--white-space) * -1); */
+}
+
+.location-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--default-border-radius);
 }
 
 .discover-main .photo-card:nth-child(odd) {
@@ -673,6 +703,7 @@ header .expanded {
 
 .discover-main .photo-card p {
   margin: var(--white-space);
+  max-width: 700px;
 }
 
 .discover-main .photo-card .left-alg-p {
@@ -689,21 +720,21 @@ header .expanded {
   filter: blur(4px);
   border-radius: 0px 0px;
   width: 100%;
-  max-width: 600px;
+  max-width: 50px;
 }
 
 .discover-main .photo-card img {
   filter:blur(0);
-  border-radius: 15px 35%;
+  border-radius: var(--default-border-radius);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  transition: .5s;
   width: 100%;
-  max-width: 750px;
+  max-width: 550px;
+  transition: .5s;
 }
 
 .discover-main .photo-card img:hover {
   filter:blur(0);
-  border-radius: 10px 10px;
+  border-radius: var(--default-border-radius) 35%;
   transition: .2s;
 }
 

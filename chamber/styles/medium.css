@@ -1,6 +1,8 @@
 @media only screen and (min-width: 651px) {
 	:root {
 		--white-space: 15px;
+		/* default border radius */
+		--default-border-radius: 8px;
 	}
 
 	/**********/

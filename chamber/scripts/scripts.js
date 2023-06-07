@@ -70,7 +70,7 @@ const numbers = document.querySelectorAll('.increase-number');
 if (imagesToLoad.length) {
 	// images threshold
 	const imageOptions = {
-		threshold: 0
+		threshold: .3
 	}
 	// numbers threshold
 	const numberOptions = {
