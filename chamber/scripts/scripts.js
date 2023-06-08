@@ -172,21 +172,29 @@ let userNameSpan = document.getElementById('username');
 const lastVisitSpan = document.getElementById('last-visit');
 const today = Number(Date.now());
 const lastVisit = Number(localStorage.getItem('lastVisit'));
-const lastVisitInterval = ((today - lastVisit) / 86400) >= 1 ?
+
+// FUNCTION calculate visits interval
+const visitsInterval = (today, lastVisit) => {
+	return lastVisit === 0 ? 0 : ((today - lastVisit) / 86400) >= 1 ?
 	((today - lastVisit) / 86400).toFixed(0) : 0;
-console.log(today);
-console.log(lastVisit);
-console.log(lastVisitInterval);
+}
+
+// calculate visits interval
+let lastVisitInterval = visitsInterval();
 
 // FUNCTION display username
 const displayUsername = () => {
 	userCardDisplay.style.display = 'flex';
 	userCardInput.style.display = 'none';
+
 	storageUsername = localStorage.getItem('discoverUserName');
+	lastVisitInterval = visitsInterval(today, lastVisit);
+
 	userNameSpan.innerText = lastVisitInterval == 0 ? 'Welcome ' + storageUsername
 		: 'Welcome back ' + storageUsername;
 	lastVisitSpan.innerText = lastVisitInterval == 0 ? '' :
 		'It\'s been ' + lastVisitInterval + ' since your last visit'
+
 	localStorage.setItem('lastVisit', today)
 }
 
