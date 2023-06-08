@@ -226,6 +226,8 @@ input.addEventListener(
 				if (input.value !== '') {
 					console.log(lastVisitInterval);
 					localStorage.setItem('discoverUserName', input.value)
+					localStorage.setItem('lastVisit', '0');
+					lastVisit = 0;
 					displayUsername();
 				}
 			}
