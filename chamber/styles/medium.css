@@ -81,6 +81,16 @@
 		width: 70%;
 	}
 
+	/*****************/
+	/* MAIN DISCOVER */
+	/*****************/
+
+	.discover-main .photo-card img:hover {
+		filter: blur(0);
+		border-radius: var(--default-border-radius) 35%;
+		transition: .2s;
+	}
+
 	/**********/
 	/* FOOTER */
 	/**********/
@@ -135,10 +145,10 @@
 }
 
 
-/******************/
+/*****************/
 /* MAIN DISCOVER */
-/******************/
-
+/*****************/
+/** media query **/
 @media only screen and (min-width: 852px) {
 
 	.discover-main .demographics {

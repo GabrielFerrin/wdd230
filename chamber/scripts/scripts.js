@@ -160,35 +160,70 @@ if (imagesToLoad.length) {
 ////////////////////
 // username input //
 ////////////////////
-// initial status check
+// VARIABLES from HTML and LocalSotrage
+const input = document.getElementById('fname');
+input.focus();
+let storageUsername = localStorage.getItem('discoverUserName');
+let userCardDisplay = document
+	.getElementById('user-card-display');
 let userCardInput = document
 	.getElementById('user-card-input');
-console.log(userCardInput);
-userCardInput.style.display = 'none';
+let userNameSpan = document.getElementById('username');
+const lastVisitSpan = document.getElementById('last-visit');
+const today = Number(Date.now());
+const lastVisit = Number(localStorage.getItem('lastVisit'));
+const lastVisitInterval = ((today - lastVisit) / 86400) >= 1 ?
+	((today - lastVisit) / 86400).toFixed(0) : 0;
+console.log(today);
+console.log(lastVisit);
+console.log(lastVisitInterval);
 
-if (!localStorage.getItem('discoverUserName')) {
+// FUNCTION display username
+const displayUsername = () => {
+	userCardDisplay.style.display = 'flex';
+	userCardInput.style.display = 'none';
+	storageUsername = localStorage.getItem('discoverUserName');
+	userNameSpan.innerText = lastVisitInterval == 0 ? 'Welcome ' + storageUsername
+		: 'Welcome back ' + storageUsername;
+	lastVisitSpan.innerText = lastVisitInterval == 0 ? '' :
+		'It\'s been ' + lastVisitInterval + ' since your last visit'
+	localStorage.setItem('lastVisit', today)
+}
+
+// FUNCTION edit user info
+const editUserInfo = () => {
+	userCardInput.style.display = 'flex';
+	userCardDisplay.style.display = 'none';
+	input.value = '';
+	input.focus();
+}
+
+// initial status check
+if (localStorage.getItem('discoverUserName')) {
 	// show username input options
+	displayUsername();
 } else {
 	// show welcome message
+	editUserInfo();
 }
 
 // enter behavior
-const input = document.getElementById('fname');
 input.addEventListener(
 	"keydown",
 	(event) => {
 		// modern approach
 		if (event.key !== undefined) {
-			if (event.key === 'Enter') {
+			if (event.key === 'Enter' && input.value !== '') {
 				event.preventDefault();
-				if (input.value !== '')
+				if (input.value !== '') {
+					console.log(lastVisitInterval);
 					localStorage.setItem('discoverUserName', input.value)
+					displayUsername();
+				}
 			}
-		// deprecated way
+			// deprecated way
 		} else if (event.keyCode === 13) {
 			event.preventDefault();
-			if (input.value !== '')
-				handleUserInfo(event.target.value);
 		}
 	}
 );

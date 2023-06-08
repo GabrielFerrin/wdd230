@@ -167,7 +167,7 @@ header .expanded {
 .header-social {
   text-align: right;
   align-self: center;
-  min-width: 64px;
+  min-width: 74px;
   padding-right: var(--white-space);
   padding-top: calc(var(--white-space) / 2);
 }
@@ -618,14 +618,11 @@ header .expanded {
   height: 200px;
 }
 
-.user-card button {
-  min-width: 160px;
-}
-
 .card-content-wrapper #fname {
   border: 1px var(--contrast-font-color02) solid;
   border-radius: var(--default-border-radius);
   height: 40px;
+  width: 320px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   text-align: center;
@@ -706,13 +703,12 @@ header .expanded {
   transition: 0.3s all ease;
 }
 
+
 .location-card:hover {
   transform: scale(1.01);
   filter: brightness(0.9);
-  /* opacity: 0.8; */
-  /* width: calc(100% + (var(--white-space) * 2)); */
-  /* margin-left: calc(var(--white-space) * -1); */
 }
+
 
 .location-card img {
   position: absolute;
@@ -770,12 +766,6 @@ header .expanded {
   width: 100%;
   max-width: 550px;
   transition: .5s;
-}
-
-.discover-main .photo-card img:hover {
-  filter: blur(0);
-  border-radius: var(--default-border-radius) 35%;
-  transition: .2s;
 }
 
 /**********/
