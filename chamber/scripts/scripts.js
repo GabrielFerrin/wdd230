@@ -1,4 +1,6 @@
-// hamburger menu
+////////////////////
+// hamburger menu //
+////////////////////
 let toggleMenu = _ => {
 	// menu button
 	const menuButton = document
@@ -22,7 +24,9 @@ let toggleMenu = _ => {
 		.style.display = isBGOn ? "none" : "block";
 }
 
-// date
+//////////
+// date //
+//////////
 const now = new Date();
 const nowDate = new Intl.DateTimeFormat("en-US", {
 	dateStyle: "full"
@@ -30,19 +34,25 @@ const nowDate = new Intl.DateTimeFormat("en-US", {
 document.getElementById('header-date')
 	.innerText = nowDate;
 
-// show banner Mondays and Tesdays
+//////////////////
+// promo banner //
+////////////////// 
 if (now.getDay() == 1 || now.getDay() == 2) {
 	document.getElementById('announcement-banner')
 		.style.display = "flex";
 }
 
-// copyright
+///////////////
+// copyright //
+///////////////
 const copyrightDate = new Date(document.lastModified);
 document.getElementById('copyright')
 	.innerText = '©' + copyrightDate.getFullYear() +
 	' Manta Chamber';
 
-// last modified
+///////////////////////
+// last modification //
+///////////////////////
 document.getElementById('last-modified')
 	.innerText = 'Last Modification: '
 	+ document.lastModified;
@@ -54,13 +64,9 @@ const copyrightLine = '©' + copyrightDate.getFullYear()
 document.getElementById('copyright-line')
 	.innerText = copyrightLine;
 
-// increase number animation
-const increaseNumbers = document
-	.querySelectorAll('.increase-number');
-
-increaseNumbers.forEach((number) => {
-
-});
+//////////////////////////
+// intersection effects //
+//////////////////////////
 
 // lazy loading images and increase numbers effect
 const imagesToLoad = document.querySelectorAll('[data-image]');
@@ -87,7 +93,7 @@ if (imagesToLoad.length) {
 
 	// intersection observers
 	if ("IntersectionObserver" in window) {
-		// imagery lazy loading
+		// imagery lazy loading observer funcion
 		const imageObserver =
 			new IntersectionObserver((items, observer) => {
 				items.forEach((item) => {
@@ -98,11 +104,12 @@ if (imagesToLoad.length) {
 				})
 			}, imageOptions);
 
+		// set observers to all images
 		imagesToLoad.forEach((image) => {
 			imageObserver.observe(image);
 		});
 
-		// increase number effect
+		// increase number effect function
 		const triggerEffect = (number) => {
 			let counter = 0;
 			const endNumber =
@@ -120,7 +127,7 @@ if (imagesToLoad.length) {
 			}, 8);
 		}
 
-		// numbers oberver
+		// numbers oberver funtion
 		const numberObserver =
 			new IntersectionObserver((items) => {
 				items.forEach((number) => {
@@ -132,22 +139,56 @@ if (imagesToLoad.length) {
 				});
 			}, numberOptions);
 
+		// set oberver to all number elements
 		numbers.forEach((number) => {
 			numberObserver.observe(number);
 		});
+		// when intersection observers are not supported
 	} else {
-
-		// nomal load of images
+		// load of images
 		imagesToLoad.forEach((image) => {
 			loadImage(image);
 		});
 
-		// normal number effect
+		// numbers effect
 		numbers.forEach((number) => {
 			triggerEffect(number);
 		});
 	}
 }
 
+////////////////////
+// username input //
+////////////////////
+// initial status check
+let userCardInput = document
+	.getElementById('user-card-input');
+console.log(userCardInput);
+userCardInput.style.display = 'none';
 
+if (!localStorage.getItem('discoverUserName')) {
+	// show username input options
+} else {
+	// show welcome message
+}
 
+// enter behavior
+const input = document.getElementById('fname');
+input.addEventListener(
+	"keydown",
+	(event) => {
+		// modern approach
+		if (event.key !== undefined) {
+			if (event.key === 'Enter') {
+				event.preventDefault();
+				if (input.value !== '')
+					localStorage.setItem('discoverUserName', input.value)
+			}
+		// deprecated way
+		} else if (event.keyCode === 13) {
+			event.preventDefault();
+			if (input.value !== '')
+				handleUserInfo(event.target.value);
+		}
+	}
+);

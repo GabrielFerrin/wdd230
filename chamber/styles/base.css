@@ -31,6 +31,12 @@ body {
   margin: 0 auto;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a:visited {
   color: var(--primary03);
 }
@@ -473,7 +479,7 @@ header .expanded {
 }
 
 .home-main .join button {
-  width: 	100%;
+  width: 100%;
 }
 
 .home-main .spotlights-wrapper {
@@ -607,7 +613,41 @@ header .expanded {
   gap: var(--white-space);
 }
 
-.discover-main .demographics-card {
+.discover-main .user-card {
+  width: 100%;
+  height: 200px;
+}
+
+.user-card button {
+  min-width: 160px;
+}
+
+.card-content-wrapper #fname {
+  border: 1px var(--contrast-font-color02) solid;
+  border-radius: var(--default-border-radius);
+  height: 40px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  text-align: center;
+}
+
+.card-content-wrapper #fname:focus {
+  color: var(--contrast-font-color01);
+  border-color: var(--primary01);
+  background-color: var(--secondary01);
+  outline: 3px solid transparent;
+}
+
+.card-content-wrapper #fname::placeholder {
+  color: var(--contrast-font-color02);
+}
+
+.card-content-wrapper #fname:focus::placeholder {
+  color: var(--secondary02);
+}
+
+.discover-main .demographics-card,
+.discover-main .user-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -724,7 +764,7 @@ header .expanded {
 }
 
 .discover-main .photo-card img {
-  filter:blur(0);
+  filter: blur(0);
   border-radius: var(--default-border-radius);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
@@ -733,7 +773,7 @@ header .expanded {
 }
 
 .discover-main .photo-card img:hover {
-  filter:blur(0);
+  filter: blur(0);
   border-radius: var(--default-border-radius) 35%;
   transition: .2s;
 }
