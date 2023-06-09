@@ -12,6 +12,7 @@
 		width: 101%;
 		box-sizing: border-box;
 		padding: 0;
+		margin-top: var(--white-space);
 	}
 
 	.announcement-banner p {

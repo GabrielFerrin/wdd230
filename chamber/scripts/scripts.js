@@ -171,7 +171,7 @@ let userCardInput = document
 let userNameSpan = document.getElementById('username');
 const lastVisitSpan = document.getElementById('last-visit');
 const today = Number(Date.now());
-const lastVisit = Number(localStorage.getItem('lastVisit'));
+let lastVisit = Number(localStorage.getItem('lastVisit'));
 
 // FUNCTION calculate visits interval
 const visitsInterval = (today, lastVisit) => {
@@ -224,10 +224,11 @@ input.addEventListener(
 			if (event.key === 'Enter' && input.value !== '') {
 				event.preventDefault();
 				if (input.value !== '') {
-					console.log(lastVisitInterval);
+					console.log('Hello');
 					localStorage.setItem('discoverUserName', input.value)
 					localStorage.setItem('lastVisit', '0');
 					lastVisit = 0;
+					lastVisitInterval = visitsInterval();
 					displayUsername();
 				}
 			}
@@ -237,3 +238,4 @@ input.addEventListener(
 		}
 	}
 );
+
