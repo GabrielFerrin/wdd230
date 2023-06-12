@@ -2,19 +2,48 @@ table {
   border-collapse: collapse;
 }
 
-thead, caption, th {
-  font-family: Calibri;
-  font-size: 2rem;
+caption {
+  box-sizing: content-box;
+  border: none;
+}
 
+thead, caption, th {
+  font-family: 'Lucida Sans';
+  font-size: 2rem;
   color: white;
   background-color: #000000;
   font-weight: 800;
+  padding: 1.2rem;
 }
 
 .th {
   background-color: #333333;
 }
 
-tbody tr:nth-child(odd) {
+tbody tr td:first-child {
+  font-size: 1.5rem;
+}
+
+tbody tr td {
+  font-family: 'YU Gothic UI';
+  font-weight: 600;
+  font-size: 2rem;
+  white-space: nowrap;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid lightgrey;
+}
+
+tbody tr:nth-child(even) {
   background-color: #eeeeee;
+}
+
+tbody tr td.ex {
+  color: #f92f60;
+}
+
+tfoot tr {
+  text-align: center;
+  font-family: 'Lucida Sans';
+  font-size: 1.3rem;
 }
