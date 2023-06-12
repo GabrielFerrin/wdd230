@@ -1,0 +1,20 @@
+table {
+  border-collapse: collapse;
+}
+
+thead, caption, th {
+  font-family: Calibri;
+  font-size: 2rem;
+
+  color: white;
+  background-color: #000000;
+  font-weight: 800;
+}
+
+.th {
+  background-color: #333333;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
