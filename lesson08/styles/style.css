@@ -23,6 +23,7 @@ th {
 
 tbody tr td:first-child {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 tbody tr td {
