@@ -1,30 +1,31 @@
 const url = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json';
 let data = null;
+let filter = '';
+
 const getProphetData = async () => {
   // waiting animation
   const resp = await fetch(url);
   if (resp.ok) {
     data = await resp.json();
     // stop animation
-    displayProphets(data.prophets);
+    displayProphets(data.prophets, filter);
   } else {
     // show error message
   }
 }
 
+const cards = document.querySelector('div.cards');
 getProphetData();
 
 // value hoisting
-function displayProphets(prophets) {
-  const cards = document.querySelector('div.cards');
-
+function displayProphets(prophets, filter) {
   prophets.forEach((prophet, index) => {
     // elements to add to div.cards
     const card = document.createElement('section');
     const h2 = document.createElement('h2');
     const subtitle = document.createElement('p');
     const div = document.createElement('div');
-    div.setAttribute('class', 'infoCard')
+    div.setAttribute('class', 'info-card')
 
     let infoLine = document.createElement('div');
     infoLine.setAttribute('class', 'line-div')
@@ -37,6 +38,12 @@ function displayProphets(prophets) {
     const deathDate = new Date(prophet.death);
     const ageSecods = new Date(deathDate - birthDate);
     const age = Math.abs(ageSecods.getUTCFullYear() - 1970);
+
+    // apply filter 
+    if (filter === '10+' && prophet.length < 10) {
+      console.log('not executed');
+      return;
+    }
 
     // h2
     h2.textContent = prophetName;
@@ -124,13 +131,14 @@ function displayProphets(prophets) {
     // img
     portrait.setAttribute('src', prophet.imageurl);
     portrait
-      .setAttribute('alt', `Portrait of ${prophetName} - 
-        ${ordinal_suffix_of(index + 1)} Latter-day President`)
+      .setAttribute('alt', 'Portrait of ' + prophetName + ' - ' +
+        ordinal_suffix_of(index + 1) + ' Latter-day President')
     portrait.setAttribute('loading', 'lazy');
-    portrait.setAttribute('width', '340');
+    portrait.setAttribute('height', '400');
 
     // subtitle
-    subtitle.innerText = `${ordinal_suffix_of(index + 1)} Latter-day President`
+    subtitle.innerText = ordinal_suffix_of(index + 1) +  
+      ' Latter-day President'
 
     // append elements
     card.appendChild(h2);
@@ -156,4 +164,21 @@ function ordinal_suffix_of(i) {
     return i + "ʳᵈ";
   }
   return i + "ᵗʰ";
+}
+
+// update filter
+const filter10Plus = () => {
+  document.getElementById('filter-button').classList.toggle("selected");
+  if (filter === '')
+    filter = '10+';
+  else
+    filter = '';
+  clearData();
+  displayProphets(data.prophets, filter);
+}
+
+// clear data
+const clearData = () => {
+  while (cards.hasChildNodes())
+    cards.firstChild.remove();
 }
