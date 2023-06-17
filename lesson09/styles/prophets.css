@@ -10,7 +10,14 @@ body {
   padding-bottom: 20px;
 }
 
-main button {
+main .options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main button,
+main a {
   margin: 10px 0;
   background-color: #0c0c0c;
   border: none;
@@ -20,8 +27,16 @@ main button {
   height: 50px;
 }
 
+main a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
 main button:hover,
-main button.selected:hover {
+main button.selected:hover,
+main a:hover {
   background-color: white;
   color: black;
 }
@@ -33,12 +48,12 @@ main button.selected {
 
 main .cards {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  
+
 }
 
 main section {
