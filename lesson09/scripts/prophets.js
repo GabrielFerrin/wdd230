@@ -37,7 +37,11 @@ function displayProphets(prophets, filter) {
     const birthDate = new Date(prophet.birthdate);
     const deathDate = new Date(prophet.death);
     const ageSecods = new Date(deathDate - birthDate);
-    const age = Math.abs(ageSecods.getUTCFullYear() - 1970);
+    const today = Date.now();
+    const aliveAge = new Date(today - birthDate);
+    const age = prophet.death === null ? 
+      aliveAge.getUTCFullYear() - 1970 :
+      Math.abs(ageSecods.getUTCFullYear() - 1970);
 
     // apply filter 
     if (filter === '10+' && prophet.length < 10) {
@@ -106,7 +110,7 @@ function displayProphets(prophets, filter) {
     span1 = document.createElement('span');
     span1.textContent = 'Death: ';
     span2 = document.createElement('span');
-    span2.textContent = prophet.death;
+    span2.textContent = prophet.death === null ? 'Alive' : prophet.death;
 
     // info card - append death
     infoLine.appendChild(span1);
