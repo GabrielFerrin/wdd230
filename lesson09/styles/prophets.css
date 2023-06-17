@@ -58,6 +58,7 @@ main .cards {
 
 main section {
   background-color: #0c0c0c;
+  border-radius: 6px;
   padding: 20px;
   min-width: 310px;
   width: calc(100% - 40px);

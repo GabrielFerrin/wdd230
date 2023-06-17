@@ -142,7 +142,7 @@ function displayProphets(prophets, filter) {
 
     // subtitle
     subtitle.innerText = ordinal_suffix_of(index + 1) +  
-      ' Latter-day President'
+      ' President'
 
     // append elements
     card.appendChild(h2);
