@@ -138,7 +138,7 @@ function displayProphets(prophets, filter) {
       .setAttribute('alt', 'Portrait of ' + prophetName + ' - ' +
         ordinal_suffix_of(index + 1) + ' Latter-day President')
     portrait.setAttribute('loading', 'lazy');
-    portrait.setAttribute('height', '400');
+    portrait.setAttribute('height', '300');
 
     // subtitle
     subtitle.innerText = ordinal_suffix_of(index + 1) +  

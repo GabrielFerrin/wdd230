@@ -59,6 +59,7 @@ main .cards {
 main section {
   background-color: #0c0c0c;
   border-radius: 6px;
+  /* border: 1px solid #242424; */
   padding: 20px;
   min-width: 310px;
   width: calc(100% - 40px);
@@ -83,7 +84,7 @@ main section p {
 }
 
 main .cards img {
-  border-radius: 10px;
+  border-radius: 6px;
   margin-top: 20px;
 }
 
