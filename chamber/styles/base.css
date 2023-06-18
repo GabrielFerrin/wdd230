@@ -768,6 +768,79 @@ header .expanded {
   transition: .5s;
 }
 
+/******************/
+/* MAIN-DIRECTORY */
+/******************/
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .display-options {
+  margin-top: var(--white-space);
+  display: flex;
+  gap: var(--white-space);
+}
+
+main .display-options button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .display-options .selected {
+  background-color: var(--primary02);
+}
+
+.directory-main {
+  text-align: center;
+  padding: var(--white-space);
+  width: 100%;
+}
+
+.directory-main #cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--white-space);
+  padding: var(--white-space) 0;
+}
+
+.directory-main .card {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  min-width: 300px;
+  border-radius: var(--default-border-radius);
+  padding: var(--white-space);
+  transition: 0.35s;
+}
+
+.directory-main .card:hover {
+  background-color: var(--primary03);
+  color: white;
+  cursor: pointer;
+}
+
+.directory-main .card h2 {
+  color: var(--secondary01);
+}
+
+.directory-main .card p {
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+.directory-main .card .membership {
+  margin: calc(var(--white-space) / 2);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.directory-main .card .gold {
+  color: #FFD700;
+}
+
 /**********/
 /* FOOTER */
 /**********/
