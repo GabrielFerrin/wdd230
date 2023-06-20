@@ -1,35 +1,41 @@
-getDirectory('card');
-
-const goToPage = (companyUrl) => {
-  window.open(companyUrl, "_blank")
-}
-
+const cards = document.getElementById('cards')
 const listButton = document.getElementById('listButton');
 const listButtonImg = document.getElementById('list-img')
 const cardsButton = document.getElementById('cardsButton');
 const cardsButtonImg = document.getElementById('cards-img')
 
-const displayList = () => {
-  listButton.classList.add('selected');
-  cardsButton.classList.remove('selected');
+getDirectory('list');
 
-  listButtonImg.setAttribute('src', 'images/list-white.svg');
-  cardsButtonImg.setAttribute('src', 'images/cards.svg')
-  emptyDirectory();
+const displayList = () => {
   getDirectory('list');
 }
 
 const displayCards = () => {
-  cardsButton.classList.add('selected');
-  listButton.classList.remove('selected');
-
-  listButtonImg.setAttribute('src', 'images/list.svg');
-  cardsButtonImg.setAttribute('src', 'images/cards-white.svg')
-  emptyDirectory();
   getDirectory('card');
 }
 
-function getDirectory(layout = 'card') {
+function getDirectory(layout = 'list') {
+  // initial
+  if (layout === 'card') {
+    cards.classList.remove('lists');
+    cards.classList.add('cards');
+    cardsButton.classList.add('selected');
+    listButton.classList.remove('selected');
+  
+    listButtonImg.setAttribute('src', 'images/list.svg');
+    cardsButtonImg.setAttribute('src', 'images/cards-white.svg')
+    emptyDirectory();
+  } else {
+    cards.classList.remove('cards');
+    cards.classList.add('lists');
+    listButton.classList.add('selected');
+    cardsButton.classList.remove('selected');
+  
+    listButtonImg.setAttribute('src', 'images/list-white.svg');
+    cardsButtonImg.setAttribute('src', 'images/cards.svg')
+    emptyDirectory();
+  }
+
   // start animation
   fetch('json/data.json')
     .then(response => response.json())
@@ -60,13 +66,17 @@ function getDirectory(layout = 'card') {
         card.appendChild(p2);
 
         const p3 = document.createElement('p');
+        p3.setAttribute('class', 'phone');
         p3.innerText = company.phone;
         card.appendChild(p3);
 
         const p4 = document.createElement('p');
         p4.innerText = company.address;
+        if (layout === 'list')
+          p4.classList.add('hide');
         card.appendChild(p4);
-        card.setAttribute('onclick', `goToPage('${company.web}')`)
+
+        card.setAttribute('onclick', `goToPage('https://www.${company.web}')`)
         card.setAttribute('class', layout);
         cards.appendChild(card);
       });
@@ -76,8 +86,12 @@ function getDirectory(layout = 'card') {
     });
 }
 
-const emptyDirectory = () => {
+function emptyDirectory() {
   const cards = document.getElementById('cards');
   while(cards.hasChildNodes())
     cards.firstChild.remove();
+}
+
+const goToPage = (companyUrl) => {
+  window.open(companyUrl, "_blank")
 }

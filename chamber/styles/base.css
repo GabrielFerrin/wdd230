@@ -801,7 +801,7 @@ main .display-options .selected {
   width: 100%;
 }
 
-.directory-main #cards {
+.directory-main .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--white-space);
@@ -839,6 +839,57 @@ main .display-options .selected {
 
 .directory-main .card .gold {
   color: #FFD700;
+}
+
+.directory-main .lists .list .hide {
+  display: none;
+}
+
+.directory-main .lists .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+  padding: var(--white-space);
+  text-align: left;
+  align-items: center;
+  border-top: 1px var(--secondary01) solid;
+  border-bottom: 1px var(--secondary01) solid;
+}
+
+.directory-main .lists .list:nth-child(even) {
+  background-color: var(--secondary01);
+  color: var(--contrast-font-color01);
+}
+
+.directory-main .lists .list:hover {
+  background-color: var(--primary03);
+  color: white;
+  cursor: pointer;
+}
+
+.directory-main .lists .list h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 25%;
+}
+
+.directory-main .lists .list img {
+  width: 40px;
+}
+
+.directory-main .lists .list p {
+  white-space: nowrap;
+  width: 20%;
+}
+
+.directory-main .lists .list .phone {
+  width: 140px;
+}
+
+.directory-main .lists .list .membership {
+  width: 180px;
 }
 
 /**********/
