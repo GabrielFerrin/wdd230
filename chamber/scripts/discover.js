@@ -13,6 +13,8 @@ let userNameSpan = document.getElementById('username');
 const lastVisitSpan = document.getElementById('last-visit');
 const today = Number(Date.now());
 let lastVisit = Number(localStorage.getItem('lastVisit'));
+const lastVisitDate = new Date(lastVisit);
+console.log(lastVisitDate);
 
 // FUNCTION calculate visits interval
 const visitsInterval = (today, lastVisit) => {
