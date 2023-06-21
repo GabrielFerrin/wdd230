@@ -120,7 +120,7 @@ nav a:hover {
 main .card-section {
   border-radius: 3px;
   background-color: var(--background-color-02);
-  margin: var(--padding);
+  margin: var(--padding) auto;
   padding: var(--padding);
   display: flex;
   flex-direction: column;
@@ -128,6 +128,7 @@ main .card-section {
   box-sizing: border-box;
   font-size: 1.5rem;
   text-align: center;
+  max-width: 800px;
 }
 
 main .card-section:hover {
