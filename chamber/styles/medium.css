@@ -1,8 +1,7 @@
 @media only screen and (min-width: 651px) {
 	:root {
-		--white-space: 15px;
 		/* default border radius */
-		--default-border-radius: 8px;
+		--default-border-radius: 5px;
 	}
 
 	/**********/
@@ -64,11 +63,15 @@
 	}
 
 	.home-main .spotlights-wrapper .spotlight {
-		height: calc(100% - var(--white-space) * 2);
-		width: calc(50% - var(--white-space) * 2);
+		height: 100%;
+		width: 50%;
 		border: none;
 	}
 
+	.home-main .spotlights-wrapper .spotlight picture:nth-child(2) img {
+		height: 55px;
+	}
+	
 	.home-main .join {
 		display: flex;
 		flex-direction: column;

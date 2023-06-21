@@ -1,8 +1,6 @@
 @media only screen and (min-width: 990px) {
 	:root {
-		--white-space: 20px;
-		/* default border radius */
-		--default-border-radius: 10px;
+		--white-space: 10px;
 	}
 
 	/**********/
@@ -85,17 +83,18 @@
 	}
 
 	.home-main .hero {
-		height: calc(400px + var(--white-space) * 3);
+		height: 100%;
 	}
 
 	.home-main .event {
+		
 		grid-area: main-event;
 		display: block;
 		text-align: center;
 	}
 
 	.home-main .event-picture-wrapper {
-		height: 130px;
+		height: 120px;
 		width: 200px;
 		margin: 0 auto;
 		margin-bottom: var(--white-space);
@@ -113,6 +112,10 @@
 		grid-area: main-weather;
 	}
 
+	.home-main section, .spotlight, .spotlights-wrapper {
+		height: 100%;
+	}
+
 	.home-main .spotlights-wrapper {
 		height: calc(600px + var(--white-space) * 6);
 		flex-direction: column;
@@ -121,11 +124,11 @@
 	}
 
 	.home-main .spotlights-wrapper .spotlight {
-		width: calc(100% - var(--white-space) * 2);
+		width: 100%;
 	}
 
 	.home-main .spotlights-wrapper .spotlight:last-child {
-		width: calc(100% - var(--white-space) * 2);
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		text-align: center;
@@ -133,4 +136,9 @@
 		background-color: var(--font-color);
 		color: var(--bg--contrast-light-01);
 	}
+
+	.home-main .spotlights-wrapper .spotlight picture:nth-child(2) img {
+		height: 65px;
+	}
+	
 }

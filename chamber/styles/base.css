@@ -354,6 +354,7 @@ header .expanded {
 }
 
 .home-main .hero {
+  width: 100%;
   background-color: var(--primary01);
   position: relative;
   z-index: 0;
@@ -401,7 +402,7 @@ header .expanded {
 .home-main .event {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: auto 120px auto;
+  grid-template-rows: auto 100px auto;
   gap: var(--white-space);
   text-align: center;
 }
@@ -447,7 +448,7 @@ header .expanded {
 .home-main .news-separator-wrapper {
   display: flex;
   width: 100%;
-  height: 160px;
+  height: 140px;
   gap: var(--white-space);
 }
 
@@ -469,6 +470,10 @@ header .expanded {
   border-radius: var(--default-border-radius);
 }
 
+.home-main .event picture img {
+  height: 100%;
+}
+
 .home-main .join {
   display: none;
   text-align: center;
@@ -484,10 +489,11 @@ header .expanded {
 
 .home-main .spotlights-wrapper {
   height: 400px;
+  width: 100%;
 }
 
 .home-main .spotlights-wrapper .spotlight {
-  height: calc(50% - var(--white-space) * 2.3);
+  height: calc(52.5% - var(--white-space));
   padding: var(--white-space);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   border: var(--primary03) 1px solid;
@@ -520,7 +526,7 @@ header .expanded {
 }
 
 .home-main .spotlights-wrapper .spotlight picture:nth-child(2) img {
-  height: 65px;
+  height: 60px;
 }
 
 .home-main .spotlights-wrapper .spotlight:last-child {
