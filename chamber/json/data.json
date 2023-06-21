@@ -2,75 +2,84 @@
   "companies": [
     {
       "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
+      "address": "113ᵗʰ Avenue, 110ᵗʰ Street",
+      "phone": "+593 98 387 4467",
+      "link": "https://www.ales.com.ec",
       "web": "ales.com.ec",
       "logo": "../chamber/images/logo-ales.webp",
+      "membership": "Bronze"
+    },
+    {
+      "name": "Casa Rosada",
+      "address": "12ᵗʰ Street, 1ˢᵗ avenue",
+      "phone": "+593 98 987 9179",
+      "link": "https://www.facebook.com/restaurantecasarosadaecuador/?locale=es_LA",
+      "web": "casarosadaecuador.com",
+      "logo": "../chamber/images/logo-casa-rosada-02.svg",
       "membership": "Gold"
     },
     {
-      "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
-      "web": "google.com",
-      "logo": "../chamber/images/logo-ales.webp",
+      "name": "Diverzu",
+      "address": "16ᵗʰ Avenue, 13ᵗʰ Street",
+      "phone": "+593 98 518 0767",
+      "link": "https://diverzu.com.ec/",
+      "web": "diverzu.com.ec",
+      "logo": "../chamber/images/diverzu-logo.svg",
+      "membership": "Silver"
+    },
+    {
+      "name": "MetalHierro",
+      "address": "113ᵗʰ Avenue, 116ᵗʰ Street",
+      "phone": "+593 99 008 0007",
+      "link": "https://ferreteriametalhierro.com/",
+      "web": "ferreteriametalhierro.com",
+      "logo": "../chamber/images/logo-ferreteria.jpg",
       "membership": "Gold"
     },
     {
-      "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
-      "web": "insdustriasales.com",
-      "logo": "../chamber/images/logo-ales.webp",
+      "name": "La Fabril",
+      "address": "323ʳᵈ Street, Montecristi, Monterrey",
+      "phone": "+593 04 371 0164",
+      "link": "https://www.lafabril.com.ec/",
+      "web": "lafabril.com.ec",
+      "logo": "../chamber/images/logo-lafabril.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "Conservas Isabel",
+      "address": "125ᵗʰ, 103ʳᵈ Avenue, 130204",
+      "phone": "+593 90 024 2524",
+      "link": "https://www.isabel.net/",
+      "web": "isabel.net",
+      "logo": "../chamber/images/logo-isabel.svg",
+      "membership": "Silver"
+    },
+    {
+      "name": "Marbelize",
+      "address": "15ᵗʰ Avenue, 33ʳᵈ Street",
+      "phone": "+593 98 387 4467",
+      "link": "http://www.marbelize.com/",
+      "web": "marbelize.com",
+      "logo": "../chamber/images/logo-marbelize.png",
+      "membership": "Non Profit"
+    },
+    {
+      "name": "Mega Bike Store",
+      "address": "100ᵗʰ Street, 6ᵗʰ Avenue",
+      "phone": "+593 99 179 8724",
+      "link": "https://megabikestore.ec/",
+      "web": "megabikestore.ec",
+      "logo": "../chamber/images/logo-mega-bike.webp",
       "membership": "Gold"
     },
     {
-      "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
-      "web": "insdustriasales.com",
-      "logo": "../chamber/images/logo-ales.webp",
-      "membership": "Gold"
-    },
-    {
-      "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
-      "web": "insdustriasales.com",
-      "logo": "../chamber/images/logo-ales.webp",
-      "membership": "Gold"
-    },
-    {
-      "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
-      "web": "insdustriasales.com",
-      "logo": "../chamber/images/logo-ales.webp",
-      "membership": "Gold"
-    },
-    {
-      "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
-      "web": "insdustriasales.com",
-      "logo": "../chamber/images/logo-ales.webp",
-      "membership": "Gold"
-    },
-    {
-      "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
-      "web": "insdustriasales.com",
-      "logo": "../chamber/images/logo-ales.webp",
-      "membership": "Gold"
-    },
-    {
-      "name": "Industrias Ales",
-      "address": "Av 114",
-      "phone": "+598 98 387 4467",
-      "web": "insdustriasales.com",
-      "logo": "../chamber/images/logo-ales.webp",
-      "membership": "Gold"
+      "name": "Cabañas Balandra",
+      "address": "1ˢᵗ Street, 8ᵗʰ Avenue",
+      "phone": "+593 5 262 0545",
+      "link": "https://www.balandrahotel.com/",
+      "web": "balandrahotel.com",
+      "logo": "../chamber/images/logo-balandra-hotel.svg",
+      "membership": "Bronze"
     }
   ]
 }

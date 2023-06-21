@@ -21,7 +21,7 @@ function getDirectory(layout = 'list') {
     cards.classList.add('cards');
     cardsButton.classList.add('selected');
     listButton.classList.remove('selected');
-  
+
     listButtonImg.setAttribute('src', 'images/list.svg');
     cardsButtonImg.setAttribute('src', 'images/cards-white.svg')
     emptyDirectory();
@@ -30,7 +30,7 @@ function getDirectory(layout = 'list') {
     cards.classList.add('lists');
     listButton.classList.add('selected');
     cardsButton.classList.remove('selected');
-  
+
     listButtonImg.setAttribute('src', 'images/list-white.svg');
     cardsButtonImg.setAttribute('src', 'images/cards.svg')
     emptyDirectory();
@@ -56,8 +56,9 @@ function getDirectory(layout = 'list') {
 
         const p1 = document.createElement('p');
         p1.setAttribute('class', 'membership')
-        p1.classList.add(company.membership === 'Gold' ?
-          'gold' : 'regular');
+        console.log(company.membership);
+        p1.classList.add(company.membership === 'Non Profit' ?
+          'non-profit' : company.membership.toLowerCase());
         p1.innerText = `${company.membership} Membership`;
         card.appendChild(p1);
 
@@ -76,7 +77,7 @@ function getDirectory(layout = 'list') {
           p4.classList.add('hide');
         card.appendChild(p4);
 
-        card.setAttribute('onclick', `goToPage('https://www.${company.web}')`)
+        card.setAttribute('onclick', `goToPage('${company.link}')`)
         card.setAttribute('class', layout);
         cards.appendChild(card);
       });
@@ -88,7 +89,7 @@ function getDirectory(layout = 'list') {
 
 function emptyDirectory() {
   const cards = document.getElementById('cards');
-  while(cards.hasChildNodes())
+  while (cards.hasChildNodes())
     cards.firstChild.remove();
 }
 
