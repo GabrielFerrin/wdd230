@@ -263,6 +263,7 @@ footer {
   text-align: center;
   height: var(--foother-high);
   position: relative;
+  padding-bottom: var(--spacing);
 }
 
 footer p {
@@ -316,7 +317,7 @@ footer p {
   background: var(--contrast-background-color-01);
 }
 
-/* @media (max-width: 611px) {
+@media (max-width: 611px) {
   header .bg-top-small {
     top: -90px;
   }
@@ -379,4 +380,4 @@ footer p {
   footer p {
     padding-bottom: 8px;
   }
-} */
+}
