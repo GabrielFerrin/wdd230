@@ -110,20 +110,31 @@
   </section>
   <section class="weather">
     <h2>Weather</h2>
+    <div class="server-error">
+      <figure>
+        <img src="images/error.svg" alt="Image of server error" height="80">
+        <figcaption>
+          We apologize for the inconvenience
+        </figcaption>
+      </figure>
+    </div>
+    <div class="load-animation">
+      <div class="lds-ripple"><div></div><div></div></div>
+    </div>
     <div class="weather-separator-01">
       <picture>
-        <img src="images/cloudy.svg" alt="">
+        <img id="weather-image" src="" alt="">
       </picture>
-      <p><span id="temperature">-20</span>°C</p>
+      <p><span id="temperature"></span>°F</p>
     </div>
     <div class="weather-separator-02">
-      <p><strong>Partly Cloudy</strong></p>
+      <p><strong  id="weather-description"></strong></p>
       <hr>
       <div class="weather-separator-03">
         <p>Wind Speed:</p>
         <p>Wind Chill:</p>
         <p><span id="wind-speed">55</span> km/h</p>
-        <p><span id="windchill">N/A</span></p>
+        <p><span id="windchill"></span></p>
       </div>
     </div>
   </section>
@@ -228,6 +239,12 @@
     <p>WDD 203 Project</p>
     <p id="last-modified"></p>
     <p id="copyright-line"></p>
+    <p>
+      Weather Provided by 
+      <a href="https://openweathermap.org/">
+        OpenWeatherMap
+      </a>
+    </p>
   </div>
 </footer>
 </body>

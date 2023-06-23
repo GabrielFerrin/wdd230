@@ -47,7 +47,7 @@ if (now.getDay() == 1 || now.getDay() == 2) {
 ///////////////
 const copyrightDate = new Date(document.lastModified);
 document.getElementById('copyright')
-	.innerText = '©' + copyrightDate.getFullYear() +
+	.innerHTML = '©' + copyrightDate.getFullYear() +
 	' Manta Chamber';
 
 ///////////////////////
@@ -59,10 +59,11 @@ document.getElementById('last-modified')
 
 const copyrightLine = '©' + copyrightDate.getFullYear()
 	+ 'Manta Chamber | Gabriel Ferrin M. | WDD 203 Project '
-	+ '| Last Modification: 05/17/2023 09:56:42';
+	+ '| ' + document.lastModified + ' '
+	+ `| Weather Provided by <a href=\"https://openweathermap.org/\\">OpenWeatherMap </a>`;
 
 document.getElementById('copyright-line')
-	.innerText = copyrightLine;
+	.innerHTML = copyrightLine;
 
 //////////////////////////
 // intersection effects //

@@ -11,7 +11,7 @@
 		width: 100%;
 		box-sizing: border-box;
 		padding: 0;
-		margin-top: var(--white-space);
+		padding-top: var(--white-space);
 	}
 
 	.announcement-banner p {
@@ -85,6 +85,10 @@
 		width: 70%;
 	}
 
+	.home-main .server-error img {
+		height: 60px;
+	}
+
 	/*****************/
 	/* MAIN DISCOVER */
 	/*****************/
@@ -142,7 +146,7 @@
 		display: none;
 	}
 
-	footer .footer-copyright p:last-child {
+	footer .footer-copyright p:nth-last-child(2) {
 		display: block;
 		align-self: center;
 	}
