@@ -72,7 +72,7 @@ header .title-background h1 {
 
 .menu-background {
 	background-color: var(--background-color-2);
-	padding: calc(var(--gap) / 2);
+	padding: 0;
 }
 
 nav ul {
@@ -80,8 +80,9 @@ nav ul {
 }
 
 nav li:hover a {
+	transition: 0.35s;
 	background-color: var(--background-contrast-color-01);
-	color: var(--font-color-01);
+	color: var(--background-color-1);
 }
 
 /* **** */
@@ -139,7 +140,7 @@ nav ul li {
 	margin: 2px 0;
 }
 
-main section li:hover, nav ul li:hover a {
+main section li:hover {
 	transition: 0.35s;
 	color: var(--background-color-2);
 	background-color: var(--background-transparent);
@@ -155,11 +156,11 @@ nav li a {
 	color: var(--background-contrast-color-01);
 }
 
-
 /* header nav override */
 nav li a {
 	height: 30px;
 }
+/*  */
 
 main section:last-of-type li a,
 nav li a {
@@ -198,5 +199,9 @@ main section span {
 }
 
 footer span img {
-	margin: 0 0 -5px 4px;
+	margin: 0 0 -6px 4px;
+}
+
+footer p {
+	font-size: 0.85rem;
 }
