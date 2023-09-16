@@ -4,12 +4,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <meta name="description" content="This is a really nice site">
+  <!-- Info -->
+  <title>Gabriel Ferrin - WDD 230 - Web Frontend Development</title>
+  <meta name="author" content="Gabriel Ferrin">
+  <meta name="description" content="A home page with the list of all
+    the assignments for Fall 2023 Semester | WDD 230 - Web Frontend
+    Development, created by Angel Gabriel Ferrin Moreira">
+  <!-- style -->
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- script -->
+  <script defer src="scripts/getdates.js"></script>
 </head>
 
 <body>
-  Hello you all!
+  <header>
+    <div class="title-background">
+      <img src="images/profile-picture.png" alt="Gabriel Ferrin's profile picture" height="91" width="90px">
+      <h1>Gabriel Ferrin</h1>
+    </div>
+
+    <nav>
+    </nav>
+  </header>
+
+  <main>
+
+    <h2>WDD 230: Web Frontend Development</h2>
+    <hr>
+
+    <section class="card">
+      <div class="card-header">
+        <h3>Learning Activities</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><a href="#">
+              <h4>01: <span>Alguna vez tenía que venir una lección fuerte</span></h4>
+            </a></li>
+          <li><a href="#">
+              <h4>01: <span>Lesson</span></h4>
+            </a></li>
+          <li><a href="#">
+              <h4>01: <span>Lesson</span></h4>
+            </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h3>Information</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li>
+            <a href="#">
+              <h4>Location | <span>Manta, Ecuador</span></h4>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>☀️🌤️😎 | <span>70° - Cloudy</span></h4>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>This is your visit number: <span>32</span></h4>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-background">
+      <p>
+        <span id="copyright"></span>
+        <span>| Gabriel Ferrin</span>
+        <span>
+          | Ecuador
+          <img src="images/ecuador-flag.png" alt="Ecuador flag" height="20px">
+        </span>
+      </p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
 </body>
 
 </html>
