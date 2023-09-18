@@ -29,6 +29,8 @@ html {
 
 body {
 	min-width: var(--min-width);
+	max-width: calc(var(--max-width) + 80px);
+	margin: 0 auto;
 }
 
 h1,
@@ -161,6 +163,7 @@ nav li a {
 nav li a {
 	height: 30px;
 }
+
 /*  */
 
 main section:last-of-type li a,
