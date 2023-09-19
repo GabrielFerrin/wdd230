@@ -47,6 +47,16 @@ p {
 /* HEADER */
 /* ****** */
 
+header {
+	position: relative;
+}
+
+header #background-top {
+	position: absolute;
+	z-index: -1;
+	bottom: 40px;
+}
+
 header .title-background img:first-of-type {
 	border-radius: 3px;
 	padding: calc(var(--gap) / 2);
