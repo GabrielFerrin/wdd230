@@ -3,7 +3,7 @@
 
 :root {
 	/* fonts */
-	--font: "Roboto Condensed", Arial, 'Trebuchet MS';
+	--font: Rubik, "Roboto Condensed", Arial, 'Trebuchet MS';
 	--font-color-01: #e4e4e4;
 	--font-color-02: #bfbfbf;
 	/* color pallet */
@@ -13,7 +13,7 @@
 	--background-transparent: rgba(255, 255, 255, 0.85);
 	--background-contrast-color-01: #ff931e;
 	/* size */
-	--max-width: 1280px;
+	--max-width: 900px;
 	--min-width: 365px;
 	--gap: 10px;
 	--radius: 4px;
@@ -52,6 +52,7 @@ header {
 }
 
 header #background-top {
+	width: 100%;
 	position: absolute;
 	z-index: -1;
 	bottom: 40px;
@@ -64,6 +65,10 @@ header .title-background img:first-of-type {
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
+header h1 {
+	font-size: 2.8rem;
+}
+
 .title-background,
 .menu-background {
 	background-color: var(--background-transparent);
@@ -74,6 +79,7 @@ header .title-background img:first-of-type {
 	justify-content: center;
 	align-items: center;
 	gap: calc(var(--gap) * 2);
+	text-align: center;
 }
 
 header .title-background h1 {
@@ -113,6 +119,7 @@ main img {
 }
 
 main h2 {
+	font-size: 2rem;
 	width: 100%;
 	text-align: center;
 }
@@ -176,6 +183,7 @@ nav li a {
 /* header nav override */
 nav li a {
 	height: 30px;
+	font-size: 1.1rem;
 }
 
 /*  */
@@ -222,4 +230,30 @@ footer span img {
 
 footer p {
 	font-size: 0.85rem;
+}
+
+/**************/
+/* SCROLL-BAR */
+/**************/
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--font-color-01);
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--font-color-02);
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--background-contrast-color-01);
 }
