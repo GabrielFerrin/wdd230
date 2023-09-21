@@ -1,0 +1,24 @@
+:root {
+  	/* size */
+	--radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    transition: .3s;
+  }
+
+  nav ul li:hover {
+    width: 110%;
+  }
+
+  nav ul li:hover a {
+    border-radius: var(--radius);
+  }
+
+}

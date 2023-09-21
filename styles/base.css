@@ -82,11 +82,23 @@ header h1 {
 	text-align: center;
 }
 
+.title-background {
+	margin-bottom: 2px;
+}
+
+.menu-background {
+	margin-top: 0px;
+}
+
 header .title-background h1 {
 	color: var(--background-color-1);
 }
 
-.menu-background {
+/* *** */
+/* NAV */
+/* *** */
+
+nav .menu-background {
 	background-color: var(--background-color-2);
 	padding: 0;
 }
@@ -185,7 +197,8 @@ nav li a {
 /* header nav override */
 nav li a {
 	height: 30px;
-	font-size: 1.1rem;
+	font-size: 0.8rem;
+	border-radius: var(--radius);
 }
 
 /*  */
