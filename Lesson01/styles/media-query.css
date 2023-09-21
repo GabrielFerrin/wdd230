@@ -23,3 +23,10 @@ section {
   background-color: #fff;
 }
 
+a {
+  color: rgb(0, 0, 59);
+}
+
+a:visited {
+  color: rgb(0, 0, 94);
+}
