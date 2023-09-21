@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
 	/* fonts */
@@ -66,7 +67,7 @@ header .title-background img:first-of-type {
 }
 
 header h1 {
-	font-size: 2.8rem;
+	font-size: 2.5rem;
 }
 
 .title-background,
@@ -113,6 +114,11 @@ nav li:hover a {
 	color: var(--background-color-1);
 }
 
+nav img {
+	margin-left: 3px;
+	margin-bottom: 3px;
+}
+
 /* **** */
 /* MAIN */
 /* **** */
@@ -131,7 +137,7 @@ main img {
 }
 
 main h2 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	width: 100%;
 	text-align: center;
 }
@@ -140,6 +146,7 @@ main hr {
 	width: 100%;
 	border-color: var(--line-divider-color);
 	margin: 20px 0;
+	margin-top: 10px;
 }
 
 main section {
@@ -199,9 +206,9 @@ nav li a {
 	height: 30px;
 	font-size: 0.8rem;
 	border-radius: var(--radius);
+	font-weight: 400;
 }
-
-/*  */
+/**/
 
 main section:last-of-type li a,
 nav li a {
@@ -244,7 +251,7 @@ footer span img {
 }
 
 footer p {
-	font-size: 0.85rem;
+	font-size: 0.75rem;
 }
 
 /**************/
