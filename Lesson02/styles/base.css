@@ -131,8 +131,8 @@ main {
 	margin: 0 auto;
 }
 
-main img {
-	justify-self: center;
+main .screenshot {
+	width: 100%;
 }
 
 main h2 {
@@ -149,13 +149,12 @@ main hr {
 }
 
 main section {
-	grid-column: 1 / 2;
 	display: flex;
 	flex-direction: column;
 }
 
 main .card-header {
-	background-color: var(--background-transparent);
+	background-color: var(--font-color-01);
 	height: 40px;
 	display: flex;
 	justify-content: center;
@@ -168,7 +167,7 @@ main .card-body {
 	border: 1px solid var(--line-divider-color);
 	border-radius: 0px 0px var(--radius) var(--radius);
 	border-top: none;
-	margin-bottom: 30px;
+	margin-bottom: calc(var(--gap) * 2);
 }
 
 main section ul,
@@ -200,6 +199,12 @@ nav li a {
 	color: var(--background-contrast-color-01);
 }
 
+main section li a {
+	height: auto;
+	padding: var(--gap);
+	text-align: center;
+}
+
 /* header nav override */
 nav li a {
 	height: 30px;
@@ -209,12 +214,12 @@ nav li a {
 }
 /**/
 
-main section:last-of-type li a,
 nav li a {
 	justify-content: center;
 }
 
-main section li:hover span {
+main section li:hover span,
+main section li:hover p{
 	color: var(--background-color-1);
 }
 
@@ -228,12 +233,20 @@ main section span {
 	color: var(--font-color-01);
 }
 
+main section ul img {
+	margin-bottom: -1px;
+}
+
+main section li:hover img {
+	content: url("../images/external-content-black.svg");
+}
+
 /* ****** */
 /* FOOTER */
 /* ****** */
 
 .footer-background {
-	color: var(--font-color-02);
+	color: var(--font-color-01);
 	background-color: var(--background-color-2);
 	border-radius: 4px;
 	margin: var(--gap);
