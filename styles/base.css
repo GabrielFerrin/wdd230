@@ -55,7 +55,7 @@ header #background-top {
 	width: 100%;
 	position: absolute;
 	z-index: -1;
-	bottom: 40px;
+	bottom: 100px;
 }
 
 header .title-background img:first-of-type {
