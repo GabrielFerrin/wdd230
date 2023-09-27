@@ -55,7 +55,7 @@ header #background-top {
 	width: 100%;
 	position: absolute;
 	z-index: -1;
-	bottom: 100px;
+	bottom: 45px;
 }
 
 header .title-background img:first-of-type {
@@ -76,7 +76,8 @@ header h1 {
 	margin: var(--gap);
 	padding: calc(var(--gap) * 2) var(--gap);
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	gap: var(--gap);
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -251,7 +252,7 @@ main .card-body {
 	border-radius: 0px 0px var(--radius) var(--radius);
 	border-top: none;
 	margin-bottom: 30px;
-	height: calc(100% - 40px);
+	height: calc(100% - 72px);
 }
 
 main section ul,
