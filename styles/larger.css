@@ -4,7 +4,7 @@
 }
 
 /* medium */
-@media screen and (min-width: 32.5em) {
+@media screen and (min-width: 520px) {
   header #background-top {
     bottom: 50px;
   }
@@ -40,7 +40,7 @@
 }
 
 /* large */
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 1024px) {
   main {
     grid-template-columns: 1.5fr 0.6fr;
   }

@@ -87,10 +87,6 @@ header h1 {
 	margin-bottom: 2px;
 }
 
-.menu-background {
-	margin-top: 0px;
-}
-
 header .title-background h1 {
 	color: var(--background-color-1);
 }
@@ -102,19 +98,19 @@ header .title-background h1 {
 nav .menu-background {
 	background-color: var(--background-color-2);
 	padding: 0;
+	flex-direction: column;
+	margin-top: 0px;
 }
 
 nav ul {
 	width: 100%;
 	display: none;
-	color: white;
 }
 
 nav .show-menu {
 	display: block;
 	opacity: 1;
 	transition: 2s;
-	color: red;
 }
 
 nav li:hover a {
@@ -199,7 +195,6 @@ nav .active {
 
 /* ↑ menu-button source:
 	https://codepen.io/ainalem/pen/wvKOEMV */
-
 
 /* **** */
 /* MAIN */

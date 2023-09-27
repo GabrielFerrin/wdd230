@@ -55,7 +55,7 @@ header #background-top {
 	width: 100%;
 	position: absolute;
 	z-index: -1;
-	bottom: 40px;
+	bottom: 45px;
 }
 
 header .title-background img:first-of-type {
@@ -76,18 +76,15 @@ header h1 {
 	margin: var(--gap);
 	padding: calc(var(--gap) * 2) var(--gap);
 	display: flex;
+	flex-direction: row;
+	gap: var(--gap);
 	justify-content: center;
 	align-items: center;
-	gap: calc(var(--gap) * 2);
 	text-align: center;
 }
 
 .title-background {
 	margin-bottom: 2px;
-}
-
-.menu-background {
-	margin-top: 0px;
 }
 
 header .title-background h1 {
@@ -101,10 +98,19 @@ header .title-background h1 {
 nav .menu-background {
 	background-color: var(--background-color-2);
 	padding: 0;
+	flex-direction: column;
+	margin-top: 0px;
 }
 
 nav ul {
 	width: 100%;
+	display: none;
+}
+
+nav .show-menu {
+	display: block;
+	opacity: 1;
+	transition: 2s;
 }
 
 nav li:hover a {
@@ -117,6 +123,78 @@ nav img {
 	margin-left: 3px;
 	margin-bottom: 1px;
 }
+
+nav .active {
+	text-decoration: underline;
+}
+
+/* ↓ menu-button source: 
+	https://codepen.io/ainalem/pen/wvKOEMV */
+
+#menu-button {
+	border: none;
+	position: relative;
+	height: 40px;
+	width: 40px;
+	/* min-width: auto; */
+	background-color: black;
+	cursor: pointer;
+	padding: 0;
+	border-radius: calc(var(--radius) / 2);
+	/* z-index: 99; */
+}
+
+.menu-button:hover {
+	background-color: orange;
+}
+
+.menu-button:hover .line {
+	stroke: var(--background-color-2);
+}
+
+.line {
+	fill: none;
+	stroke: var(--background-contrast-color-01);
+	stroke-width: 6;
+	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+	stroke-dasharray: 60 207;
+	stroke-width: 6;
+}
+
+.line2 {
+	stroke-dasharray: 60 60;
+	stroke-width: 6;
+}
+
+.line3 {
+	stroke-dasharray: 60 207;
+	stroke-width: 6;
+}
+
+.opened .line1 {
+	stroke-dasharray: 90 207;
+	stroke-dashoffset: -134;
+	stroke-width: 6;
+}
+
+.opened .line2 {
+	stroke-dasharray: 1 60;
+	stroke-dashoffset: -30;
+	stroke-width: 6;
+}
+
+.opened .line3 {
+	stroke-dasharray: 90 207;
+	stroke-dashoffset: -134;
+	stroke-width: 6;
+}
+
+/* ↑ menu-button source:
+	https://codepen.io/ainalem/pen/wvKOEMV */
 
 /* **** */
 /* MAIN */
@@ -169,6 +247,7 @@ main .card-body {
 	border-radius: 0px 0px var(--radius) var(--radius);
 	border-top: none;
 	margin-bottom: calc(var(--gap) * 2);
+	height: calc(100% - 51px);
 }
 
 main section ul,
@@ -213,6 +292,7 @@ nav li a {
 	border-radius: var(--radius);
 	font-weight: 400;
 }
+
 /**/
 
 nav li a {
@@ -220,7 +300,7 @@ nav li a {
 }
 
 main section li:hover span,
-main section li:hover p{
+main section li:hover p {
 	color: var(--background-color-1);
 }
 
@@ -273,22 +353,22 @@ footer p {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+	width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--font-color-01);
-  border-radius: 4px;
+	background: var(--font-color-01);
+	border-radius: 4px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--font-color-02);
-  border-radius: 6px;
+	background: var(--font-color-02);
+	border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--background-contrast-color-01);
+	background: var(--background-contrast-color-01);
 }

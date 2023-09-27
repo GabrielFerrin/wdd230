@@ -7,7 +7,23 @@ let toggleMenu = _ => {
 		.getElementById('menu-button');
 	menuButton.classList.toggle('opened');
 
-	// menu
+	// menu items
 	const menu = document.getElementById('menu');
-		menu.classList.toggle('show-menu');
+	menu.classList.toggle('show-menu');
 }
+
+// resize observer
+const observer = new ResizeObserver(entries => {
+	if (entries[0].contentRect.width >= 520) {
+		const menuButton = document
+			.getElementById('menu-button');
+		if (menuButton.classList.contains('opened')) {
+
+			const menu = document.getElementById('menu');
+			menu.classList.toggle('show-menu');
+			menuButton.classList.toggle('opened');
+		}
+
+	}
+});
+observer.observe(document.body);
