@@ -8,7 +8,8 @@
 	/* color pallet */
 	--background-color-1: #010101;
 	--background-color-2: #0c0c0c;
-
+	--background-color-3: #272727;
+	--background-color-4: #383838;
 	--background-transparent: rgba(255, 255, 255, 0.85);
 	--background-contrast-color-01: #ff931e;
 	/* size */
@@ -96,7 +97,7 @@ header .title-background h1 {
 /* *** */
 
 nav .menu-background {
-	background-color: var(--background-color-2);
+	background-color: var(--background-color-3);
 	padding: 0;
 	flex-direction: column;
 	margin-top: 0px;
@@ -117,6 +118,7 @@ nav li:hover a {
 	transition: 0.35s;
 	background-color: var(--background-contrast-color-01);
 	color: var(--background-color-1);
+	border-radius: var(--radius);
 }
 
 nav img {
@@ -124,8 +126,22 @@ nav img {
 	margin-bottom: 1px;
 }
 
+nav .menu-background ul li:hover img {
+	content: url("../lesson2/images/external-content-black.svg");
+}
+
 nav .active {
-	text-decoration: underline;
+	background-color: var(--background-color-4);
+}
+
+nav .active::after {
+	content: "|";
+	color: var(--font-color-01)
+}
+
+nav .active::before {
+	content: '|';
+	color: var(--font-color-01)
 }
 
 /* ↓ menu-button source: 
@@ -280,11 +296,19 @@ nav li a {
 }
 
 /* header nav override */
+nav ul li {
+	margin: 0;
+}
+
 nav li a {
 	height: 30px;
 	font-size: 0.8rem;
-	border-radius: var(--radius);
 	font-weight: 400;
+	background-color: var(--background-color-3);
+}
+
+nav li a span {
+	margin: 0 4px;
 }
 
 /**/
