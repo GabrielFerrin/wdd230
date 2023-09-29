@@ -3,13 +3,13 @@
 :root {
 	/* fonts */
 	--font: "Roboto Condensed", Arial, 'Trebuchet MS';
-	--font-color-01: #e4e4e4;
-	--font-color-02: #bfbfbf;
+	--font-color-01: #ffffff;
+	--font-color-02: #ffffff;
 	/* color pallet */
-	--background-color-1: #010101;
-	--background-color-2: #0c0c0c;
-	--background-color-3: #272727;
-	--background-color-4: #383838;
+	--background-color-1: #0a0443;
+	--background-color-2: #3c38e5;
+	--background-color-3: #00b5b6;
+	--background-color-4: #00e5df;
 	--background-transparent: rgba(255, 255, 255, 0.85);
 	--background-contrast-color-01: #ff931e;
 	/* size */
@@ -116,8 +116,8 @@ nav .show-menu {
 
 nav li:hover a {
 	transition: 0.35s;
-	background-color: var(--background-contrast-color-01);
-	color: var(--background-color-1);
+	background-color: var(--background-color-2);
+	color: var(--font-color-01);
 	border-radius: var(--radius);
 }
 
@@ -126,12 +126,9 @@ nav img {
 	margin-bottom: 1px;
 }
 
-nav .menu-background ul li:hover img {
-	content: url("../images/external-content-black.svg");
-}
-
 nav .active {
 	background-color: var(--background-color-4);
+	color: var(--background-color-1);
 }
 
 nav .active::after {
@@ -286,7 +283,7 @@ nav li a {
 	height: 65px;
 	text-decoration: none;
 	padding: 1px;
-	color: var(--background-contrast-color-01);
+	color: var(--font-color-01);
 }
 
 main section h4 {
