@@ -8,11 +8,15 @@
   header #background-top {
     bottom: 50px;
   }
-  
+
   header h1 {
     font-size: 2.8rem;
   }
-  
+
+  #glasses {
+    margin-top: 0px;
+  }
+
   nav #menu {
     display: flex;
   }

@@ -52,6 +52,85 @@ header {
 	position: relative;
 }
 
+/* ↓ menu-button source: 
+	https://codepen.io/ainalem/pen/wvKOEMV */
+
+	#menu-button {
+		border: none;
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		height: 40px;
+		width: 40px;
+		/* min-width: auto; */
+		background-color: black;
+		cursor: pointer;
+		padding: 0;
+		border-radius: calc(var(--radius) / 2);
+		/* z-index: 99; */
+	}
+	
+	#glasses {
+		margin-top: 20px;
+	}
+
+	header svg {
+		border-radius: calc(var(--radius) / 2);
+		transition: 0.35s;
+	}
+	
+	header svg:hover {
+		background-color: orange;
+	}
+	
+	header svg:hover .line {
+		stroke: var(--background-color-2);
+	}
+	
+	.line {
+		fill: none;
+		stroke: var(--background-contrast-color-01);
+		stroke-width: 6;
+		transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+			stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	
+	.line1 {
+		stroke-dasharray: 60 207;
+		stroke-width: 6;
+	}
+	
+	.line2 {
+		stroke-dasharray: 60 60;
+		stroke-width: 6;
+	}
+	
+	.line3 {
+		stroke-dasharray: 60 207;
+		stroke-width: 6;
+	}
+	
+	.opened .line1 {
+		stroke-dasharray: 90 207;
+		stroke-dashoffset: -134;
+		stroke-width: 6;
+	}
+	
+	.opened .line2 {
+		stroke-dasharray: 1 60;
+		stroke-dashoffset: -30;
+		stroke-width: 6;
+	}
+	
+	.opened .line3 {
+		stroke-dasharray: 90 207;
+		stroke-dashoffset: -134;
+		stroke-width: 6;
+	}
+	
+	/* ↑ menu-button source:
+		https://codepen.io/ainalem/pen/wvKOEMV */
+
 header #background-top {
 	width: 100%;
 	position: absolute;
@@ -143,74 +222,6 @@ nav .active::before {
 	content: '|';
 	color: var(--font-color-01)
 }
-
-/* ↓ menu-button source: 
-	https://codepen.io/ainalem/pen/wvKOEMV */
-
-#menu-button {
-	border: none;
-	position: relative;
-	height: 40px;
-	width: 40px;
-	/* min-width: auto; */
-	background-color: black;
-	cursor: pointer;
-	padding: 0;
-	border-radius: calc(var(--radius) / 2);
-	/* z-index: 99; */
-}
-
-.menu-button:hover {
-	background-color: orange;
-}
-
-.menu-button:hover .line {
-	stroke: var(--background-color-2);
-}
-
-.line {
-	fill: none;
-	stroke: var(--background-contrast-color-01);
-	stroke-width: 6;
-	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line1 {
-	stroke-dasharray: 60 207;
-	stroke-width: 6;
-}
-
-.line2 {
-	stroke-dasharray: 60 60;
-	stroke-width: 6;
-}
-
-.line3 {
-	stroke-dasharray: 60 207;
-	stroke-width: 6;
-}
-
-.opened .line1 {
-	stroke-dasharray: 90 207;
-	stroke-dashoffset: -134;
-	stroke-width: 6;
-}
-
-.opened .line2 {
-	stroke-dasharray: 1 60;
-	stroke-dashoffset: -30;
-	stroke-width: 6;
-}
-
-.opened .line3 {
-	stroke-dasharray: 90 207;
-	stroke-dashoffset: -134;
-	stroke-width: 6;
-}
-
-/* ↑ menu-button source:
-	https://codepen.io/ainalem/pen/wvKOEMV */
 
 /* **** */
 /* MAIN */
