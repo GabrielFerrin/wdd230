@@ -463,11 +463,12 @@ main .topography-card .subtitle {
 }
 
 main .mobile-wireframe {
+	background-color: red;
 	position: relative;
-	height: calc(777px + calc(var(--gap) * 2)) !important;
 }
 
-main .mobile-wireframe img{
+main .mobile-wireframe img,
+main .wireframe img {
 	width: 100% !important;
 	height: auto !important;
 }
@@ -483,11 +484,23 @@ main #iphone-frame {
 main .iphone-wrapper {
 	overflow: auto;
 	width: calc(100% - 38px);
-	height: calc(100% - var(--gap) - 36px);
+	height: calc(100% - 36px);
 	margin-left: 20px;
 	margin-top: 17px;
 	border-radius: 50px;
 	z-index: 1;
+}
+
+main #iphone-camera {
+	position: absolute;
+	z-index: 2;
+}
+
+main #iphone-home {
+	position: absolute;
+	bottom: 0px;
+	left: 30px;
+	z-index: 2;
 }
 
 /* ****** */
