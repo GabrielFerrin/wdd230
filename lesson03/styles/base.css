@@ -470,7 +470,8 @@ main .content-wrapper {
 	margin: 0 auto;
 }
 
-main .image-wrapper img {
+main .image-wrapper img,
+main .wireframe img {
 	width: 100% !important;
 	height: auto !important;
 }
