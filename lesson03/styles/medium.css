@@ -30,10 +30,6 @@
     width: 110%;
   }
 
-  nav ul li:hover a {
-    border-radius: var(--radius);
-  }
-
   #menu-button {
     display: none;
   }

@@ -20,7 +20,7 @@
 	--gap: 10px;
 	--radius: 4px;
 	/* others */
-	--line-divider-color: rgb(77, 77, 77);
+	--line-divider-color: rgb(255, 255, 255);
 }
 
 html {
@@ -56,6 +56,7 @@ header {
 
 h1 {
 	color: var(--background-color-1);
+	text-align: center;
 }
 
 /* ↓ menu-button source: 
@@ -151,13 +152,10 @@ header .title-background img:first-of-type {
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-header h1 {
-	font-size: 2.5rem;
-}
-
 .title-background,
 .menu-background {
 	background-color: var(--background-transparent);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	border-radius: 4px;
 	margin: var(--gap);
 	padding: calc(var(--gap) * 2) var(--gap);
@@ -175,6 +173,7 @@ header h1 {
 
 header .title-background h1 {
 	color: var(--background-color-1);
+	font-size: 1.7rem;
 }
 
 /* *** */
@@ -186,6 +185,7 @@ nav .menu-background {
 	padding: 0;
 	flex-direction: column;
 	margin-top: 0px;
+	margin-top: var(--gap);
 }
 
 nav ul {
@@ -196,14 +196,11 @@ nav ul {
 nav .show-menu {
 	display: block;
 	opacity: 1;
-	transition: 2s;
 }
 
 nav li:hover a {
-	transition: 0.35s;
 	background-color: var(--background-color-3);
 	color: var(--font-color-01);
-	border-radius: var(--radius);
 }
 
 nav img {
@@ -254,8 +251,10 @@ main h2 {
 main hr {
 	width: 100%;
 	border-color: var(--line-divider-color);
-	margin: 20px 0;
-	margin-top: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	margin: 10px 0;
+	margin-top: 0;
+	margin-left: -1px;
 }
 
 main section {
@@ -265,6 +264,7 @@ main section {
 
 main .card-header {
 	background-color: var(--background-color-1);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	height: 40px;
 	display: flex;
 	justify-content: center;
@@ -275,7 +275,7 @@ main .card-header {
 
 main .card-body {
 	background-color: var(--background-color-6);
-	border: 1px solid var(--line-divider-color);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	border-radius: 0px 0px var(--radius) var(--radius);
 	border-top: none;
 	margin-bottom: calc(var(--gap) * 2);
@@ -328,6 +328,10 @@ main section .card-title {
 	text-align: center;
 }
 
+main section .underlined {
+	text-decoration: underline;
+}
+
 main section li a {
 	height: auto;
 	padding: var(--gap);
@@ -344,6 +348,8 @@ nav li a {
 	height: 30px;
 	font-size: 0.8rem;
 	font-weight: 400;
+	justify-content: center;
+
 }
 
 nav li a span {
@@ -351,10 +357,6 @@ nav li a span {
 }
 
 /**/
-
-nav li a {
-	justify-content: center;
-}
 
 nav h4 {
 	margin: 0 var(--gap);
