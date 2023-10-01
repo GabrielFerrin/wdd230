@@ -54,6 +54,10 @@ header {
 	position: relative;
 }
 
+h1 {
+	color: var(--background-color-1);
+}
+
 /* ↓ menu-button source: 
 	https://codepen.io/ainalem/pen/wvKOEMV */
 
@@ -440,7 +444,8 @@ main section .typography7 {
 }
 
 main .topography-card-body {
-	gap: var(--gap);
+	gap: calc(var(--gap) * 2);
+	padding: calc(var(--gap) * 2);
 }
 
 main .topography-card h4,
