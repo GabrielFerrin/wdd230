@@ -24,7 +24,7 @@
 }
 
 html {
-	background-color: var(co);
+	background-color: var(--background-color-4);
 	font-family: var(--font);
 	color: var(--font-color-01);
 	font-size: 16px;
@@ -462,6 +462,34 @@ main .topography-card .subtitle {
 	margin-left: 25px;
 }
 
+main .mobile-wireframe {
+	position: relative;
+	height: calc(777px + calc(var(--gap) * 2)) !important;
+}
+
+main .mobile-wireframe img{
+	width: 100% !important;
+	height: auto !important;
+}
+
+main #iphone-frame {
+	width: calc(100% - calc(var(--gap) * 2)) !important;
+	position: absolute;
+	top: var(--gap);
+	left: var(--gap);
+	z-index: 0;
+}
+
+main .iphone-wrapper {
+	overflow: auto;
+	width: calc(100% - 38px);
+	height: calc(100% - var(--gap) - 36px);
+	margin-left: 20px;
+	margin-top: 17px;
+	border-radius: 50px;
+	z-index: 1;
+}
+
 /* ****** */
 /* FOOTER */
 /* ****** */
@@ -494,21 +522,22 @@ footer p {
 /* width */
 ::-webkit-scrollbar {
 	width: 8px;
+	background: transparent;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: var(--font-color-01);
+	background: transparent;
 	border-radius: 4px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: var(--font-color-02);
 	border-radius: 6px;
+	background: transparent;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--background-contrast-color-01);
+	background: transparent;
 }
