@@ -44,7 +44,8 @@
 
   main hr,
   main .card-scenarios,
-  main .card-wireframe {
+  main .card-wireframe,
+  main h2 {
     grid-column: 1/3;
   }
 

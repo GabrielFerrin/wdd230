@@ -24,7 +24,7 @@
 }
 
 html {
-	background-color: var(--background-color-4);
+	/* background-color: var(--background-color-4); */
 	font-family: var(--font);
 	color: var(--font-color-01);
 	font-size: 16px;
@@ -243,7 +243,7 @@ main .screenshot {
 
 main h2 {
 	font-size: 1.8rem;
-	color: var(--background-contrast-color-01);
+	color: var(--background-color-1);
 	width: 100%;
 	text-align: center;
 }
@@ -270,7 +270,6 @@ main .card-header {
 	justify-content: center;
 	align-items: center;
 	border-radius: var(--radius) var(--radius) 0px 0px;
-	color: var(--background-contrast-color-01);
 }
 
 main .card-body {
@@ -398,6 +397,7 @@ main section .color4 {
 
 main section .color5 {
 	background-color: #00b5b6;
+	color: #000;
 }
 
 main section .color6 {
