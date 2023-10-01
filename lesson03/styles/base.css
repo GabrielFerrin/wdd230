@@ -381,7 +381,7 @@ main section .color-container:last-of-type {
 
 main section .color1 {
 	background-color: #ff931e;
-	color: var(--background-color-2);
+	color: var(--background-color-1);
 }
 
 main section .color2 {
@@ -398,7 +398,6 @@ main section .color4 {
 
 main section .color5 {
 	background-color: #00b5b6;
-	color: var(--background-color-2);
 }
 
 main section .color6 {
