@@ -3,7 +3,7 @@
 :root {
   --font: "Roboto Condensed", Arial, 'Trebuchet MS';
   --font-dark-color: #000000;
-  --font-grey-color: #666666;
+  --font-grey-color: rgb(57, 57, 57);
   --bg-color-01: #0a0443;
   --bg-color-02: #2c2292;
   --bg-color-03: #3c38e5;
