@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+  --font: "Roboto Condensed", Arial, 'Trebuchet MS';
+  --bg-color-01: #0a0443;
+  --bg-color-02: #2c2292;
+  --bg-color-03: #3c38e5;
+  --bg-color-04: #00b5b6;
+  --bg-color-05: #00e5df;
+  --contrast: #df9803;
+  --bg-white: #ffffff;
+  --gap: 10px;
+  --radius: 4px;
+  --shadow-light: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --transition-duration: .32s;
+}
+
+body {
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  font-family: var(--font);
+  min-width: 350px;
+  color: var(--bg-color-01);
+}
+
+.basic-card {
+  min-height: 50px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  box-shadow: var(--shadow-light);
+  padding: var(--gap);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.button-01 {
+  background-color: var(--bg-color-02);
+  color: var(--bg-white);
+  height: 28px;
+  width: 130px;
+  border: none;
+  border-radius: calc(var(--radius) / 1.6);
+  box-shadow: var(--shadow-light);
+  font-size: 0.7rem;
+  transition: var(--transition-duration);
+}
+
+.button-01:hover {
+  background-color: var(--bg-color-03);
+}
+
+.button-01:active {
+  background-color: var(--bg-color-04);
+  color: var(--bg-color-01);
+  margin-top: 0.6px;
+  margin-left: 0.6px;
+}
+

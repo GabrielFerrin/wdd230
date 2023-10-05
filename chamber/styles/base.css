@@ -1,0 +1,175 @@
+:root {
+  --font: "Roboto Condensed", Arial, 'Trebuchet MS';
+  --bg-color-01: #0a0443;
+  --bg-color-02: #2c2292;
+  --bg-color-03: #3c38e5;
+  --bg-color-04: #00b5b6;
+  --bg-color-05: #00e5df;
+  --contrast: #df9803;
+  --bg-white: #ffffff;
+  --gap: 10px;
+  --radius: 4px;
+  --shadow-light: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --transition-duration: .32s;
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+.header {
+  padding: calc(var(--gap) * 1.5) var(--gap);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+header .logo-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header .h1-subtitle {
+  grid-column: 2 / 3;
+  font-size: 0.7rem;
+  margin-top: -3px;
+}
+
+header .logo-img {
+  margin-right: calc(var(--gap) / 1.5);
+}
+
+header .social-wrapper {
+  margin-top: 3px;
+}
+
+/* ↓ menu-button source: 
+	https://codepen.io/ainalem/pen/wvKOEMV */
+
+#menu-button {
+  height: 40px;
+  width: 40px;
+  background-color: var(--bg-white);
+  cursor: pointer;
+  padding: 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--bg-color-01);
+}
+
+header svg {
+  border-radius: calc(var(--radius) / 2);
+  transition: var(--transition-duration);
+}
+
+header svg:hover {
+  background-color: var(--bg-color-01);
+}
+
+header svg:hover .line {
+  stroke: var(--bg-white);
+}
+
+.line {
+  fill: none;
+  stroke: var(--bg-color-01);
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+/* ↑ menu-button source:
+  https://codepen.io/ainalem/pen/wvKOEMV */
+
+/*******/
+/* NAV */
+/*******/
+
+.nav {
+  display: none;
+}
+
+/********/
+/* MAIN */
+/********/
+
+.main {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+main .hero {
+  height: 150px;
+  background-image: url('../images/hero.png');
+  background-size: 100% auto;
+  background-position: center;
+}
+
+/**************/
+/* SCROLL-BAR */
+/**************/
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--font-color-01);
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--font-color-02);
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--background-contrast-color-01);
+}

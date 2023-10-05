@@ -2,30 +2,112 @@
 <html lang="en">
 
 <head>
-	<title>Document</title>
 	<meta charset="UTF-8">
-	<meta name="author" content="Gabriel Ferrin">
-	<meta name="description" content="This is a really nice site">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- HTML Meta Tags -->
+	<title>Gabriel Ferrin - WDD 230 - Web Frontend Development</title>
+	<meta name="author" content="Gabriel Ferrin">
+	<meta name="description" content="A Chamber of Commerce page for
+		Fall 2023 Semester | WDD 230 | Web Frontend Development,
+		created by Angel Gabriel Ferrin Moreira">
+
+	<!-- Facebook Meta Tags -->
+	<meta property="fb:app_id" content="GabrielFerrinM">
+	<meta property="og:site_name" content="Gabriel Ferrin WDD 230">
+	<meta property="og:url" content="https://gabrielferrin.github.io/wdd230/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Gabriel Ferrin | WDD 230 | Web Frontend Development">
+	<meta property="og:description" content="A Chamber of Commerce page for
+		Fall 2023 Semester | WDD 230 | Web Frontend Development,
+		created by Angel Gabriel Ferrin Moreira">
+	<meta property="og:image" content="https://gabrielferrin.github.io/wdd230/chamber/images/opengraph.png">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:site" content="@gabrielferrin">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="gabrielferrin.github.io">
+	<meta property="twitter:url" content="https://gabrielferrin.github.io/wdd230/">
+	<meta name="twitter:title" content="Gabriel Ferrin | WDD 230 | Web Frontend Development">
+	<meta name="twitter:description" content="A Chamber of Commerce page for
+		Fall 2023 Semester | WDD 230 | Web Frontend Development,
+		created by Angel Gabriel Ferrin Moreira">
+	<meta name="twitter:image" content="https://gabrielferrin.github.io/wdd230/chamber/images/opengraph.png">
+	<meta name="twitter:image:alt" content="Computer with code seen through glasses">
+
+	<!-- style -->
 	<link rel="stylesheet" href="styles/normalize.css">
-	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/theme.css">
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/medium.css">
+	<link rel="stylesheet" href="styles/larger.css">
+
+	<!-- favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
-	<script defer src="scripts/small.css"></script>
+
+	<!-- script -->
+	<!-- <script defer src="scripts/small.css"></script> -->
 </head>
 
 <body>
-	<header>
-		<nav>
-		</nav>
+	<header class="basic-card header">
+		<div class="logo-wrapper">
+			<img class="logo-img" src="images/logo.svg" alt="" width="60px">
+			<div class="logo-title-wrapper">
+				<h1>MANTA</h1>
+				<span class="h1-subtitle">CHAMBER OF COMMERCE</span>
+			</div>
+		</div>
+		<div class="social-wrapper">
+			<img src="images/facebook-logo.svg" alt="Facebook logo" width="25px">
+			<img src="images/linkedin-logo.svg" alt="Linkedin logo" width="25px">
+		</div>
+		<!-- ↓ source: https://codepen.io/ainalem/pen/wvKOEMV -->
+		<button id="menu-button" aria-label="Menu button" onclick="toggleMenu();">
+			<svg viewBox="0 0 100 100">
+				<path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,
+          29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,
+          77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,
+          81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,
+          25.000058" />
+				<path class="line line2" d="M 20,50 H 80" />
+				<path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,
+          70.999954 94.498839, 71.182648 94.532987,33.288669 94.543142,
+          22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,
+          18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,
+          74.999942" />
+			</svg>
+		</button>
+		<!-- ↑ source: https://codepen.io/ainalem/pen/wvKOEMV -->
 	</header>
-	<main>
-		Chamber is under construction. Thank you for your patience.
-		<a href="../">Go back</a>
+
+	<nav class="basic-card nav">
+	</nav>
+
+	<main class="basic-card main">
+		<!-- hero -->
+		<section class="basic-card hero">
+			<!-- <img class="hero-img" src="images/hero.png" alt="Beautiful landscape of Murcielago Beach in Manta" width="200"> -->
+			<button class="button-01">Joing the Chamber</button>
+		</section>
+
+		<section class="basic-card">
+
+		</section>
+
+		<!-- current event -->
+		<section class="basic-card">
+
+		</section>
+
+		<!-- weather card -->
+		<section class="basic-card"></section>
+		<!-- spotlights -->
+		<section class="basic-card"></section>
 	</main>
-	<footer>
+	<footer class="basic-card">
 	</footer>
 </body>
 
