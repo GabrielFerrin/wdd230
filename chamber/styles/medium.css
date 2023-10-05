@@ -1,0 +1,19 @@
+@media screen and (min-width: 600px) {
+  header #menu-button {
+    display: none;
+  }
+
+  .header ul {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header ul li a {
+    font-size: .9rem;
+  }
+}

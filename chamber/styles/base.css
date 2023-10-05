@@ -35,6 +35,36 @@ header .social-wrapper {
   margin-top: 3px;
 }
 
+header ul {
+  display: none;
+  width: 100%;
+  max-width: 500px;
+}
+
+.header ul li {
+  list-style: none;
+  border-radius: calc(var(--radius) / 3);
+  width: 100%;
+}
+
+.header ul li a {
+  text-decoration: none;
+  display: flex;
+  padding: var(--gap);
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - var(--gap) * 2);
+  background-color: var(--bg-white);
+  color: var(--font-dark-color);
+  box-shadow: none;
+  font-size: .7rem;
+}
+
+.header ul li:hover a {
+  background-color: var(--bg-white);
+  width: 75%;
+}
+
 /* ↓ menu-button source: 
 	https://codepen.io/ainalem/pen/wvKOEMV */
 
@@ -111,10 +141,13 @@ header .opened .line3 {
 
 .nav {
   padding: 0;
-  margin-top: calc(var(--gap) * 2 * -1);
+  margin: 0 auto;
+  margin-top: 1px;
   display: none;
+  width: calc(100% - var(--gap) * 5);
 }
 
+.header ul,
 .nav ul {
   margin: 0;
   padding: 0;
@@ -128,11 +161,12 @@ header .opened .line3 {
 .nav ul li a {
   text-decoration: none;
   display: flex;
-  height: 20px;
   padding: var(--gap);
   justify-content: center;
+  align-items: center;
   width: calc(100% - var(--gap) * 2);
 }
+
 /********/
 /* MAIN */
 /********/
@@ -214,4 +248,12 @@ footer hr {
   margin: var(--gap);
   width: calc(100% - var(--gap));
   border: var(--hr-border);
+}
+
+.show-menu {
+  display: flex;
+}
+
+.hide {
+  display: none;
 }

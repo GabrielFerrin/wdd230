@@ -1,14 +1,14 @@
 // copyright
 const copyrightDate = new Date(document.lastModified);
 document.getElementById('copyright')
-    .innerHTML = '©' + copyrightDate.getFullYear();
+	.innerHTML = '©' + copyrightDate.getFullYear();
 
 // last modified time
 document.getElementById('lastModified')
-    .innerText = 'Last Modification: '
-    + document.lastModified;
+	.innerText = 'Last Modification: '
+	+ document.lastModified;
 
-    ////////////////////
+////////////////////
 // hamburger menu //
 ////////////////////
 let toggleMenu = _ => {
@@ -18,18 +18,18 @@ let toggleMenu = _ => {
 	menuButton.classList.toggle('opened');
 
 	// menu items
-	const menu = document.getElementById('menu');
+	const menu = document.getElementById('nav-menu');
 	menu.classList.toggle('show-menu');
 }
 
 // resize observer
 const observer = new ResizeObserver(entries => {
-	if (entries[0].contentRect.width >= 520) {
+	if (entries[0].contentRect.width >= 600) {
 		const menuButton = document
 			.getElementById('menu-button');
 		if (menuButton.classList.contains('opened')) {
 
-			const menu = document.getElementById('menu');
+			const menu = document.getElementById('nav-menu');
 			menu.classList.toggle('show-menu');
 			menuButton.classList.toggle('opened');
 		}

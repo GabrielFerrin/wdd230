@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- HTML Meta Tags -->
-	<title>Gabriel Ferrin - WDD 230 - Web Frontend Development</title>
+	<title>Chamber of Commerce - WDD 230 - Web Frontend Development</title>
 	<meta name="author" content="Gabriel Ferrin">
 	<meta name="description" content="A Chamber of Commerce page for
 		Fall 2023 Semester | WDD 230 | Web Frontend Development,
@@ -14,7 +14,7 @@
 	<!-- Facebook Meta Tags -->
 	<meta property="fb:app_id" content="GabrielFerrinM">
 	<meta property="og:site_name" content="Gabriel Ferrin WDD 230">
-	<meta property="og:url" content="https://gabrielferrin.github.io/wdd230/">
+	<meta property="og:url" content="https://gabrielferrin.github.io/wdd230/chamber/">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Gabriel Ferrin | WDD 230 | Web Frontend Development">
 	<meta property="og:description" content="A Chamber of Commerce page for
@@ -26,7 +26,7 @@
 	<meta name="twitter:site" content="@gabrielferrin">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="twitter:domain" content="gabrielferrin.github.io">
-	<meta property="twitter:url" content="https://gabrielferrin.github.io/wdd230/">
+	<meta property="twitter:url" content="https://gabrielferrin.github.io/wdd230/chamber/">
 	<meta name="twitter:title" content="Gabriel Ferrin | WDD 230 | Web Frontend Development">
 	<meta name="twitter:description" content="A Chamber of Commerce page for
 		Fall 2023 Semester | WDD 230 | Web Frontend Development,
@@ -56,14 +56,21 @@
 		<div class="logo-wrapper">
 			<img class="logo-img" src="images/logo.svg" alt="" width="50px">
 			<div class="logo-title-wrapper">
-				<h1>MANTA</h1>
+				<h1>MANTA <span class="hide">CHAMBER OF COMMERCE</span></h1>
 				<span class="h1-subtitle">CHAMBER OF COMMERCE</span>
 			</div>
 		</div>
 		<div class="social-wrapper">
-			<img src="images/facebook-logo.svg" alt="Facebook logo" width="25px">
-			<img src="images/linkedin-logo.svg" alt="Linkedin logo" width="25px">
+			<img src="images/facebook-logo.svg" alt="Facebook logo" width="25">
+			<img src="images/linkedin-logo.svg" alt="Linkedin logo" width="25">
 		</div>
+		<ul id="header-menu">
+			<li><a href="#" class="button-01">HOME</a></li>
+			<li><a href="#" class="button-01">DISCOVER</a></li>
+			<li><a href="#" class="button-01">DIRECTORY</a></li>
+			<li><a href="#" class="button-01">JOIN</a></li>
+			<li><a href="#" class="button-01">ABOUT US</a></li>
+		</ul>
 		<!-- ↓ source: https://codepen.io/ainalem/pen/wvKOEMV -->
 		<button id="menu-button" aria-label="Menu button" onclick="toggleMenu();">
 			<svg viewBox="0 0 100 100">
@@ -83,36 +90,35 @@
 		<!-- ↑ source: https://codepen.io/ainalem/pen/wvKOEMV -->
 	</header>
 
-	<nav class="basic-card nav">
+	<nav class="basic-card nav" id="nav-menu">
 		<ul>
-			<li><a href="#" class="button-01">Item</a></li>
-			<li><a href="#" class="button-01">Item</a></li>
-			<li><a href="#" class="button-01">Item</a></li>
-			<li><a href="#" class="button-01">Item</a></li>
-			<li><a href="#" class="button-01">Item</a></li>
+			<li><a href="#" class="button-01">HOME</a></li>
+			<li><a href="#" class="button-01">DISCOVER</a></li>
+			<li><a href="#" class="button-01">DIRECTORY</a></li>
+			<li><a href="#" class="button-01">JOIN</a></li>
+			<li><a href="#" class="button-01">ABOUT US</a></li>
 		</ul>
 	</nav>
 
 	<main class="main">
 		<!-- hero -->
 		<section class="basic-card hero-card">
-			<!-- <img class="hero-img" src="images/hero.png" alt="Beautiful landscape of Murcielago Beach in Manta" width="200"> -->
-			<button class="button-01">Joing the Chamber</button>
+			<button class="button-01">JOIN THE CHAMBER</button>
 		</section>
 
 		<!-- current events -->
 		<section class="basic-card events-card temp">
-			current events section
+			<h2>current events section</h2>
 		</section>
 
 		<!-- weather card -->
 		<section class="basic-card temp">
-			weather section
+			<h2>weather section</h2>
 		</section>
 
 		<!-- spotlights -->
 		<section class="spotlights-wrapper">
-			spotlights section
+			<h2>spotlights section</h2>
 			<div class="spotlight-card temp">spotlight 01</div>
 			<div class="spotlight-card temp">spotlight 02</div>
 			<div class="spotlight-card temp">spotlight 03</div>
@@ -122,7 +128,7 @@
 	<footer class="footer-card">
 		<div class="foot-wrapper">
 			<div class="logo-wrapper">
-				<img class="logo-img" src="images/logo.svg" alt="" width="50px">
+				<img class="logo-img" src="images/logo.svg" alt="" width="50">
 				<div class="logo-title-wrapper">
 					<h1>MANTA</h1>
 					<span class="h1-subtitle">CHAMBER OF COMMERCE</span>
