@@ -2,11 +2,14 @@
 
 :root {
   --font: "Roboto Condensed", Arial, 'Trebuchet MS';
+  --font-dark-color: #000000;
   --bg-color-01: #0a0443;
   --bg-color-02: #2c2292;
   --bg-color-03: #3c38e5;
   --bg-color-04: #00b5b6;
   --bg-color-05: #00e5df;
+  --bg-light-01: #e1e1e1;
+  --border-line: 1px solid #e1e1e1;
   --contrast: #df9803;
   --bg-white: #ffffff;
   --gap: 10px;
@@ -16,7 +19,6 @@
 }
 
 body {
-  padding: var(--gap);
   display: flex;
   flex-direction: column;
   gap: var(--gap);
@@ -33,6 +35,7 @@ body {
   gap: var(--gap);
   box-shadow: var(--shadow-light);
   padding: var(--gap);
+  margin: var(--gap);
 }
 
 h1,
@@ -48,12 +51,12 @@ p {
 .button-01 {
   background-color: var(--bg-color-02);
   color: var(--bg-white);
-  height: 28px;
-  width: 130px;
+  height: 37px;
+  width: 150px;
   border: none;
   border-radius: calc(var(--radius) / 1.6);
   box-shadow: var(--shadow-light);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   transition: var(--transition-duration);
 }
 
@@ -68,3 +71,29 @@ p {
   margin-left: 0.6px;
 }
 
+
+/**************/
+/* SCROLL-BAR */
+/**************/
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-light-01);
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color-05);
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--contrast);
+}

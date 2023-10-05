@@ -48,13 +48,13 @@
 	<link rel="manifest" href="site.webmanifest">
 
 	<!-- script -->
-	<!-- <script defer src="scripts/small.css"></script> -->
+	<script defer src="scripts/getdates.js"></script>
 </head>
 
 <body>
 	<header class="basic-card header">
 		<div class="logo-wrapper">
-			<img class="logo-img" src="images/logo.svg" alt="" width="60px">
+			<img class="logo-img" src="images/logo.svg" alt="" width="50px">
 			<div class="logo-title-wrapper">
 				<h1>MANTA</h1>
 				<span class="h1-subtitle">CHAMBER OF COMMERCE</span>
@@ -86,28 +86,54 @@
 	<nav class="basic-card nav">
 	</nav>
 
-	<main class="basic-card main">
+	<main class="main">
 		<!-- hero -->
-		<section class="basic-card hero">
+		<section class="basic-card hero-card">
 			<!-- <img class="hero-img" src="images/hero.png" alt="Beautiful landscape of Murcielago Beach in Manta" width="200"> -->
 			<button class="button-01">Joing the Chamber</button>
 		</section>
 
-		<section class="basic-card">
-
-		</section>
-
-		<!-- current event -->
-		<section class="basic-card">
-
+		<!-- current events -->
+		<section class="basic-card events-card temp">
+			current events section
 		</section>
 
 		<!-- weather card -->
-		<section class="basic-card"></section>
+		<section class="basic-card temp">
+			weather section
+		</section>
+
 		<!-- spotlights -->
-		<section class="basic-card"></section>
+		<section class="spotlights-wrapper">
+			spotlights section
+			<div class="spotlight-card temp">spotlight 01</div>
+			<div class="spotlight-card temp">spotlight 02</div>
+			<div class="spotlight-card temp">spotlight 03</div>
+		</section>
 	</main>
-	<footer class="basic-card">
+	<footer class="footer-card">
+		<div class="foot-wrapper">
+			<div class="logo-wrapper">
+				<img class="logo-img" src="images/logo.svg" alt="" width="50px">
+				<div class="logo-title-wrapper">
+					<h1>MANTA</h1>
+					<span class="h1-subtitle">CHAMBER OF COMMERCE</span>
+				</div>
+			</div>
+			<div class="contact-info">
+				<p>info@mantachamber.com</p>
+				<p>+593 548 3877</p>
+				<p>Show in the map</p>
+			</div>
+		</div>
+
+		<hr>
+		<div class="foot-wrapper">
+			<p><span id="copyright"></span> Manta Chamber of Commerce</p>
+			<p>ANGEL GABRIEL FERRIN MOREIRA</p>
+			<p>WDD 230 PROJECT</p>
+			<p id="lastModified"></p>
+		</div>
 	</footer>
 </body>
 
