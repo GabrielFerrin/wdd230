@@ -3,25 +3,27 @@
 :root {
   --font: "Roboto Condensed", Arial, 'Trebuchet MS';
   --font-dark-color: #000000;
+  --font-grey-color: #666666;
   --bg-color-01: #0a0443;
   --bg-color-02: #2c2292;
   --bg-color-03: #3c38e5;
   --bg-color-04: #00b5b6;
   --bg-color-05: #00e5df;
   --bg-light-01: #e1e1e1;
-  --border-line: 1px solid #e1e1e1;
+  --border-line-01: 1px solid #e1e1e1;
+  --border-line-02: 1px solid #c7c7c7;
+  --hr-border: 0.1px solid #c9c9c9;
   --contrast: #df9803;
   --bg-white: #ffffff;
   --gap: 10px;
   --radius: 4px;
-  --shadow-light: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --shadow-light:rgba(0, 0, 0, 0.09) 0px 3px 12px;
   --transition-duration: .32s;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
   font-family: var(--font);
   min-width: 350px;
   color: var(--bg-color-01);

@@ -7,6 +7,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 0;
 }
 
 header .logo-wrapper {
@@ -109,9 +110,29 @@ header .opened .line3 {
 /*******/
 
 .nav {
+  padding: 0;
+  margin-top: calc(var(--gap) * 2 * -1);
   display: none;
 }
 
+.nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  list-style: none;
+  border-radius: calc(var(--radius) / 3);
+}
+
+.nav ul li a {
+  text-decoration: none;
+  display: flex;
+  height: 20px;
+  padding: var(--gap);
+  justify-content: center;
+  width: calc(100% - var(--gap) * 2);
+}
 /********/
 /* MAIN */
 /********/
@@ -138,10 +159,10 @@ main .hero-card {
 
 .spotlight-card {
   box-shadow: none;
-  border: var(--border-line);
+  border: var(--border-line-01);
   border-radius: var(--radius);
   padding: var(--gap);
-  margin: var(--gap);
+  margin: 0 var(--gap);
 }
 
 .temp {
@@ -158,12 +179,16 @@ main .hero-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: calc(var(--gap) * 3);
 }
 
 footer .logo-wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: var(--gap);
+  border: var(--border-line-02);
+  border-radius: var(--radius);
+  padding: calc(var(--gap) * 1.5);
 }
 
 footer .foot-wrapper {
@@ -176,10 +201,11 @@ footer .foot-wrapper {
 footer .foot-wrapper:nth-of-type(2) {
   gap: 0;
   font-size: 0.9rem;
+  color: var(--font-grey-color);
 }
 
 footer .contact-info {
-  color: var(--font-dark-color);
+  color: var(--font-grey-color);
   text-align: center;
   font-size: 0.9rem;
 }
@@ -187,4 +213,5 @@ footer .contact-info {
 footer hr {
   margin: var(--gap);
   width: calc(100% - var(--gap));
+  border: var(--hr-border);
 }
