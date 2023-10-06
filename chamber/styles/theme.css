@@ -18,7 +18,7 @@
   --bg-white: #ffffff;
   --gap: 10px;
   --radius: 4px;
-  --shadow-light:rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  --shadow-light: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --transition-duration: .32s;
 }
 
@@ -37,6 +37,7 @@ body {
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: calc(var(--gap) / 2);
   box-shadow: var(--shadow-light);
   padding: var(--gap);
@@ -76,6 +77,15 @@ p {
   margin-left: 0.3px;
 }
 
+.active::before {
+  content: '|';
+  margin-right: 6px;
+}
+
+.active::after {
+  content: '|';
+  margin-left: 6px;
+}
 
 /**************/
 /* SCROLL-BAR */

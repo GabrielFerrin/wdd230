@@ -66,7 +66,7 @@
 			<img src="images/linkedin-logo.svg" alt="Linkedin logo" height="25" width="25">
 		</div>
 		<ul id="header-menu">
-			<li><a href="#" class="button-01">HOME</a></li>
+			<li><a href="#" class="button-01 active">HOME</a></li>
 			<li><a href="#" class="button-01">DISCOVER</a></li>
 			<li><a href="#" class="button-01">DIRECTORY</a></li>
 			<li><a href="#" class="button-01">JOIN</a></li>
@@ -93,7 +93,7 @@
 
 	<nav class="basic-card nav" id="nav-menu">
 		<ul>
-			<li><a href="#" class="button-01">HOME</a></li>
+			<li><a href="#" class="button-01 active">HOME</a></li>
 			<li><a href="#" class="button-01">DISCOVER</a></li>
 			<li><a href="#" class="button-01">DIRECTORY</a></li>
 			<li><a href="#" class="button-01">JOIN</a></li>
@@ -122,19 +122,58 @@
 		<!-- weather card -->
 		<section class="basic-card weather-card">
 			<img src="images/weather.png" alt="Image of baloons for a formal party" width="100px" height="100px">
+			<div class="weather-bg"></div>
 			<div class="card-title-wrapper">
 				<h2>WEATHER</h2>
-				<p>source: theweather.com</p>
+				<p>SOURCE: WEATHER.COM</p>
 			</div>
-			<p class="contrast-title">36°</p>
+			<div class="weather-details-wrapper">
+				<p class="contrast-title">36°</p>
+				<p>Partially cloudy</p>
+				<p>Humidity: 35%</p>
+				<p>Wind Chill: N/A</p>
+			</div>
 		</section>
 
 		<!-- spotlights -->
 		<section class="spotlights-wrapper">
-			<h2>spotlights section</h2>
-			<div class="spotlight-card">spotlight 01</div>
-			<div class="spotlight-card">spotlight 02</div>
-			<div class="spotlight-card">spotlight 03</div>
+			<h2 class="contrast-title">MEMBERS</h2>
+			<div class="spotlight-card">
+				<div class="spotlight-tittle-wrapper">
+					<h3>THANKFULL TRANSPORT</h3>
+					<p>"WE GET IT DONE FOR YOU!"</p>
+				</div>
+				<div class="spotlight-details-wrapper">
+					<p>"hello@thankfulltransport.com"</p>
+					<p>"+593 435 4358"</p>
+					<p>"thankfultransport.com"</p>
+				</div>
+				<p>more info...</p>
+			</div>
+			<div class="spotlight-card">
+				<div class="spotlight-tittle-wrapper">
+					<h3>THANKFULL TRANSPORT</h3>
+					<p>"WE GET IT DONE FOR YOU!"</p>
+				</div>
+				<div class="spotlight-details-wrapper">
+					<p>"hello@thankfulltransport.com"</p>
+					<p>"+593 435 4358"</p>
+					<p>"thankfultransport.com"</p>
+				</div>
+				<p>more info...</p>
+			</div>
+			<div class="spotlight-card">
+				<div class="spotlight-tittle-wrapper">
+					<h3>THANKFULL TRANSPORT</h3>
+					<p>"WE GET IT DONE FOR YOU!"</p>
+				</div>
+				<div class="spotlight-details-wrapper">
+					<p>"hello@thankfulltransport.com"</p>
+					<p>"+593 435 4358"</p>
+					<p>"thankfultransport.com"</p>
+				</div>
+				<p>more info...</p>
+			</div>
 		</section>
 	</main>
 
@@ -160,6 +199,7 @@
 			<p>ANGEL GABRIEL FERRIN MOREIRA</p>
 			<p>WDD 230 PROJECT</p>
 			<p id="lastModified"></p>
+			<span id="footer-details"></span>
 		</div>
 	</footer>
 </body>

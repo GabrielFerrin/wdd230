@@ -1,12 +1,19 @@
 // copyright
 const copyrightDate = new Date(document.lastModified);
 document.getElementById('copyright')
-	.innerHTML = '©' + copyrightDate.getFullYear();
+	.innerHTML = `©${copyrightDate.getFullYear()}`;
 
 // last modified time
 document.getElementById('lastModified')
-	.innerText = 'Last Modification: '
-	+ document.lastModified;
+	.innerText = `Last Modification: ${document.lastModified}`;
+
+// footer details
+document.getElementById('footer-details')
+	.innerText = '©' + copyrightDate.getFullYear() +
+	'  |  Manta Chamber of Commerce  |  ' +
+	'ANGEL GABRIEL FERRIN MOREIRA  |  ' +
+	'WDD 230 PROJECT  |  Last Modification: ' +
+	document.lastModified;
 
 ////////////////////
 // hamburger menu //

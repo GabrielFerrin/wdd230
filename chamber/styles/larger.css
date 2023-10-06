@@ -10,6 +10,8 @@
 
   main .hero-card {
     height: 260px;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   main .hero-card,
@@ -35,4 +37,19 @@
   main .spotlight-card {
     margin: var(--gap);
   }
+
+  footer .foot-wrapper:first-of-type {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  footer .foot-wrapper:last-of-type p {
+    display: none;
+  }
+
+  footer .foot-wrapper:last-of-type span {
+    display: block;
+  }
+
 }
