@@ -33,7 +33,6 @@ const observer = new ResizeObserver(entries => {
 			menu.classList.toggle('show-menu');
 			menuButton.classList.toggle('opened');
 		}
-
 	}
 });
 observer.observe(document.body);

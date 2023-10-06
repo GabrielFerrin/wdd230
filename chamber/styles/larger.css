@@ -1,2 +1,38 @@
 @media screen and (min-width: 1024px) {
+
+  /********/
+  /* MAIN */
+  /********/
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  main .hero-card {
+    height: 260px;
+  }
+
+  main .hero-card,
+  main .spotlights-wrapper {
+    grid-column: 1 / 4;
+  }
+
+  main .events-card {
+    grid-column: 1 / 3;
+  }
+
+  main .spotlights-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 0;
+  }
+
+  main .spotlights-wrapper h2 {
+    display: none;
+  }
+
+  main .spotlight-card {
+    margin: var(--gap);
+  }
 }

@@ -33,6 +33,7 @@ header .logo-img {
 
 header .social-wrapper {
   margin-top: 3px;
+  text-align: center;
 }
 
 header ul {
@@ -178,29 +179,98 @@ header .opened .line3 {
 }
 
 main .hero-card {
-  height: 150px;
-  background-image: url('../images/hero.png');
+  display: flex;
+  justify-content: flex-end;
+  height: 120px;
+  background-image: url('../images/hero.webp');
   background-size: 100% auto;
   background-position: center;
 }
 
-.spotlights-wrapper {
+main .hero-card .button-01 {
+  background-color: var(--bg-color-03);
+}
+
+main .hero-card .button-01:hover {
+  background-color: var(--contrast-01);
+}
+
+main .hero-card .button-01:active {
+  background-color: var(--contrast-01-lighter);
+  color: var(--bg-white);
+  margin-bottom: -0.3px;
+}
+
+main .events-card {
+  position: relative;
+  overflow: hidden;
+}
+
+main .events-card > p {
+  font-size: .75rem;
+  width: 55%;
+}
+
+main .events-card img {
+  width: auto !important;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  right: -65px;
+  top: 0;
+}
+
+main .card-title-wrapper {
+  width: 47%;
+}
+
+main .card-title-wrapper p {
+  margin-top: -4px;
+  margin-left: 1px;
+}
+
+main .weather-card {
+  background-color: var(--bg-color-01);
+  color: var(--bg-white);
+  position: relative;
+}
+
+main .weather-card img {
+  width: auto !important;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  right: -5px;
+  top: 0;
+}
+
+main .contrast-title {
+  color: var(--contrast-01);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+main .spotlights-wrapper {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
   padding: 0 calc(var(--gap) / 2);
+  text-align: center;
 }
 
-.spotlight-card {
+main .spotlight-card {
   box-shadow: none;
   border: var(--border-line-01);
   border-radius: var(--radius);
   padding: var(--gap);
   margin: 0 var(--gap);
+  max-width: 500px;
+  width: calc(100% - var(--gap) * 4);
+  align-self: center;
 }
 
-.temp {
-  min-height: 150px;
+main .temp {
+  min-height: 120px;
 }
 
 /**********/

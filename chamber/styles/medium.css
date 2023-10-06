@@ -1,4 +1,8 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
+
+  /**********/
+  /* HEADER */
+  /**********/
   header #menu-button {
     display: none;
   }
@@ -7,8 +11,32 @@
     display: flex;
   }
 
+  header .logo-wrapper {
+    margin-right: var(--gap);
+  }
+
+  /*******/
+  /* NAV */
+  /*******/
   .nav {
     display: none;
+  }
+
+  /********/
+  /* MAIN */
+  /********/
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main .hero-card {
+    height: 220px;
+  }
+
+  main .hero-card,
+  main .spotlights-wrapper {
+    grid-column: 1 / 3;
   }
 }
 

@@ -13,7 +13,8 @@
   --border-line-01: 1px solid #e1e1e1;
   --border-line-02: 1px solid #c7c7c7;
   --hr-border: 0.1px solid #c9c9c9;
-  --contrast: #df9803;
+  --contrast-01: #df9803;
+  --contrast-01-lighter: #ffb414;
   --bg-white: #ffffff;
   --gap: 10px;
   --radius: 4px;
@@ -26,7 +27,9 @@ body {
   flex-direction: column;
   font-family: var(--font);
   min-width: 350px;
+  max-width: 1200px;
   color: var(--bg-color-01);
+  margin: 0 auto;
 }
 
 .basic-card {
@@ -34,7 +37,7 @@ body {
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
+  gap: calc(var(--gap) / 2);
   box-shadow: var(--shadow-light);
   padding: var(--gap);
   margin: var(--gap);
@@ -59,7 +62,7 @@ p {
   border-radius: calc(var(--radius) / 1.6);
   box-shadow: var(--shadow-light);
   font-size: 0.9rem;
-  transition: var(--transition-duration);
+  transition: calc(var(--transition-duration) / 3);
 }
 
 .button-01:hover {
@@ -69,8 +72,8 @@ p {
 .button-01:active {
   background-color: var(--bg-color-04);
   color: var(--bg-color-01);
-  margin-top: 0.6px;
-  margin-left: 0.6px;
+  margin-top: 0.3px;
+  margin-left: 0.3px;
 }
 
 
@@ -97,5 +100,5 @@ p {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--contrast);
+  background: var(--contrast-01);
 }
