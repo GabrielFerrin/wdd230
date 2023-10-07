@@ -216,8 +216,8 @@ main .events-card {
 }
 
 main .events-card > p {
-  font-size: .75rem;
-  width: 60%;
+  font-size: 0.85rem;
+  width: 53%;
 }
 
 main .events-card img {
@@ -265,8 +265,8 @@ main .weather-bg {
 
 main .weather-details-wrapper {
   margin-left: calc(100% / 6);
-  margin-bottom: 15px;
-  font-size: 0.7rem;
+  margin-bottom: 7px;
+  font-size: 0.85rem;
 }
 
 main .spotlights-wrapper {
@@ -282,9 +282,9 @@ main .spotlights-wrapper .contrast-title {
   width: calc(100% - var(--gap));
   text-align: center;
   border-radius: var(--radius);
-  color: var(--bg-color-01);
+  color: var(--bg-white);
   background-color: var(--contrast-01);
-  max-width: 500px;
+  max-width: 520px;
 }
 
 main .spotlight-card {
