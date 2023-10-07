@@ -272,10 +272,19 @@ main .weather-details-wrapper {
 main .spotlights-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--gap);
   padding: 0 calc(var(--gap) / 2);
-  text-align: center;
   font-size: .8rem;
+}
+
+main .spotlights-wrapper .contrast-title {
+  width: calc(100% - var(--gap));
+  text-align: center;
+  border-radius: var(--radius);
+  color: var(--bg-color-01);
+  background-color: var(--contrast-01);
+  max-width: 500px;
 }
 
 main .spotlight-card {
