@@ -77,6 +77,10 @@ header ul {
   color: var(--bg-white);
 }
 
+.header .switch {
+  width: 40px;
+}
+
 /* ↓ menu-button source: 
 	https://codepen.io/ainalem/pen/wvKOEMV */
 
