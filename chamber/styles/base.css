@@ -15,15 +15,20 @@ header .logo-wrapper {
   grid-template-columns: auto 1fr;
 }
 
-header .logo-title-wrapper {
+header .logo-title-wrapper,
+footer .logo-title-wrapper {
+  font-weight: bold;
+  font-size: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-header .h1-subtitle {
+header .h1-subtitle,
+footer .h1-subtitle {
   grid-column: 2 / 3;
   font-size: 0.8rem;
+  font-weight: 400;
   margin-top: -3px;
 }
 
