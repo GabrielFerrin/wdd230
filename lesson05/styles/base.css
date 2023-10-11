@@ -12,6 +12,7 @@
 	--background-color-4: #383838;
 	--background-transparent: rgba(255, 255, 255, 0.85);
 	--background-contrast-color-01: #ff931e;
+	--background-contrast-color-02: rgb(210, 108, 0);
 	/* size */
 	--max-width: 900px;
 	--min-width: 365px;
@@ -280,9 +281,9 @@ main .input-wrapper {
 	margin: 2px 0;
 }
 
-main .input-wrapper p {
+main .input-wrapper label {
 	grid-column: 1/2;
-	font-size: 0.8rem;
+	font-size: 0.85rem;
 	margin-top: var(--gap);
 	margin-left: var(--gap);
 	margin-bottom: 5px;
@@ -308,8 +309,8 @@ main .input-wrapper input:active {
 
 main .button-01 {
 	grid-row: 2/3;
-  background-color: var(--background-contrast-color-01);
-  color: var(--bg-white);
+  background-color: var(--background-color-3);
+  color: var(--background-contrast-color-01);
   height: 42px;
   width: 30px;
   border: none;
@@ -320,11 +321,12 @@ main .button-01 {
 }
 
 main .button-01:hover {
-  background-color: var(--background-color-4);
+  background-color: var(--background-contrast-color-01);
+	color: var(--font-color-01);
 }
 
 main .button-01:active {
-  background-color: var(--background-color-3);
+  background-color: var(--background-contrast-color-02);
   color: var(--bg-color-01);
   margin-top: 0.3px;
   margin-left: 0.3px;
@@ -385,14 +387,34 @@ nav li a {
 	color: var(--background-color-1);
 } */
 
+main section li {
+	width: calc(100% - 2px);
+}
+
 main section h4,
 nav h4 {
 	margin: 0 var(--gap);
 }
 
+main section h4 {
+	width: 100%;
+}
+
 main section span {
 	font-weight: 100;
 	color: var(--font-color-01);
+}
+
+main section .remove-btn {
+	align-self: flex-end;
+	margin: auto 0;
+	margin-right: var(--gap);
+	width: 50px;
+}
+
+main section .remove-btn:active {
+	margin-right: 9px;
+	margin-bottom: 11px;
 }
 
 /* ****** */

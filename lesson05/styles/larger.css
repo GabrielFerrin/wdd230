@@ -37,29 +37,8 @@
   #menu-button {
     display: none;
   }
-
-  iframe {
-    height: 500px !important;
-  }
 }
 
 /* large */
 @media screen and (min-width: 1024px) {
-  main {
-    grid-template-columns: 1.5fr 0.6fr;
-  }
-
-  main h2,
-  main hr {
-    grid-column: 1 / 3;
-  }
-
-  main section:last-of-type {
-    grid-column: 2 / 3;
-    height: 100%;
-  }
-
-  iframe {
-    height: 700px !important;
-  }
 }

@@ -49,6 +49,7 @@
   <!-- script -->
   <script defer src="../scripts/getdates.js"></script>
   <script defer src="../scripts/hamburger-menu.js"></script>
+  <script defer src="scripts/script.js"></script>
 </head>
 
 <body>
@@ -81,7 +82,7 @@
   <nav>
     <div class="menu-background">
       <ul id="menu">
-        <li><a href="../" class="active">
+        <li><a href="../">
             <span>HOME</span>
           </a></li>
         <li><a href="../lesson03/chamber-site-plan.html">
@@ -114,14 +115,11 @@
       </div>
       <div class="card-body">
         <div class="input-wrapper">
-          <p>Enter book and Chapter:</p>
-          <input type="text">
-          <button class="button-01">+</button>
+          <label for="favchap">Enter book and chapter and press enter:</label>
+          <input type="text" id="favchap">
+          <button id="button" placeholder="Alma 5" class="button-01">+</button>
         </div>
-        <ul>
-          <li><h4>01: <span>Lesson 01 | CSS Media Queries</span></h4>
-          <li><h4>02: <span>Lesson 02 | Web Design Principles</span></h4>
-          <li><h4>03: <span>Lesson 02 | Design Principles Document</span></h4>
+        <ul id="list">
         </ul>
       </div>
     </section>
