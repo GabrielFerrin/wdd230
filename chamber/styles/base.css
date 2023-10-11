@@ -43,6 +43,7 @@ header .social-wrapper {
 
 header ul {
   display: none;
+  align-items: center;
   width: 100%;
   max-width: 500px;
 }
