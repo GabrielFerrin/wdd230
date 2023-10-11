@@ -54,6 +54,7 @@ header ul {
   padding: var(--gap);
   justify-content: center;
   align-items: center;
+  height: 15px;
   width: calc(100% - var(--gap) * 2);
   background-color: var(--bg-white);
   color: var(--font-dark-color);
@@ -66,8 +67,8 @@ header ul {
 }
 
 .header ul li:hover a {
-  background-color: var(--bg-white);
-  width: 75%;
+  background-color: var(--bg-color-03);
+  color: var(--bg-white);
 }
 
 /* ↓ menu-button source: 
@@ -375,8 +376,4 @@ footer hr {
 
 .show-menu {
   display: flex;
-}
-
-.hide {
-  display: none;
 }

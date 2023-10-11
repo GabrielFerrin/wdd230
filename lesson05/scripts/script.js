@@ -24,7 +24,7 @@ const add = () => {
       })
     })
     deleteButton.setAttribute('class', 'button-01 remove-btn');
-    deleteButton.setAttribute('aria-label', 'Remove item');
+    deleteButton.setAttribute('aria-label', 'Remove ' + input.value);
     li.append(h4);
     li.appendChild(deleteButton);
     list.append(li);

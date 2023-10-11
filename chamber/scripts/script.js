@@ -19,6 +19,7 @@ document.getElementById('footer-details')
 // hamburger menu //
 ////////////////////
 let toggleMenu = _ => {
+	console.log('hello');
 	// menu button
 	const menuButton = document
 		.getElementById('menu-button');
@@ -31,14 +32,14 @@ let toggleMenu = _ => {
 
 // resize observer
 const observer = new ResizeObserver(entries => {
-	if (entries[0].contentRect.width >= 600) {
+	if (entries[0].contentRect.width > 649.99) {
+		console.log('observer');
 		const menuButton = document
 			.getElementById('menu-button');
 		if (menuButton.classList.contains('opened')) {
-
 			const menu = document.getElementById('nav-menu');
-			menu.classList.toggle('show-menu');
-			menuButton.classList.toggle('opened');
+			menu.classList.remove('show-menu');
+			menuButton.classList.remove('opened');
 		}
 	}
 });
