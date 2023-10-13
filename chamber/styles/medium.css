@@ -9,6 +9,7 @@
 
   .header ul {
     display: flex;
+    justify-content: space-evenly;
   }
 
   header .logo-wrapper {
@@ -43,6 +44,6 @@
 
 @media screen and (min-width: 700px) {
   .header ul li a {
-    font-size: .9rem;
+    font-size: .87rem;
   }
 }

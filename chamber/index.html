@@ -62,34 +62,39 @@
 			<img src="images/facebook-logo.svg" alt="Facebook logo" height="25" width="25">
 			<img src="images/linkedin-logo.svg" alt="Linkedin logo" height="25" width="25">
 		</div>
-		<ul id="header-menu">
-			<li><a href="#" class="button-01 active">HOME</a></li>
-			<li><a href="#" class="button-01">DISCOVER</a></li>
-			<li><a href="#" class="button-01">DIRECTORY</a></li>
-			<li><a href="#" class="button-01">JOIN</a></li>
-			<li><a href="#" class="button-01">ABOUT US</a></li>
-			<label class="switch">
-				<input type="checkbox">
-				<span class="slider round"></span>
-			</label>
-		</ul>
-		<!-- ↓ source: https://codepen.io/ainalem/pen/wvKOEMV -->
-		<button id="menu-button" aria-label="Menu button" onclick="toggleMenu();">
-			<svg viewBox="0 0 100 100">
-				<path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,
-          29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,
-          77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,
-          81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,
-          25.000058" />
-				<path class="line line2" d="M 20,50 H 80" />
-				<path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,
-          70.999954 94.498839, 71.182648 94.532987,33.288669 94.543142,
-          22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,
-          18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,
-          74.999942" />
-			</svg>
-		</button>
-		<!-- ↑ source: https://codepen.io/ainalem/pen/wvKOEMV -->
+		<div class="menu-wrapper">
+			<ul id="header-menu">
+				<li><a href="#" class="button-01 active">HOME</a></li>
+				<li><a href="#" class="button-01">DISCOVER</a></li>
+				<li><a href="#" class="button-01">DIRECTORY</a></li>
+				<li><a href="#" class="button-01">JOIN</a></li>
+				<li><a href="#" class="button-01">ABOUT US</a></li>
+			</ul>
+			
+			<div class="dark-slider-wrapper">
+				<label class="switch">
+					<input id="dark-checkbox" type="checkbox">
+					<span class="slider round"></span>
+				</label>
+				<!-- ↓ source: https://codepen.io/ainalem/pen/wvKOEMV -->
+				<button id="menu-button" aria-label="Menu button" onclick="toggleMenu();">
+					<svg viewBox="0 0 100 100">
+						<path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,
+							29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,
+							77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,
+							81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,
+							25.000058" />
+						<path class="line line2" d="M 20,50 H 80" />
+						<path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,
+							70.999954 94.498839, 71.182648 94.532987,33.288669 94.543142,
+							22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,
+							18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,
+							74.999942" />
+					</svg>
+				</button>
+				<!-- ↑ source: https://codepen.io/ainalem/pen/wvKOEMV -->
+			</div>
+		</div>
 	</header>
 
 	<nav class="basic-card nav" id="nav-menu">

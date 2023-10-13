@@ -15,11 +15,17 @@ document.getElementById('footer-details')
 	'WDD 230 PROJECT  |  Last Modification: ' +
 	document.lastModified;
 
+// dark mode
+const darkCheckbox = document.getElementById('dark-checkbox');
+document.getElementById('dark-checkbox')
+	.addEventListener('click', () => {
+		document.body.classList.toggle('dark');
+	})
+
 ////////////////////
 // hamburger menu //
 ////////////////////
 let toggleMenu = _ => {
-	console.log('hello');
 	// menu button
 	const menuButton = document
 		.getElementById('menu-button');
@@ -33,7 +39,6 @@ let toggleMenu = _ => {
 // resize observer
 const observer = new ResizeObserver(entries => {
 	if (entries[0].contentRect.width > 649.99) {
-		console.log('observer');
 		const menuButton = document
 			.getElementById('menu-button');
 		if (menuButton.classList.contains('opened')) {

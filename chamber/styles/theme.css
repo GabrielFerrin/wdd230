@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 :root {
+
+}
+
+body {
   --font: "Roboto Condensed", Arial, 'Trebuchet MS';
   --font-dark-color: #000000;
   --font-grey-color: rgb(57, 57, 57);
@@ -9,20 +13,19 @@
   --bg-color-03: #3c38e5;
   --bg-color-04: #00b5b6;
   --bg-color-05: #00e5df;
+  --bg-color-06: #fff;
   --bg-light-01: #e1e1e1;
+  --bg-white: #ffffff;
   --border-line-01: 1px solid #e1e1e1;
   --border-line-02: 1px solid #c7c7c7;
   --hr-border: 0.1px solid #c9c9c9;
   --contrast-01: #df9803;
   --contrast-01-lighter: #ffb414;
-  --bg-white: #ffffff;
   --gap: 10px;
   --radius: 4px;
   --shadow-light: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   --transition-duration: .32s;
-}
 
-body {
   display: flex;
   flex-direction: column;
   font-family: var(--font);
@@ -30,6 +33,35 @@ body {
   max-width: 1200px;
   color: var(--bg-color-01);
   margin: 0 auto;
+  transition: var(--transition-duration);
+  background-color: var(--bg-white);
+}
+
+body.dark {
+  --font-dark-color: #ffffff;
+  --font-grey-color: rgb(255, 255, 255);
+  --bg-color-01: #efefef;
+  --bg-color-02: #ffffff;
+  --bg-color-03: #d4d4d4;
+  --bg-color-04: #ffffff;
+  --bg-color-05: #ffffff;
+  --bg-color-06: #272727;
+  --bg-light-01: #4e4e4e;
+  --bg-white: #292929;
+  --border-line-01: 1px solid #e1e1e1;
+  --border-line-02: 1px solid #c7c7c7;
+  --hr-border: 0.1px solid #c9c9c9;
+  --contrast-01: #df9803;
+  --contrast-01-lighter: #ffb414;
+  --shadow-light: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+body.dark a {
+  color: var(--contrast-01);
+}
+
+body.dark a:visited {
+  color: var(--bg-color-05);
 }
 
 .basic-card {
@@ -65,6 +97,12 @@ p {
   font-size: 0.9rem;
   transition: calc(var(--transition-duration) / 3);
 }
+
+body.dark .button-01 {
+  box-shadow: none;
+
+}
+
 
 .button-01:hover {
   background-color: var(--bg-color-03);

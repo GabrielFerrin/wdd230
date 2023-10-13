@@ -41,11 +41,29 @@ header .social-wrapper {
   text-align: center;
 }
 
+body.dark header .social-wrapper img:first-of-type {
+  content: url('../images/linkedin-dark-logo.svg');
+}
+
+body.dark header .social-wrapper img:last-of-type {
+  content: url('../images/facebook-dark-logo.svg');
+}
+
+header .menu-wrapper {
+  display: flex;
+  width: 60%;
+  justify-content: flex-end;
+}
+
+header #header-menu {
+  width: 100%;
+}
+
 header ul {
   display: none;
   align-items: center;
-  width: 100%;
-  max-width: 500px;
+  justify-content: flex-end;
+  max-width: 600px;
 }
 
 .header ul li {
@@ -75,10 +93,78 @@ header ul {
 .header ul li:hover a {
   background-color: var(--bg-color-03);
   color: var(--bg-white);
+  
 }
 
 .header .switch {
-  width: 40px;
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 15px;
+  margin-left: var(--gap);
+}
+
+.header .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.header .dark-slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.header .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: var(--transition-duration);
+  transform: var(--transition-duration);
+}
+
+.header .slider::before {
+  position: absolute;
+  content: "";
+  height: 7px;
+  width: 7px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: var(--transition-duration);
+  transition: var(--transition-duration);
+}
+
+body.dark .header .slider::before {
+  background-color: var(--bg-color-06);
+}
+
+.header input:checked + .slider {
+  background-color: var(--bg-color-02);
+}
+
+.header input:focus + .slider {
+  box-shadow: 0 0 1px var(--bg-color-02);
+}
+
+.header input:checked + .slider::before {
+  -webkit-transform: translateX(8px);
+  -ms-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+.header .slider.round {
+  border-radius: 34px;
+}
+
+.header .slider.round::before {
+  border-radius: 50%;
 }
 
 /* ↓ menu-button source: 
@@ -181,6 +267,14 @@ header .opened .line3 {
   justify-content: center;
   align-items: center;
   width: calc(100% - var(--gap) * 2);
+}
+
+body.dark .nav ul li a {
+  color: var(--bg-color-06);
+}
+
+body.dark .nav ul li a:visited {
+  color: var(--bg-color-06);
 }
 
 /********/
