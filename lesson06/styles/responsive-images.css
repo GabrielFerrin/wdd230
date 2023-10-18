@@ -1,0 +1,20 @@
+main {
+  display: block;
+}
+
+.hero {
+  border: 1px solid var(--line-divider-color);
+  border-radius: 0px 0px var(--radius) var(--radius);
+  border-top: none;
+  margin-bottom: 30px;
+  height: calc(100% - 72px);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.footer-background {
+  margin: 0;
+}

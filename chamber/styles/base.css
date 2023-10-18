@@ -296,9 +296,25 @@ main .hero-card {
   justify-content: center;
   align-items: center;
   height: 120px;
-  background-image: url('../images/hero.webp');
-  background-size: 100% auto;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
+  /* background-image: url('../images/hero.webp'); */
+  /* background-size: 100% auto; */
+  /* background-position: center; */
+}
+
+main .hero-card picture {
+  width: 100% !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -1;
+}
+
+main .hero-card picture img {
+  width: 100% !important;
+  height: auto !important;
 }
 
 main .hero-card .button-01 {
