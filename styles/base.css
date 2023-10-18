@@ -236,6 +236,11 @@ main {
 	margin: 0 auto;
 }
 
+main .card-header p {
+	font-size: 1.17em;
+	font-weight: bold;
+}
+
 main .hero picture {
 	display: block;
 	width: 100%;
