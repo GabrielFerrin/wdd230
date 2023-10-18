@@ -44,7 +44,7 @@
 }
 
 /* large */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
   main {
     grid-template-columns: 1.5fr 0.6fr;
   }

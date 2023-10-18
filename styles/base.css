@@ -13,7 +13,7 @@
 	--background-transparent: rgba(255, 255, 255, 0.85);
 	--background-contrast-color-01: #ff931e;
 	/* size */
-	--max-width: 900px;
+	--max-width: 1200px;
 	--min-width: 365px;
 	--gap: 10px;
 	--radius: 4px;
@@ -30,7 +30,7 @@ html {
 
 body {
 	min-width: var(--min-width);
-	max-width: calc(var(--max-width) + 80px);
+	max-width: calc(var(--max-width) + 40px);
 	margin: 0 auto;
 }
 
