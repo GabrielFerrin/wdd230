@@ -14,7 +14,6 @@ getProphetData();
 
 const displayProphets = (prophets) => {
   const cards = document.querySelector('#cards');
-  console.log(cards);
   prophets.forEach(prophet => {
     const card = document.createElement('section');
     card.setAttribute('class', 'card');
@@ -54,6 +53,5 @@ const displayProphets = (prophets) => {
     portrait.setAttribute('height', '440');
     cardBody.appendChild(portrait);
     card.appendChild(cardBody);
-    console.log(prophet);
   });
 }

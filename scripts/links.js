@@ -22,6 +22,7 @@ const displayLinks = (links) => {
       li.appendChild(a);
       const h4 = document.createElement('h4');
       a.appendChild(h4);
+      a.setAttribute('href', link.url);
       h4.textContent = 'Lesson ' + linksCount > 9 ?
         linksCount + ': ' :
         '0' + linksCount + ': ';
