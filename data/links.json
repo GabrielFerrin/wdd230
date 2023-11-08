@@ -1,11 +1,33 @@
 {
   "lessons": [
     {
-      "lesson": "01",
+      "lesson": "01:",
       "links": [
         {
-          "url": "../index.html",	
-          "title": "Home"	
+          "url": "lesson1/media-query.html",	
+          "title": "CSS Media Queries"	
+        }
+      ]
+    },
+    {
+      "lesson": "02:",
+      "links": [
+        {
+          "url": "lesson2/design.html",	
+          "title": "Web Design Principles"	
+        },
+        {
+          "url": "lesson2/design-principles.html",
+          "title": "Design Principles Document"
+        }
+      ]
+    },
+    {
+      "lesson": "03:",
+      "links": [
+        {
+          "url": "https://gabrielferrin.github.io/wdd230/lesson3/images/combinator-exercises.webp",	
+          "title": "CSS Combinators Exercises"	
         }
       ]
     }
