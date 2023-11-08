@@ -1,0 +1,23 @@
+{
+  "familyName": "Ward",
+  "dateMoved": "2023-08-11",
+  "numberOfMembers": 3,
+  "visitedByBishopric": true,
+  "members": [
+    {
+      "name": "John",
+      "gender": "male",
+      "birthDate": "1983-01-01"
+    },
+    {
+      "name": "Sarah",
+      "gender": "female",
+      "birthDate": "2090-01-01"
+    },
+    {
+      "name": "Timmy",
+      "gender": "male",
+      "birthDate": "2016-01-01"
+    }
+  ]
+}

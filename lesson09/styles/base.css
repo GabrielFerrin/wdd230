@@ -146,7 +146,7 @@ header .title-background img:first-of-type {
 }
 
 header h1 {
-	font-size: 2.5rem;
+	font-size: 1.8rem;
 }
 
 .title-background,
@@ -206,7 +206,7 @@ nav img {
 }
 
 nav .menu-background ul li:hover img {
-	content: url("../lesson2/images/external-content-black.svg");
+	content: url("../../lesson2/images/external-content-black.svg");
 }
 
 nav .active {
@@ -241,11 +241,11 @@ main .card-header p {
 	font-weight: bold;
 }
 
-main .hero picture {
+/* main .hero picture {
 	display: block;
 	width: 100%;
 	height: 100%;
-}
+} */
 
 main .hero img {
 	width: 100%;
@@ -296,6 +296,10 @@ nav ul {
 	margin: 0;
 }
 
+main section ul {
+	width: 100%;
+}
+
 main section li,
 nav ul li {
 	list-style: none;
@@ -319,6 +323,13 @@ nav li a {
 	color: var(--background-contrast-color-01);
 }
 
+main section li a {
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	gap: calc(var(--gap) / 2);
+}
+
 /* header nav override */
 nav ul li {
 	margin: 0;
@@ -329,19 +340,10 @@ nav li a {
 	font-size: 0.8rem;
 	font-weight: 400;
 	background-color: var(--background-color-3);
-}
-
-nav li a span {
-	margin: 0 4px;
-}
-
-/**/
-
-main section:last-of-type li a,
-nav li a {
 	justify-content: center;
 }
 
+/**/
 main section li:hover span {
 	color: var(--background-color-1);
 }
@@ -349,11 +351,26 @@ main section li:hover span {
 main section h4,
 nav h4 {
 	margin: 0 var(--gap);
+	display: block;
 }
 
 main section span {
 	font-weight: 100;
 	color: var(--font-color-01);
+}
+
+main section h4:first-of-type span {
+	margin-left: 25px;
+}
+
+main section h4:last-of-type span {
+	margin-left: 20px;
+}
+
+main .card-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* ****** */
