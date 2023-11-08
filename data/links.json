@@ -1,7 +1,7 @@
 {
   "lessons": [
     {
-      "lesson": "01:",
+      "lesson": "01 | ",
       "links": [
         {
           "url": "lesson1/media-query.html",	
@@ -10,7 +10,7 @@
       ]
     },
     {
-      "lesson": "02:",
+      "lesson": "02 | ",
       "links": [
         {
           "url": "lesson2/design.html",	
@@ -23,11 +23,50 @@
       ]
     },
     {
-      "lesson": "03:",
+      "lesson": "03 | ",
       "links": [
         {
           "url": "https://gabrielferrin.github.io/wdd230/lesson3/images/combinator-exercises.webp",	
           "title": "CSS Combinators Exercises"	
+        },
+        {
+          "url": "https://codepen.io/agferrin/pen/bGOMRQy",
+          "title": "CSS Pseudo-elements"
+        },
+        {
+          "url": "lesson03/chamber-site-plan.html",
+          "title": "Project Milestone - The Chamber of Commerce Site Plan"
+        }
+      ]
+    },
+    {
+      "lesson": "05 | ",
+      "links": [
+        {
+          "url": "lesson05/bom.html",
+          "title": "Book of Mormon Favorite Chapters Application"
+        }
+      ]
+    },
+    {
+      "lesson": "06 | ",
+      "links": [
+        {
+          "url": "lesson06/responsive-images.html",
+          "title": "Responsive Images: srcset"
+        }
+      ]
+    },
+    {
+      "lesson": "09 | ",
+      "links": [
+        {
+          "url": "lesson05/new-ward-members.json",
+          "title": "JSON"
+        },
+        {
+          "url": "lesson09/prophets.html",
+          "title": "The Fetch API"
         }
       ]
     }
