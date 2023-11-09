@@ -236,6 +236,12 @@ main {
 	margin: 0 auto;
 }
 
+main #cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: var(--gap);
+}
+
 main .card-header p {
 	font-size: 1.17em;
 	font-weight: bold;
@@ -267,7 +273,6 @@ main hr {
 }
 
 main section {
-	grid-column: 1 / 2;
 	display: flex;
 	flex-direction: column;
 	max-height: 582px;

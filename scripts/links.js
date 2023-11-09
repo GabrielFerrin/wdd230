@@ -27,7 +27,7 @@ const displayLinks = (links) => {
         linksCount + ': ' :
         '0' + linksCount + ': ';
       const span = document.createElement('span');
-      span.textContent = 'Lesson ' + lesson.lesson + ' ' + link.title;
+      span.textContent = 'Lesson ' + lesson.lesson + ' | ' + link.title;
       h4.appendChild(span);
       list.appendChild(li);
     })

@@ -21,7 +21,7 @@ const displayProphets = (prophets) => {
     const cardHeader = document.createElement('div');
     cardHeader.setAttribute('class', 'card-header');
     const h3 = document.createElement('h3');
-    h3.textContent = prophet.name;
+    h3.textContent = prophet.name + ' ' + prophet.lastname;
     cardHeader.appendChild(h3);
     card.appendChild(cardHeader);
     cards.appendChild(card);
