@@ -287,8 +287,13 @@ body.dark .nav ul li a:visited {
   box-shadow: none;
 }
 
+
 .main .basic-card {
   height: 140px;
+}
+
+.main .basic-members-card {
+
 }
 
 main .hero-card {
@@ -298,10 +303,8 @@ main .hero-card {
   height: 120px;
   position: relative;
   overflow: hidden;
-  /* background-image: url('../images/hero.webp'); */
-  /* background-size: 100% auto; */
-  /* background-position: center; */
-}
+  height: 140px;
+}  
 
 main .hero-card picture {
   width: 100% !important;

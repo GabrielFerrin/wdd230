@@ -1,0 +1,40 @@
+{
+  "members": [
+    {
+      "name": "John",
+      "address": "123 Main St",
+      "phone": "555-555-5555",
+      "website": "https://john.com",
+      "icon": "https://john.com/icon.png",
+      "level": "senior",
+      "darkMode": false
+    },
+    {
+      "name": "John",
+      "address": "123 Main St",
+      "phone": "555-555-5555",
+      "website": "https://john.com",
+      "icon": "https://john.com/icon.png",
+      "level": "senior",
+      "darkMode": false
+    },
+    {
+      "name": "John",
+      "address": "123 Main St",
+      "phone": "555-555-5555",
+      "website": "https://john.com",
+      "icon": "https://john.com/icon.png",
+      "level": "senior",
+      "darkMode": false
+    },
+    {
+      "name": "John",
+      "address": "123 Main St",
+      "phone": "555-555-5555",
+      "website": "https://john.com",
+      "icon": "https://john.com/icon.png",
+      "level": "senior",
+      "darkMode": false
+    }
+  ]
+}
