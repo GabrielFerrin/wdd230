@@ -17,7 +17,7 @@
   }
 
   .header .menu-wrapper {
-    width: 60%;
+    width: 59%;
   }
 
   /*******/
@@ -60,6 +60,17 @@
 
   .main #discovery-subtitle {
     margin-top: 0;
+  }
+
+  .main .list .basic-members-card {
+    height: 30px;
+    grid-template-columns: 25px 1.5fr 1fr 1fr 1fr;
+    text-align: center;
+  }
+
+  .main .list #badge {
+    position: static;
+    display: inline;
   }
 }
 

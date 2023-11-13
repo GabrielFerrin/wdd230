@@ -443,6 +443,7 @@ main .contrast-title {
 .main .basic-members-card {
   position: relative;
   border-left: 5px black solid;
+  height: auto;
 }
 
 .main article {
@@ -460,14 +461,19 @@ main .contrast-title {
 .main #grid,
 .main #list {
   position: absolute;
-  right: 140px;
+  right: 145px;
   top: 23px;
-  transform: translate(260%, -50%);
-  width: 50px;
+  transform: translate(290%, -50%);
+  width: 45px;
 }
 
 .main #grid {
   right: 195px;
+}
+
+.main #grid img,
+.main #list img {
+  margin-top: 4px;
 }
 
 .main .basic-members-card span {
@@ -517,23 +523,22 @@ main .contrast-title {
 }
 
 .main .list #badge {
-  position: static;
+  position: absolute;
+  top: calc(var(--gap) / 2);
+  right: calc(var(--gap) / 2);
   display: inline;
-  height: 23px !important;
-  width: auto !important;
 }
 
 
 .main .list .basic-members-card {
-  height: 30px;
   min-height: 30px;
   margin-top: 0;
   margin-bottom: 0;
   padding: calc(var(--gap) / 2);
   box-shadow: none;
   display: grid;
-  grid-template-columns: 25px 1.5fr 1fr 1fr 1fr;
-  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
   align-items: center;
 }
 

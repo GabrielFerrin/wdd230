@@ -88,10 +88,10 @@ const displayMembers = (members) => {
 		container.appendChild(card);
 		const badge = document.createElement('img');
 		badge.setAttribute('id', 'badge');
-		badge.setAttribute('src', 'images/directory/badge-' + member.membership + '.png');
+		badge.setAttribute('src', 'images/directory/badge-' + member.membership + '.svg');
 		badge.setAttribute('alt', toCamelCase(member.membership) + ' badge');
-		badge.setAttribute('height', '25');
-		badge.setAttribute('width', '25');
+		badge.setAttribute('height', '23');
+		badge.setAttribute('width', '23');
 		card.appendChild(badge);
 		const logo = document.createElement('img');
 		logo.setAttribute('src', member.logo);
