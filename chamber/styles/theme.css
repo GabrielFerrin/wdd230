@@ -11,6 +11,7 @@ body {
   --bg-color-05: #00e5df;
   --bg-color-06: #fff;
   --bg-light-01: #e1e1e1;
+  --bg-light-02: rgb(244, 244, 244);
   --bg-white: #ffffff;
   --border-line-01: 1px solid #e1e1e1;
   --border-line-02: 1px solid #c7c7c7;
@@ -70,6 +71,7 @@ body.dark a:visited {
   box-shadow: var(--shadow-light);
   padding: var(--gap);
   margin: var(--gap);
+  text-align: left;
 }
 
 h1,

@@ -7,7 +7,7 @@ const getProphetData = async () => {
     let data = await response.json();
     displayProphets(data.prophets);
   }
-  return undefined; // Explicitly return a value
+  return undefined;
 };
 
 getProphetData();

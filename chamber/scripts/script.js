@@ -53,3 +53,84 @@ observer.observe(document.body);
 ///////////////
 // directory //
 ///////////////
+const container = document.getElementById('container');
+const list = document.getElementById('list');
+const grid = document.getElementById('grid');
+list.addEventListener('click', () => {
+	container.classList.remove('grid');
+	container.classList.add('list');
+})
+grid.addEventListener('click', () => {
+	container.classList.remove('list');
+	container.classList.add('grid');
+})
+// get members info
+const url = 'data/members.json';
+const getMembersData = async () => {
+	const response = await fetch(url);
+	if (response.ok) {
+		let data = await response.json();
+		displayMembers(data.members);
+	}
+	return undefined;
+};
+
+getMembersData();
+
+// display members
+const displayMembers = (members) => {
+	members.forEach(member => {
+		const card = document.createElement('div');
+		console.log(card.style);
+		card.setAttribute('class', 'basic-card basic-members-card');
+		card.style.borderLeftColor = member.membership === 'bronze' ?
+			'#cd7f32' : member.membership;
+		container.appendChild(card);
+		const badge = document.createElement('img');
+		badge.setAttribute('id', 'badge');
+		badge.setAttribute('src', 'images/directory/badge-' + member.membership + '.png');
+		badge.setAttribute('alt', toCamelCase(member.membership) + ' badge');
+		badge.setAttribute('height', '25');
+		badge.setAttribute('width', '25');
+		card.appendChild(badge);
+		const logo = document.createElement('img');
+		logo.setAttribute('src', member.logo);
+		logo.setAttribute('alt', 'Ales Industries Logo');
+		logo.setAttribute('loading', 'lazy');
+		logo.setAttribute('id', 'logo');
+		logo.setAttribute('height', '50px');
+		logo.setAttribute('width', '50');
+		card.appendChild(logo);
+		const title = document.createElement('span');
+		title.setAttribute('class', 'title');
+		title.textContent = member.name;
+		card.appendChild(title);
+		const address = document.createElement('span');
+		address.textContent = member.address;
+		card.appendChild(address);
+		const phone = document.createElement('span');
+		phone.textContent = member.phone;
+		card.appendChild(phone);
+		const linkSpan = document.createElement('span');
+		const link = document.createElement('a');
+		link.setAttribute('href', member.link);
+		link.setAttribute('target', '_blank');
+		link.textContent = member.website;
+		linkSpan.appendChild(link);
+		card.appendChild(linkSpan);
+	});
+}
+
+const toCamelCase = (str) => {
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+const getMembershipColor = (membership) => {
+	if (membership === 'Gold') {
+		return 'gold';
+	} else if (membership === 'Silver') {
+		return 'silver';
+	} else if (membership === 'Bronze') {
+		return 'bronze';
+	}
+}

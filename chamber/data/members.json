@@ -1,40 +1,85 @@
 {
   "members": [
     {
-      "name": "John",
-      "address": "123 Main St",
-      "phone": "555-555-5555",
-      "website": "https://john.com",
-      "icon": "https://john.com/icon.png",
-      "level": "senior",
-      "darkMode": false
+      "name": "Industrias Ales",
+      "address": "113ᵗʰ Avenue, 110ᵗʰ Street",
+      "phone": "+593 98 387 4467",
+      "link": "https://www.ales.com.ec",
+      "website": "ales.com.ec",
+      "logo": "images/directory/logo-ales.png",
+      "membership": "bronze"
     },
     {
-      "name": "John",
-      "address": "123 Main St",
-      "phone": "555-555-5555",
-      "website": "https://john.com",
-      "icon": "https://john.com/icon.png",
-      "level": "senior",
-      "darkMode": false
+      "name": "Casa Rosada",
+      "address": "12ᵗʰ Street, 1ˢᵗ avenue",
+      "phone": "+593 98 987 9179",
+      "link": "https://www.facebook.com/restaurantecasarosadaecuador/?locale=es_LA",
+      "website": "casarosadaecuador.com",
+      "logo": "images/directory/logo-casa-rosada.svg",
+      "membership": "silver"
     },
     {
-      "name": "John",
-      "address": "123 Main St",
-      "phone": "555-555-5555",
-      "website": "https://john.com",
-      "icon": "https://john.com/icon.png",
-      "level": "senior",
-      "darkMode": false
+      "name": "Diverzu",
+      "address": "16ᵗʰ Avenue, 13ᵗʰ Street",
+      "phone": "+593 98 518 0767",
+      "link": "https://diverzu.com.ec/",
+      "website": "diverzu.com.ec",
+      "logo": "images/directory/diverzu-logo.svg",
+      "membership": "silver"
     },
     {
-      "name": "John",
-      "address": "123 Main St",
-      "phone": "555-555-5555",
-      "website": "https://john.com",
-      "icon": "https://john.com/icon.png",
-      "level": "senior",
-      "darkMode": false
+      "name": "MetalHierro",
+      "address": "113ᵗʰ Avenue, 116ᵗʰ Street",
+      "phone": "+593 99 008 0007",
+      "link": "https://ferreteriametalhierro.com/",
+      "website": "ferreteriametalhierro.com",
+      "logo": "images/directory/logo-ferreteria.jpg",
+      "membership": "gold"
+    },
+    {
+      "name": "La Fabril",
+      "address": "323ʳᵈ Street, Montecristi, Monterrey",
+      "phone": "+593 04 371 0164",
+      "link": "https://www.lafabril.com.ec/",
+      "website": "lafabril.com.ec",
+      "logo": "images/directory/logo-lafabril.png",
+      "membership": "silver"
+    },
+    {
+      "name": "Conservas Isabel",
+      "address": "125ᵗʰ, 103ʳᵈ Avenue, 130204",
+      "phone": "+593 90 024 2524",
+      "link": "https://www.isabel.net/",
+      "website": "isabel.net",
+      "logo": "images/directory/logo-isabel.svg",
+      "membership": "silver"
+    },
+    {
+      "name": "Marbelize",
+      "address": "15ᵗʰ Avenue, 33ʳᵈ Street",
+      "phone": "+593 98 387 4467",
+      "link": "http://www.marbelize.com/",
+      "website": "marbelize.com",
+      "logo": "images/directory/logologo-marbelize.png",
+      "membership": "gold"
+    },
+    {
+      "name": "Mega Bike Store",
+      "address": "100ᵗʰ Street, 6ᵗʰ Avenue",
+      "phone": "+593 99 179 8724",
+      "link": "https://megabikestore.ec/",
+      "website": "megabikestore.ec",
+      "logo": "images/directory/logo-mega-bike.webp",
+      "membership": "gold"
+    },
+    {
+      "name": "Cabañas Balandra",
+      "address": "1ˢᵗ Street, 8ᵗʰ Avenue",
+      "phone": "+593 5 262 0545",
+      "link": "https://www.balandrahotel.com/",
+      "website": "balandrahotel.com",
+      "logo": "images/directory/logo-balandra-hotel.svg",
+      "membership": "bronze"
     }
   ]
 }
