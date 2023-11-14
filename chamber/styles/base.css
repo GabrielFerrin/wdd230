@@ -124,7 +124,7 @@ header ul {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transform: var(--transition-duration);
+  transition: var(--transition-duration);
 }
 
 .header .slider::before {
