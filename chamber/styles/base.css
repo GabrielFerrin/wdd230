@@ -125,7 +125,6 @@ header ul {
   bottom: 0;
   background-color: #ccc;
   -webkit-transition: var(--transition-duration);
-  transition: var(--transition-duration);
   transform: var(--transition-duration);
 }
 
