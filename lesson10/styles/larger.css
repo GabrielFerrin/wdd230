@@ -1,0 +1,41 @@
+:root {
+  /* size */
+  --radius: 4px;
+}
+
+/* medium */
+@media screen and (min-width: 520px) {
+  header #background-top {
+    bottom: 50px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  #glasses {
+    margin-top: 0px;
+  }
+
+  nav #menu {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    transition: .3s;
+  }
+
+  nav ul li:hover {
+    width: 110%;
+  }
+
+  nav ul li:hover a {
+    border-radius: var(--radius);
+  }
+
+  #menu-button {
+    display: none;
+  }
+}
+
