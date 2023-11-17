@@ -242,16 +242,23 @@ main #cards {
 	gap: var(--gap);
 }
 
+main #weather-icon {
+	position: absolute;
+	left: 10px;
+}
+
+main #weather-h4 {
+	margin-left: 40px;
+}
+
+main #weather-a {
+	position: relative;
+}
+
 main .card-header p {
 	font-size: 1.17em;
 	font-weight: bold;
 }
-
-/* main .hero picture {
-	display: block;
-	width: 100%;
-	height: 100%;
-} */
 
 main .hero img {
 	width: 100%;
@@ -365,11 +372,7 @@ main section span {
 }
 
 main section h4:first-of-type span {
-	margin-left: 25px;
-}
-
-main section h4:last-of-type span {
-	margin-left: 20px;
+	margin-left: 5px;
 }
 
 main .card-body {

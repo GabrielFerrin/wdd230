@@ -139,18 +139,24 @@ if (container) {
 /////////////
 // weather //
 /////////////
-const atHomepage = document.getElementById('hero-homepage');
-if (atHomepage) {
-	const openWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?id=3654410&appid=7355654a40f63232368257f667f78b4b";
-	const getWeather = async () => {
-		// start animation
-		const response = await fetch(openWeatherUrl);
-		if (response.ok) {
-			// finish animation
-			const data = await response.json();
-			// displayWeather(data);
-			console.log(data);
-		}
-	}
-	getWeather();	
+const threeDaysUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=3654410&units=imperial&appid=7355654a40f63232368257f667f78b4b';
+const getThreeDays = async () => {
+  const response = await fetch(threeDaysUrl);
+  if (response.ok) {
+    const data = await response.json();
+    let dayRange = 0;
+    let counter = 0;
+    console.log(data);
+    data.list.forEach(item => {
+      const date = new Date(item.dt * 1000);
+      const day = date.getDate();
+      if (dayRange !== day && counter <= 2) {
+        counter++;
+        dayRange = day;
+				console.log(item);
+      }
+    })
+  }
 }
+
+getThreeDays();

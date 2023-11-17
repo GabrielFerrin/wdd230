@@ -361,6 +361,7 @@ main .weather-card {
   color: var(--bg-white);
   position: relative;
   overflow: hidden;
+  width: 290px;
 }
 
 main .weather-card img {
@@ -382,9 +383,8 @@ main .weather-bg {
 }
 
 main .weather-details-wrapper {
-  margin-left: calc(100% / 6);
   margin-bottom: 7px;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
 }
 
 main .spotlights-wrapper {
