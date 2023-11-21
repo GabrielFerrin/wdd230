@@ -1,7 +1,82 @@
 /**********/
-/* HEADER */
+/* BANNER */
 /**********/
 
+.banner-wrapper {
+  position: relative;
+  display: none;
+}
+
+.banner-wrapper input {
+  display: none;
+}
+
+.banner-wrapper .banner {
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: var(--bg-color-07);
+  transition: all .3s ease;
+  max-height: 30px;
+  width: 100%;
+  padding: var(--gap);
+  opacity: 1;
+  top: 0;
+}
+
+.banner-wrapper input:checked~.banner {
+  padding: 0;
+  max-height: 1px;
+  top: -100%;
+  opacity: 0;
+}
+
+.banner-wrapper .x {
+  cursor: pointer;
+  font-size: 0.3rem;
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  z-index: 1;
+  transition: all .3s ease;
+}
+
+.banner-wrapper input:checked~.x {
+  top: 0;
+  opacity: 0;
+}
+
+.banner-wrapper label:after {
+  position: absolute;
+  top: 22px;
+  z-index: 1;
+  right: 0;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: url("../images/arrow-collapse.svg") no-repeat 0 0;
+  background-size: cover;
+  transition: all .3s ease;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.banner-wrapper input:checked+label::after {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+.collapsible-banner {
+  background-color: var(--bg-color-07);
+  transition-duration: .3s;
+  max-height: 1px;
+  opacity: .5;
+  position: relative;
+  top: -100%;
+}
+
+/**********/
+/* HEADER */
+/**********/
 .header {
   padding: calc(var(--gap) * 1.5) var(--gap);
   flex-direction: row;
@@ -92,7 +167,7 @@ header ul {
 .header ul li:hover a {
   background-color: var(--bg-color-03);
   color: var(--bg-white);
-  
+
 }
 
 .header .switch {
@@ -143,15 +218,15 @@ body.dark .header .slider::before {
   background-color: var(--bg-color-06);
 }
 
-.header input:checked + .slider {
+.header input:checked+.slider {
   background-color: var(--bg-color-02);
 }
 
-.header input:focus + .slider {
+.header input:focus+.slider {
   box-shadow: 0 0 1px var(--bg-color-02);
 }
 
-.header input:checked + .slider::before {
+.header input:checked+.slider::before {
   -webkit-transform: translateX(8px);
   -ms-transform: translateX(8px);
   transform: translateX(8px);
@@ -275,18 +350,24 @@ body.dark .nav ul li a:visited {
   color: var(--bg-color-06);
 }
 
+#toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
 /********/
 /* MAIN */
 /********/
 
-.main {
+main {
   padding: 0;
   border: none;
   box-shadow: none;
   position: relative;
 }
 
-.main .basic-card {
+main .basic-card {
   height: 140px;
 }
 
@@ -298,7 +379,7 @@ main .hero-card {
   position: relative;
   overflow: hidden;
   height: 140px;
-}  
+}
 
 main .hero-card picture {
   width: 100% !important;
@@ -333,7 +414,7 @@ main .events-card {
   overflow: hidden;
 }
 
-main .events-card > p {
+main .events-card>p {
   font-size: 0.85rem;
   width: 53%;
 }
@@ -361,10 +442,9 @@ main .weather-card {
   color: var(--bg-white);
   position: relative;
   overflow: hidden;
-  width: 290px;
 }
 
-main .weather-card img {
+main .weather-card #weather-bg {
   width: auto !important;
   height: 100%;
   position: absolute;
@@ -382,9 +462,39 @@ main .weather-bg {
   z-index: -1;
 }
 
+main #three-days-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--gap) / 2);
+  width: calc(100% - 160px);
+}
+
 main .weather-details-wrapper {
+  position: relative;
   margin-bottom: 7px;
   font-size: 0.65rem;
+  text-align: center;
+  padding-left: var(--gap);
+  width: 70px;
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+main .weather-details-wrapper:last-child,
+main .weather-details-wrapper:nth-child(2) {
+  border-left: 1px solid var(--bg-light-01);
+}
+
+main .weather-card .contrast-title {
+  color: var(--contrast-01);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+main #weather-icon {
+  position: absolute;
+  top: -10px;
+  left: 0;
 }
 
 main .spotlights-wrapper {
@@ -426,12 +536,6 @@ main .spotlight-card h3 {
 
 main .spotlight-tittle-wrapper p {
   margin-top: -5px;
-}
-
-main .contrast-title {
-  color: var(--contrast-01);
-  font-size: 2rem;
-  font-weight: 700;
 }
 
 /********************/
@@ -540,7 +644,7 @@ main .contrast-title {
   align-items: center;
 }
 
-.main .list .basic-members-card span:first-of-type{
+.main .list .basic-members-card span:first-of-type {
   text-align: left;
 }
 
@@ -593,7 +697,7 @@ footer .foot-wrapper:last-of-type {
   color: var(--font-grey-color);
 }
 
-footer .foot-wrapper:last-of-type span{
+footer .foot-wrapper:last-of-type span {
   display: none;
 }
 

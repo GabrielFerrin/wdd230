@@ -53,6 +53,17 @@
 </head>
 
 <body>
+	<div class="banner-wrapper">
+		<input type="checkbox" id="collapse-icon">
+		<label for="collapse-icon"></label>
+		<span class="x">❌</span>
+		<div class="banner">
+			<span>
+				Be our guest at our Manta Chamber of Commerce 
+				Meet and Greet on Wednesday at 7:00 p.m.
+			</span>
+		</div>
+	</div>
 	<header class="basic-card header">
 		<div class="logo-wrapper">
 			<img class="logo-img" src="images/logo.svg" alt="" height="50" width="50">
@@ -107,13 +118,14 @@
 		</ul>
 	</nav>
 
-	<main class="main">
+	<main class="main" id="main">
 		<!-- hero -->
 		<div class="basic-card hero-card" id="hero-homepage">
 			<picture>
 				<source srcset="images/hero-small1.webp" media="(max-width: 649px)">
 				<source srcset="images/hero-medium.webp" media="(max-width: 1023px)">
-				<img src="images/hero-large.webp" alt="Beautiful landscape of Mucielago Beach in Manta" width="100" height="100">
+				<img src="images/hero-large.webp" alt="Beautiful landscape of Mucielago Beach in Manta" width="100"
+					height="100">
 			</picture>
 			<button class="button-01">JOIN THE CHAMBER</button>
 		</div>
@@ -132,18 +144,16 @@
 
 		<!-- weather card -->
 		<section class="basic-card weather-card">
-			<img src="images/weather.webp" alt="Stormy cluds with the sun at the back" width="100" height="100">
+			<img id="weather-bg" src="images/weather.webp" alt="Stormy cluds with the sun at the back" width="100"
+				height="100">
 			<div class="weather-bg"></div>
 			<div class="card-title-wrapper">
 				<h2>WEATHER</h2>
-				<p>SOURCE: WEATHER.COM</p>
+				<p>SOURCE: openweathermap.org</p>
 			</div>
-			<div class="weather-details-wrapper">
-				<p class="contrast-title">36°</p>
-				<p>Partially cloudy</p>
-				<p>Humidity: 35%</p>
-				<p>Wind Chill: N/A</p>
+			<div id="three-days-wrapper">
 			</div>
+
 		</section>
 
 		<!-- spotlights -->

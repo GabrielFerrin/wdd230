@@ -146,17 +146,66 @@ const getThreeDays = async () => {
     const data = await response.json();
     let dayRange = 0;
     let counter = 0;
-    console.log(data);
     data.list.forEach(item => {
       const date = new Date(item.dt * 1000);
       const day = date.getDate();
       if (dayRange !== day && counter <= 2) {
         counter++;
         dayRange = day;
-				console.log(item);
+				addWeatherDetail(item, counter);
       }
     })
   }
 }
 
 getThreeDays();
+
+const addWeatherDetail = (item, dayNumber) => {
+	const container = document.getElementById('three-days-wrapper');
+	const card = document.createElement('div');
+	card.setAttribute('class', 'weather-details-wrapper');
+	const temp = document.createElement('p');
+	temp.setAttribute('class', 'contrast-title');
+	temp.textContent = item.main.temp.toFixed(0) + '°F';
+	card.appendChild(temp);
+	const icon = document.createElement('img');
+	icon.setAttribute('src', `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`);
+	icon.setAttribute('alt', item.weather[0].description);
+	icon.setAttribute('id', 'weather-icon');
+	icon.setAttribute('loading', 'lazy');
+	icon.setAttribute('height', '40');
+	icon.setAttribute('width', '40');
+	card.appendChild(icon);
+	const day = document.createElement('p');
+	day.textContent = dayNumber === 1 ? 'Today' : dayNumber === 2 ?
+		'Tomorrow' : 'Overtomorrow';
+	card.appendChild(day);
+	const description = document.createElement('p');
+	description.textContent = toUpperWords(item.weather[0].description);
+	card.appendChild(description);
+	const humidity = document.createElement('p');
+	humidity.textContent = 'Humidity: ' + item.main.humidity + '%';
+	card.appendChild(humidity);
+	container.appendChild(card);
+}
+
+const toUpperWords = (str) => {
+	return str.split(' ').map(word => word.charAt(0).toUpperCase() +
+		word.slice(1)).join(' ');
+}
+
+////////////
+// banner //
+////////////
+const dayOfWeek = new Date().getDay();
+if (dayOfWeek >= 1 && dayOfWeek <= 3) {
+	const banner = document.getElementsByClassName('banner-wrapper');
+	banner[0].style.display = 'flex';
+}
+const banner = document.getElementsByClassName('banner-wrapper');
+
+const xButton = document.getElementsByClassName('x');
+xButton[0].addEventListener('click', () => {
+	const input = document.getElementById('collapse-icon');
+	input.checked = true;
+})
