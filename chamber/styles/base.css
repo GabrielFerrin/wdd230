@@ -979,6 +979,27 @@ main .spotlight-tittle-wrapper p {
   width: 100%;
 }
 
+/************/
+/* THANKYOU */
+/************/
+
+.main-thankyou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  margin: calc(var(--gap) * 2);
+  height: calc(100vh - 450px);
+}
+
+.main-thankyou .button-01 {
+  margin-top: calc(var(--gap) * 2);
+  display: block;
+  justify-self: center;
+}
+
+
 /**********/
 /* FOOTER */
 /**********/
