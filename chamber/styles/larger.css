@@ -38,6 +38,10 @@
     margin: var(--gap);
   }
 
+  .discover-main-tag {
+    display: flex;
+  }
+
   footer .foot-wrapper:first-of-type {
     flex-direction: row;
     justify-content: space-between;

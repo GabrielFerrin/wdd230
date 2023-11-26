@@ -34,7 +34,7 @@ const displayUsername = () => {
 
 	userNameSpan.innerText = lastVisitInterval == 0 ? 'Welcome ' + 
 		storageUsername + '! Let us know if you have any questions.'
-		: 'Back so soon! Awesome' + storageUsername + '!';
+		: 'Back so soon! Awesome ' + storageUsername + '!';
 	lastVisitSpan.innerText = lastVisitInterval == 0 ? '' :
 		'It\'s been ' + lastVisitInterval + 'day(s) since your last visit'
 
