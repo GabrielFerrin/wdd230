@@ -690,6 +690,184 @@ main .spotlight-tittle-wrapper p {
   border-left: 5px black solid;
 }
 
+/******************/
+/* MAIN DISCOVER */
+/******************/
+
+.discover-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--gap);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.discover-main .demographics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.discover-main .user-card {
+  width: 100%;
+  height: 200px;
+  padding: var(--gap);
+  box-sizing: border-box;
+}
+
+.card-content-wrapper #fname {
+  border: 1px var(--contrast-font-color02) solid;
+  border-radius: var(--radius);
+  height: 40px;
+  width: 320px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  text-align: center;
+}
+
+.card-content-wrapper #fname:focus {
+  color: var(--contrast-font-color01);
+  border-color: var(--primary01);
+  background-color: var(--secondary01);
+  outline: 3px solid transparent;
+}
+
+.card-content-wrapper #fname::placeholder {
+  color: var(--contrast-font-color02);
+}
+
+.card-content-wrapper #fname:focus::placeholder {
+  color: var(--secondary02);
+}
+
+.discover-main .demographics-card,
+.discover-main .user-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--contrast-font-color01);
+}
+
+.discover-main .card-content-wrapper {
+  width: fit-content;
+}
+
+.discover-main .demographics-card p {
+  color: var(--primary02);
+}
+
+.discover-main .demographics-card p:first-child {
+  color: var(--font-color);
+  font-size: 0.8rem;
+  width: fit-content;
+}
+
+.discover-main .demographics-card p:last-child {
+  width: fit-content;
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+
+.discover-main .photos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.discover-main .photo-card {
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  padding: var(--gap) 0.1px;
+  color: var(--font-color);
+  background-color: var(--bg-color-06);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.location-card {
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  height: 200px;
+  padding: 0;
+  position: relative;
+  filter: brightness(1);
+  transition: 0.3s all ease;
+}
+
+
+.location-card:hover {
+  transform: scale(1.01);
+  filter: brightness(0.9);
+}
+
+
+.location-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.discover-main .photo-card:nth-child(odd) {
+  background-color: var(--bg-color-01);
+  color: var(--bg-light-01);
+}
+
+.discover-main .photo-card:nth-child(3) a {
+  color: var(--contrast-font-color01);
+}
+
+.discover-main .photo-card:nth-child(3) a:visited {
+  color: var(--warn);
+}
+
+.discover-main .photo-card h2 {
+  margin: var(--gap);
+}
+
+.discover-main .photo-card p {
+  margin: var(--gap);
+  max-width: 700px;
+}
+
+.discover-main .photo-card .left-alg-p {
+  text-align: left;
+}
+
+.discover-main .photo-card button {
+  font-size: 0.95rem;
+  margin: var(--gap) 0;
+  min-width: 160px;
+}
+
+.discover-main .photo-card img[data-image] {
+  filter: blur(4px);
+  border-radius: 0px 0px;
+  width: 100%;
+  max-width: 50px;
+}
+
+.discover-main .photo-card img {
+  filter: blur(0);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  max-width: 550px;
+  transition: .5s;
+}
+
 /**********/
 /* FOOTER */
 /**********/

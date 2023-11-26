@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- HTML Meta Tags -->
+	<title>Chamber of Commerce - WDD 230 - Web Frontend Development</title>
+	<meta name="author" content="Gabriel Ferrin">
+	<meta name="description" content="A Discover Page for the Chamber of Commerce for
+		Fall 2023 Semester | WDD 230 | Web Frontend Development,
+		created by Angel Gabriel Ferrin Moreira">
+
+	<!-- Facebook Meta Tags -->
+	<meta property="fb:app_id" content="GabrielFerrinM">
+	<meta property="og:site_name" content="Gabriel Ferrin WDD 230">
+	<meta property="og:url" content="https://gabrielferrin.github.io/wdd230/chamber/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Gabriel Ferrin | WDD 230 | Web Frontend Development">
+	<meta property="og:description" content="A Discover Page for the Chamber of Commerce for
+		Fall 2023 Semester | WDD 230 | Web Frontend Development,
+		created by Angel Gabriel Ferrin Moreira">
+	<meta property="og:image" content="https://gabrielferrin.github.io/wdd230/images/opengraph-chamber.webp">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:site" content="@gabrielferrin">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="gabrielferrin.github.io">
+	<meta property="twitter:url" content="https://gabrielferrin.github.io/wdd230/chamber/">
+	<meta name="twitter:title" content="Gabriel Ferrin | WDD 230 | Web Frontend Development">
+	<meta name="twitter:description" content="A Discover Page for the Chamber of Commerce for
+		Fall 2023 Semester | WDD 230 | Web Frontend Development,
+		created by Angel Gabriel Ferrin Moreira">
+	<meta name="twitter:image" content="https://gabrielferrin.github.io/wdd230/images/opengraph-chamber.webp">
+	<meta name="twitter:image:alt" content="Computer with code seen through glasses">
+
+	<!-- style -->
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/theme.css">
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/medium.css">
+	<link rel="stylesheet" href="styles/larger.css">
+
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+
+	<!-- script -->
+	<script defer src="scripts/script.js"></script>
+	<script defer src="scripts/discover.js"></script>
+</head>
+
+<body>
+	<div class="banner-wrapper">
+		<input type="checkbox" id="collapse-icon">
+		<label for="collapse-icon"></label>
+		<span class="x">❌</span>
+		<div class="banner">
+			<span>
+				Be our guest at our Manta Chamber of Commerce
+				Meet and Greet on Wednesday at 7:00 p.m.
+			</span>
+		</div>
+	</div>
+	<header class="basic-card header">
+		<div class="logo-wrapper">
+			<img class="logo-img" src="images/logo.svg" alt="" height="50" width="50" loading="lazy">
+			<h1 class="logo-title-wrapper">MANTA&nbsp;<span class="h1-subtitle">Chamber of Commerce</span></h1>
+		</div>
+		<div class="social-wrapper">
+			<img src="images/facebook-logo.svg" alt="Facebook logo" height="25" width="25" loading="lazy">
+			<img src="images/linkedin-logo.svg" alt="Linkedin logo" height="25" width="25" loading="lazy">
+		</div>
+		<div class="menu-wrapper">
+			<ul id="header-menu">
+				<li><a href="index.html" class="button-01">HOME</a></li>
+				<li><a href="#" class="button-01  active">DISCOVER</a></li>
+				<li><a href="directory.html" class="button-01">DIRECTORY</a></li>
+				<li><a href="#" class="button-01">JOIN</a></li>
+				<li><a href="#" class="button-01">ABOUT US</a></li>
+			</ul>
+
+			<div class="dark-slider-wrapper">
+				<label class="switch" content="Dark mode switch" for="dark-checkbox">
+					<input id="dark-checkbox" type="checkbox">
+					<span class="slider round"></span>
+				</label>
+				<!-- ↓ source: https://codepen.io/ainalem/pen/wvKOEMV -->
+				<button id="menu-button" aria-label="Menu button" onclick="toggleMenu();">
+					<svg viewBox="0 0 100 100">
+						<path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,
+							29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,
+							77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,
+							81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,
+							25.000058" />
+						<path class="line line2" d="M 20,50 H 80" />
+						<path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,
+							70.999954 94.498839, 71.182648 94.532987,33.288669 94.543142,
+							22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,
+							18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,
+							74.999942" />
+					</svg>
+				</button>
+				<!-- ↑ source: https://codepen.io/ainalem/pen/wvKOEMV -->
+			</div>
+		</div>
+	</header>
+
+	<nav class="basic-card nav" id="nav-menu">
+		<ul>
+			<li><a href="index.html" class="button-01">HOME</a></li>
+			<li><a href="#" class="button-01  active">DISCOVER</a></li>
+			<li><a href="directory.html" class="button-01">DIRECTORY</a></li>
+			<li><a href="#" class="button-01">JOIN</a></li>
+			<li><a href="#" class="button-01">ABOUT US</a></li>
+		</ul>
+	</nav>
+
+	<main class="main discover-main-tag" id="main">
+		<!-- discover -->
+		<div class="discover-main">
+			<h2>About Manta</h2>
+			<div class="demographics">
+				<div class="user-card" id="user-card-input">
+					<div class="card-content-wrapper">
+						<input type="text" id="fname" placeholder="Type your name here and press Enter" name="fname"><br>
+					</div>
+				</div>
+				<div class="user-card" id="user-card-display">
+					<div class="card-content-wrapper">
+						<h2 id="username">Welcome</h2>
+						<p id="last-visit"></p>
+						<a href="#" onclick="editUserInfo()">Edit</a>
+					</div>
+				</div>
+				<div class="demographics-card">
+					<div class="card-content-wrapper">
+						<p>Area</p>
+						<p>
+							<span class="increase-number" number-info="297.7"></span>
+							km²
+						</p>
+					</div>
+				</div>
+				<div class="demographics-card">
+					<div class="card-content-wrapper">
+						<p>Population</p>
+						<p>
+							<span class="increase-number" number-info="264821"></span>
+							res.
+						</p>
+					</div>
+				</div>
+				<div class="demographics-card">
+					<div class="card-content-wrapper">
+						<p>Male Population</p>
+						<p>
+							<span class="increase-number" number-info="49.20"></span>
+							%
+						</p>
+						<p>
+							<span class="increase-number" number-info="130275"></span>
+						</p>
+					</div>
+				</div>
+				<div class="demographics-card">
+					<div class="card-content-wrapper">
+						<p>Female Population</p>
+						<p>
+							<span class="increase-number" number-info="50.8"></span>
+							%
+						</p>
+						<p>
+							<span class="increase-number" number-info="134546"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="photos">
+				<div class="location-card">
+					<a href="https://goo.gl/maps/LdWe9TNXjZKQw1Np9">
+						<img src="images/placeholder.webp" data-image="images/location.webp" alt="Manta's location in the map">
+					</a>
+				</div>
+				<div class="photo-card">
+					<h2>Manta</h2>
+					<img src="images/placeholder.webp" data-image="images/manta.webp"
+						alt="Beautiful air view of the coast of Manta" width="100%">
+					<p class="left-alg-p">
+						Manta, also known as San Pablo de Manta, is a city in Ecuador,
+						cantonal head of the Manta Canton, as well as the largest and
+						most populated city in the Manabí Province. It is the tenth
+						most populous in the country.
+						Manta is a small city full of interesting things to see and do
+						on the pacific coast. There are many factors that made Manta
+						perfect for the family. It is in the goldilocks zone. Not too
+						big, Nor too small. Not too hot, Nor too cold. Just right.
+					</p>
+					<p class="left-alg-p">
+						Apart from the climate, a big part of its attraction is the
+						variety of activities and amenities. From water sports and
+						Cycling routes to Pre-Columbian history and culture, this is
+						a list of things to do in Manta Ecuador.
+					</p>
+				</div>
+				<div class="photo-card">
+					<h2>Pacoche - The Rain Forest</h2>
+					<img src="images/placeholder.webp" data-image="images/rain-forest.webp"
+						alt="Entrance of the rainf forest of Pacoche" width="100%">
+					<p class="left-alg-p">
+						Visit Pacoche Wildlife Refuge to see famous local animals such as
+						howler monkeys, see a local button factory, witness artisans
+						weaving a fine Montecristi hat, stop by the Ciudad Alfaro museum,
+						and more.
+						This is a great chance to expose yourself to a whole range of
+						Ecuadorian culture and history.
+					</p>
+					<button class="button-01">Know more...</button>
+				</div>
+				<div class="photo-card">
+					<h2>Montecristi - Panama Hat</h2>
+					<img src="images/placeholder.webp" data-image="images/panama-hat.webp" alt="Variety of Panama hats for sale"
+						width="100%">
+					<p class="left-alg-p">
+						Did you know that the famous Panama Hat is originally from Ecuador?
+					</p>
+					<p class="left-alg-p">
+						A Panama hat, also known as an Ecuadorian hat, a Jipijapa hat, or a
+						toquilla straw hat, is a traditional brimmed straw hat of Ecuadorian
+						origin. Source:
+						<a href="https://en.wikipedia.org/wiki/Panama_hat">Wikipedia</a>
+					</p>
+					<p class="left-alg-p">
+						Learn about the iconic Panama hat at the Alfaro City Civic Center
+						and visit a local hat maker to see how they are made.
+					</p>
+					<button class="button-01">Know more...</button>
+				</div>
+				<div class="photo-card">
+					<h2>“El Murcielago” Beach</h2>
+					<img src="images/placeholder.webp" data-image="images/murcielago.webp"
+						alt="Beautiful sunset of the coast of Manta" width="100%">
+					<p class="left-alg-p">
+						Situated around the midpoint of the pacific coast of Ecuador, Manta
+						attracts many tourists from outside the country as well as within
+						other areas of the country during the holiday seasons.
+					</p>
+					<p class="left-alg-p">
+						Tourists from Guayaquil and Quito travel to take advantage of the
+						numerous scenic beaches and coastal culture. The main beach in
+						Manta right next to the cruise ship terminal is the “Playa Murcielago”.
+						It has a lot to offer with banana boat rides and inflatable watersports.
+						There are Jetskis for rent as well as jetski powered hoverboards and
+						other toys.
+					</p>
+					<button class="button-01">Know more...</button>
+				</div>
+				<div class="photo-card">
+					<h2>“Santa Marianita” Beach - Kitesurfing</h2>
+					<img src="images/placeholder.webp" data-image="images/santa-marianita.webp"
+						alt="Several kitesurfers getting ready" width="100%">
+					<p class="left-alg-p">
+						Just up the coast from Manta is a great beach town, Santa Marianita.
+						It is famous for great food, amazing sunsets and most of all Kite
+						Surfing.
+					</p>
+					<p class="left-alg-p">
+						Santa Marianita is the capital of kitesurfing in Ecuador and often
+						hosts competitions and festivals. This is a great sport to watch
+						from the comfort of the beach bars and restaurants, especially as
+						the sunsets here are divine. A BBQ on this beach is as good as it
+						gets.
+					</p>
+					<button class="button-01">Know more...</button>
+				</div>
+				<div class="photo-card">
+					<h2>Cycling</h2>
+					<img src="images/placeholder.webp" data-image="images/cycling.webp"
+						alt="A crowd of cylers ready to start a marathon" width="100%">
+					<p class="left-alg-p">
+						Manta has some of the best Bicycle routes on the coast of Ecuador.
+						Many cycling clubs from here and other parts of the country come
+						to ride along with the sunny coast.
+					</p>
+					<p class="left-alg-p">
+						You can rent bikes for a nice day out from around $5, or join one
+						of the clubs for more elaborate and challenging expeditions. Many
+						people enjoy riding from Manta to San Mateo beach, which has a
+						dedicated cycle lane almost all the way.
+					</p>
+					<button class="button-01">Know more...</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer-card">
+		<div class="foot-wrapper">
+			<div class="logo-wrapper">
+				<img class="logo-img" src="images/logo.svg" alt="" height="50" width="50" loading="lazy">
+				<p class="logo-title-wrapper">MANTA&nbsp;<span class="h1-subtitle">CHAMBER OF COMMERCE</span></p>
+			</div>
+			<div class="contact-info">
+				<p>info@mantachamber.com</p>
+				<p>+593 548 3877</p>
+				<p>Show in the map</p>
+			</div>
+		</div>
+
+		<hr>
+		<div class="foot-wrapper">
+			<p><span id="copyright"></span> Manta Chamber of Commerce</p>
+			<p>ANGEL GABRIEL FERRIN MOREIRA</p>
+			<p>WDD 230 PROJECT</p>
+			<p id="lastModified"></p>
+			<span id="footer-details"></span>
+		</div>
+	</footer>
+</body>
+
+</html>

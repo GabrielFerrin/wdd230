@@ -72,6 +72,25 @@
     position: static;
     display: inline;
   }
+
+  .discover-main-tag {
+    display: flex;
+  }
+
+  .discover-main-tag .discover-main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  /*****************/
+  /* MAIN DISCOVER */
+  /*****************/
+
+  .discover-main-tag .discover-main .photo-card img:hover {
+    filter: blur(0);
+    border-radius: var(--radius) 35%;
+    transition: .2s;
+  }
 }
 
 @media screen and (min-width: 700px) {

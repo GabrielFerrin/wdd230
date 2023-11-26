@@ -16,10 +16,20 @@ document.getElementById('footer-details')
 	document.lastModified;
 
 // dark mode
-const darkCheckbox = document.getElementById('dark-checkbox');
+if (localStorage.getItem('mantaChamberDark') === 'true') {
+	// 	darkCheckbox.checked = true;
+	document.body.classList.toggle('dark');
+	document.getElementById('dark-checkbox').checked = true;
+}
+
 document.getElementById('dark-checkbox')
 	.addEventListener('click', () => {
 		document.body.classList.toggle('dark');
+		if (document.body.classList.contains('dark')) {
+			localStorage.setItem('mantaChamberDark', 'true');
+		} else {
+			localStorage.removeItem('mantaChamberDark');
+		}
 	})
 
 ////////////////////
@@ -139,35 +149,39 @@ if (container) {
 /////////////
 // weather //
 /////////////
-const threeDaysUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=3654410&units=imperial&appid=7355654a40f63232368257f667f78b4b';
-const getThreeDays = async () => {
-  const response = await fetch(threeDaysUrl);
-  if (response.ok) {
-    const data = await response.json();
-    let dayRange = 0;
-    let counter = 0;
-    data.list.forEach(item => {
-      const date = new Date(item.dt * 1000);
-      const day = date.getDate();
-      if (dayRange !== day && counter <= 2) {
-        counter++;
-        dayRange = day;
-				addWeatherDetail(item, counter);
-				if (counter == 1) {
-					document.getElementById('speed').textContent = item.wind.speed;
-					if (item.main.temp >= 50) {
-						document.getElementById('wind-chill').textContent = 'N/A';
-					} else {
-						const windChill = 35.74 + 0.6215 * item.main.temp - 35.75 * Math.pow(item.wind.speed, 0.16) + 0.4275 * item.main.temp * Math.pow(item.wind.speed, 0.16);
-						document.getElementById('wind-chill').textContent = windChill;
+if (document.getElementById('three-days-wrapper')) {
+	// get weather
+	const threeDaysUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=3654410&units=imperial&appid=7355654a40f63232368257f667f78b4b';
+	const getThreeDays = async () => {
+		const response = await fetch(threeDaysUrl);
+		if (response.ok) {
+			const data = await response.json();
+			let dayRange = 0;
+			let counter = 0;
+			data.list.forEach(item => {
+				const date = new Date(item.dt * 1000);
+				const day = date.getDate();
+				if (dayRange !== day && counter <= 2) {
+					counter++;
+					dayRange = day;
+					addWeatherDetail(item, counter);
+					if (counter == 1) {
+						document.getElementById('speed').textContent = item.wind.speed;
+						if (item.main.temp >= 50) {
+							document.getElementById('wind-chill').textContent = 'N/A';
+						} else {
+							const windChill = 35.74 + 0.6215 * item.main.temp - 35.75 * Math.pow(item.wind.speed, 0.16) + 0.4275 * item.main.temp * Math.pow(item.wind.speed, 0.16);
+							document.getElementById('wind-chill').textContent = windChill;
+						}
 					}
 				}
-      }
-    })
-  }
+			})
+		}
+	}
+
+	getThreeDays();
 }
 
-getThreeDays();
 
 const addWeatherDetail = (item, dayNumber) => {
 	const container = document.getElementById('three-days-wrapper');
@@ -214,7 +228,9 @@ if (dayOfWeek >= 1 && dayOfWeek <= 3) {
 const banner = document.getElementsByClassName('banner-wrapper');
 
 const xButton = document.getElementsByClassName('x');
-xButton[0].addEventListener('click', () => {
-	const input = document.getElementById('collapse-icon');
-	input.checked = true;
-})
+if (xButton[0] !== undefined) {
+	xButton[0].addEventListener('click', () => {
+		const input = document.getElementById('collapse-icon');
+		input.checked = true;
+	})
+}
