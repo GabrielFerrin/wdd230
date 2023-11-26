@@ -153,6 +153,15 @@ const getThreeDays = async () => {
         counter++;
         dayRange = day;
 				addWeatherDetail(item, counter);
+				if (counter == 1) {
+					document.getElementById('speed').textContent = item.wind.speed;
+					if (item.main.temp >= 50) {
+						document.getElementById('wind-chill').textContent = 'N/A';
+					} else {
+						const windChill = 35.74 + 0.6215 * item.main.temp - 35.75 * Math.pow(item.wind.speed, 0.16) + 0.4275 * item.main.temp * Math.pow(item.wind.speed, 0.16);
+						document.getElementById('wind-chill').textContent = windChill;
+					}
+				}
       }
     })
   }

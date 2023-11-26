@@ -429,7 +429,8 @@ main .events-card img {
 }
 
 main .card-title-wrapper {
-  width: 50%;
+  width: 100%;
+  position: relative;
 }
 
 main .card-title-wrapper p {
@@ -442,6 +443,34 @@ main .weather-card {
   color: var(--bg-white);
   position: relative;
   overflow: hidden;
+}
+
+main .weather-card .wind-chill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: var(--radius);
+  background-color: var(--bg-light-02);
+  color: var(--bg-color-01);
+  padding: calc(var(--gap) / 2);
+  width: 35%;
+  height: 32px;
+  text-align: center;
+  
+}
+
+main .weather-card .wind-chill  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main .weather-card .wind-chill .wind-label {
+  font-size: 0.6rem;
+  margin-bottom: calc(var(--gap) / 2);
+}
+
+main .weather-card .wind-chill .wind-chill-det {
+  font-weight: 600;
 }
 
 main .weather-card #weather-bg {
