@@ -592,14 +592,15 @@ main .spotlight-tittle-wrapper p {
 .main #grid,
 .main #list {
   position: absolute;
-  right: 145px;
+  right: 96px;
   top: 23px;
   transform: translate(290%, -50%);
-  width: 45px;
+  height: 28px;
+  width: 28px;
 }
 
 .main #grid {
-  right: 195px;
+  right: 126px;
 }
 
 .main #grid img,
