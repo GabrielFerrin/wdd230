@@ -868,6 +868,77 @@ main .spotlight-tittle-wrapper p {
   transition: .5s;
 }
 
+/******************/
+/* MAIN DISCOVER */
+/******************/
+
+.main-join {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-join .basic-card {
+  height: auto;
+  gap: var(--gap);
+  justify-content: start;
+}
+
+.main-join .benefits-card {
+  gap: 0;
+}
+
+.main-join .basic-card h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-join .basic-card h3 img {
+  margin-left: var(--gap);
+}
+
+.main-join form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.main-join form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--gap);
+  border-radius: var(--radius);
+  border: 1px solid var(--bg-light-01);
+}
+
+.main-join form fieldset legend{
+  color: var(--bg-color-02);
+  font-weight: 700;
+  padding: calc(var(--gap) / 2);
+}
+
+.main-join form label.label-top,
+.main-join form div {
+  display: block;
+  padding-top: 0.3rem;
+  font-size: 0.85rem;
+  width: 100%;
+  color: var(--font-grey-color);
+}
+
+.main-join form label.label-top input {
+  display: block;
+  max-width: 28rem;
+  height: 50px;
+  margin-top: 2px;
+  width: 100%;
+  border-radius: calc(var(--radius) / 2);
+  border: .5px solid var(--bg-color-01);
+  font-size: 1rem;
+  color: var(--bg-color-01);
+}
+
 /**********/
 /* FOOTER */
 /**********/

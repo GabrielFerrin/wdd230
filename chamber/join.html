@@ -75,10 +75,10 @@
 		</div>
 		<div class="menu-wrapper">
 			<ul id="header-menu">
-				<li><a href="#" class="button-01 active">HOME</a></li>
+				<li><a href="index.html" class="button-01">HOME</a></li>
 				<li><a href="discover.html" class="button-01">DISCOVER</a></li>
 				<li><a href="directory.html" class="button-01">DIRECTORY</a></li>
-				<li><a href="join.html" class="button-01">JOIN</a></li>
+				<li><a href="#" class="button-01 active">JOIN</a></li>
 				<li><a href="../index.html" class="button-01">MAIN</a></li>
 			</ul>
 
@@ -110,97 +110,108 @@
 
 	<nav class="basic-card nav" id="nav-menu">
 		<ul>
-			<li><a href="#" class="button-01 active">HOME</a></li>
+			<li><a href="index.html" class="button-01">HOME</a></li>
 			<li><a href="discover.html" class="button-01">DISCOVER</a></li>
 			<li><a href="directory.html" class="button-01">DIRECTORY</a></li>
-			<li><a href="join.html" class="button-01">JOIN</a></li>
+			<li><a href="#" class="button-01 active">JOIN</a></li>
 			<li><a href="../index.html" class="button-01">MAIN</a></li>
 		</ul>
 	</nav>
 
-	<main class="main" id="main">
-		<!-- hero -->
-		<div class="basic-card hero-card" id="hero-homepage">
-			<picture>
-				<source srcset="images/hero-small1.webp" media="(max-width: 649px)">
-				<source srcset="images/hero-medium.webp" media="(max-width: 1023px)">
-				<img src="images/hero-large.webp" alt="Beautiful landscape of Mucielago Beach in Manta" width="100"
-					height="100" loading="lazy">
-			</picture>
-			<button class="button-01">JOIN THE CHAMBER</button>
-		</div>
-
-		<!-- current events -->
-		<section class="basic-card events-card">
-			<img src="images/baloons.webp" alt="Baloons in a formal party" width="100" height="100" loading="lazy">
-			<div class="card-title-wrapper">
-				<h2>EVENTS</h2>
-				<p>RIBBON CUTTING - THE DIAMOND SHACK</p>
-			</div>
-			<p>Join us for the grand opening of The
-				Diamond Shak, Thursday at 1:00 p.m.</p>
-			<p><a href="#">more...</a></p>
+	<main class="main main-join" id="main">
+		<section class="basic-card">
+			<h2>Mebership application</h2>
+			<form method="get" action="thankyou.html">
+				<fieldset>
+					<legend>Personal information</legend>
+					<label for="fname" class="label-top">
+						First name
+						<input type="text" name="fname" id="fname" required>
+					</label>
+					<label for="lname" class="label-top">
+						Last name
+						<input type="text" name="lname" id="lname" required>
+					</label>
+					<label for="title" class="label-top">
+						Title or position within your organization
+						<input type="text" name="title" id="title" required placeholder="123 555 1234">
+					</label>
+					<label for="email" class="label-top">
+						Email
+						<input type="email" name="email" id="email" required placeholder="jpjvK@example.com">
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend>Business/Membership information</legend>
+					<label for="organization" class="label-top">
+						Organization
+						<input type="text" name="organization" id="organization" required>
+					</label>
+					<div>Membership</div>
+					<label>
+						<input type="radio" name="membership" id="membership" value="bronze">
+						<img src="images/directory/badge-bronze.svg" alt="Bronze badge" loading="lazy" height="40" width="40">
+						NP Membership
+					</label>
+					<label>
+						<input type="radio" name="membership" id="membership" value="bronze">
+						<img src="images/directory/badge-bronze.svg" alt="Bronze badge" loading="lazy" height="40" width="40">
+						Bronze Membership
+					</label>
+					<label>
+						<input type="radio" name="membership" id="membership" value="silver">
+						<img src="images/directory/badge-silver.svg" alt="Bronze badge" loading="lazy" height="40" width="40">
+						Silver Membership
+					</label>
+					<label>
+						<input type="radio" name="membership" id="membership" value="gold">
+						<img src="images/directory/badge-gold.svg" alt="Bronze badge" loading="lazy" height="40" width="40">
+						Gold Membership
+					</label>
+					<label class="label-top">
+						Business/Organization's description
+						<textarea name="description" id="description"></textarea>
+					</label>
+				</fieldset>
+				<input class="button-01" type="submit" value="Apply for my membership">
+			</form>
 		</section>
+		<section class="basic-card benefits-card">
+			<h2>Benefits</h2>
+			<h3>
+				Bronze Membership
+				<img src="images/directory/badge-bronze.svg" alt="Bronze badge" loading="lazy" height="40" width="40">
+			</h3>
+			<ul>
+				<li>Access to monthly networking events</li>
+				<li>Listing in the Chamber's online directory</li>
+				<li>One free ticket to an annual gala event</li>
+			</ul>
+			<hr>
 
-		<!-- weather card -->
-		<section class="basic-card weather-card">
-			<img id="weather-bg" src="images/weather.webp" alt="Stormy cluds with the sun at the back" width="100"
-				height="100" loading="lazy">
-			<div class="weather-bg"></div>
-			<div class="card-title-wrapper">
-				<h2>WEATHER</h2>
-				<p>SOURCE: openweathermap.org</p>
-				<div class="wind-chill">
-					<span class="wind-label">Wind Speed</span>
-					<span class="wind-label">Wind Chill</span>
-					<span id="speed" class="wind-chill-det"></span>
-					<span id="wind-chill" class="wind-chill-det"></span>
-				</div>
-			</div>
-			<div id="three-days-wrapper">
-			</div>
+			<h3>
+				Silver Membership
+				<img src="images/directory/badge-silver.svg" alt="Bronze badge" loading="lazy" height="40" width="40">
+			</h3>
+			<ul>
+				<li>All Bronze membership benefits</li>
+				<li>Priority access to Chamber workshops and seminars</li>
+				<li>Featured listing in the Chamber's online directory</li>
+				<li>Two free tickets to the annual gala event</li>
+			</ul>
+			<hr>
 
-		</section>
-
-		<!-- spotlights -->
-		<section class="spotlights-wrapper">
-			<h2 class="contrast-title">MEMBERS</h2>
-			<div class="spotlight-card">
-				<div class="spotlight-tittle-wrapper">
-					<h3>THANKFULL TRANSPORT</h3>
-					<p>"WE GET IT DONE FOR YOU!"</p>
-				</div>
-				<div class="spotlight-details-wrapper">
-					<p>"hello@thankfulltransport.com"</p>
-					<p>"+593 435 4358"</p>
-					<p>"thankfultransport.com"</p>
-				</div>
-				<p>more info...</p>
-			</div>
-			<div class="spotlight-card">
-				<div class="spotlight-tittle-wrapper">
-					<h3>THANKFULL TRANSPORT</h3>
-					<p>"WE GET IT DONE FOR YOU!"</p>
-				</div>
-				<div class="spotlight-details-wrapper">
-					<p>"hello@thankfulltransport.com"</p>
-					<p>"+593 435 4358"</p>
-					<p>"thankfultransport.com"</p>
-				</div>
-				<p>more info...</p>
-			</div>
-			<div class="spotlight-card">
-				<div class="spotlight-tittle-wrapper">
-					<h3>THANKFULL TRANSPORT</h3>
-					<p>"WE GET IT DONE FOR YOU!"</p>
-				</div>
-				<div class="spotlight-details-wrapper">
-					<p>"hello@thankfulltransport.com"</p>
-					<p>"+593 435 4358"</p>
-					<p>"thankfultransport.com"</p>
-				</div>
-				<p>more info...</p>
-			</div>
+			<h3>
+				Gold Membership
+				<img src="images/directory/badge-gold.svg" alt="Bronze badge" loading="lazy" height="40" width="40">
+			</h3>
+			<ul>
+				<li>All Bronze and Silver membership benefits</li>
+				<li>Exclusive access to VIP networking events</li>
+				<li>Prominent featured listing in the Chamber's online directory</li>
+				<li>Four free tickets to the annual gala event</li>
+				<li>Opportunity to host a Chamber-sponsored event</li>
+			</ul>
 		</section>
 	</main>
 

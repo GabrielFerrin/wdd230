@@ -42,6 +42,11 @@
     display: flex;
   }
 
+  .main-join {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+  }
+
   footer .foot-wrapper:first-of-type {
     flex-direction: row;
     justify-content: space-between;
