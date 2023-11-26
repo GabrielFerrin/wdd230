@@ -939,7 +939,7 @@ main .spotlight-tittle-wrapper p {
   max-width: 28rem;
   height: 50px;
   margin-top: 2px;
-  width: 100% !important;
+  width: calc(100% - var(--gap)) !important;
   border-radius: calc(var(--radius) / 2);
   border: .5px solid var(--bg-light-01);
   font-size: 1rem;
@@ -972,7 +972,11 @@ main .spotlight-tittle-wrapper p {
 }
 
 .main-join form label.label-top input:required:valid {
-  /* border: 1px green solid 4px; */
+  border: 1px green solid 4px;
+}
+
+.main-join hr {
+  width: 100%;
 }
 
 /**********/
