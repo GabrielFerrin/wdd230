@@ -933,6 +933,8 @@ main .spotlight-tittle-wrapper p {
 
 .main-join form label.label-top input,
 .main-join form label.label-top textarea {
+  -webkit-appearance: none;
+  appearance: none;
   display: block;
   max-width: 28rem;
   height: 50px;
@@ -951,6 +953,26 @@ main .spotlight-tittle-wrapper p {
   padding-top: 0.3rem;
   width: 100%;
   gap: var(--gap);
+}
+
+.main-join .button-01 {
+  width: calc(100% - (var(--gap) * 2));
+  max-width: calc(28rem + 6px);
+  margin-left: calc(var(--gap) + 3px);
+}
+
+.main-join form label.label-top input:required {
+  border-left: red solid 4px;
+  border-top-left-radius: calc(var(--radius) * 0.9);
+  border-bottom-left-radius: calc(var(--radius) * 0.9);
+}
+
+.main-join form label.label-top input:focus {
+  border: 1px solid var(--bg-light-01);
+}
+
+.main-join form label.label-top input:required:valid {
+  /* border: 1px green solid 4px; */
 }
 
 /**********/
